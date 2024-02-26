@@ -62,6 +62,7 @@
 	<ItemGroup>
 	  <None Remove="Views\" />
 	  <None Remove="ViewModel\" />
+	  <None Remove="Resources\Images\scene1.jpeg" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Views\" />
