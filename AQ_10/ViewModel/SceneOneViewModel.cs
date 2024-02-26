@@ -35,7 +35,7 @@ namespace AQ_10.ViewModel
         {
             ToggleAudioCommand = new Command(() => IsAudioOn = !IsAudioOn);
             NavigateToPreviousCommand = new Command(async () => await Shell.Current.GoToAsync("//MainPage"));
-            NavigateToNextCommand = new Command(async () => await Shell.Current.GoToAsync("NextPage"));
+            NavigateToNextCommand = new Command(async () => await Shell.Current.GoToAsync("//SceneTwo"));
         }
     }
 
