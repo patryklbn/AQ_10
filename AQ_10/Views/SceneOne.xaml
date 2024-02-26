@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
              x:Class="AQ_10.SceneOne"
+             ios:Page.UseSafeArea="False"
              Shell.NavBarIsVisible="False"
              Title="Scene One">
 
@@ -13,7 +15,7 @@
 
 
         <!-- Background image stretched across the entire Grid -->
-        <Image Source="Resources/Images/background_startup.jpg"
+        <Image Source="scene1.png"
                Aspect="AspectFill"
                HorizontalOptions="FillAndExpand"
                VerticalOptions="FillAndExpand"
@@ -31,12 +33,12 @@
                 />
 
         <!-- Content Border -->
-        <Border Padding="15,10"
-                BackgroundColor="{StaticResource FrameBackgroundColor}"
+        <Border Padding="15"
+                BackgroundColor="White"
                 Stroke="{StaticResource BorderColor}"
                 HorizontalOptions="Fill"
                 VerticalOptions="End"
-                Margin="20"
+                Margin="20,0,20,0" 
                 Grid.Row="1"> <!-- Positioned in the second row for main content -->
             <Border.StrokeShape>
                 <RoundRectangle CornerRadius="24"/>
