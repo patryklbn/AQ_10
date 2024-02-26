@@ -11,10 +11,49 @@
         Title="MainPage"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
-
     <ShellContent
         Title="Scene One"
         ContentTemplate="{DataTemplate local:SceneOne}"
         Route="SceneOne" />
+    <ShellContent
+        Title="Scene Two"
+        ContentTemplate="{DataTemplate local:SceneTwo}"
+        Route="SceneTwo" />
+    <ShellContent
+        Title="Scene Three"
+        ContentTemplate="{DataTemplate local:SceneThree}"
+        Route="SceneThree" />
+    <ShellContent
+        Title="Scene Four"
+        ContentTemplate="{DataTemplate local:SceneFour}"
+        Route="SceneFour" />
+    <ShellContent
+        Title="Scene Five"
+        ContentTemplate="{DataTemplate local:SceneFive}"
+        Route="SceneFive" />
+    <ShellContent
+        Title="Scene Six"
+        ContentTemplate="{DataTemplate local:SceneSix}"
+        Route="SceneSix" />
+    <ShellContent
+        Title="Scene Seven"
+        ContentTemplate="{DataTemplate local:SceneSeven}"
+        Route="SceneSeven" />
+    <ShellContent
+        Title="Scene Eight"
+        ContentTemplate="{DataTemplate local:SceneEight}"
+        Route="SceneEight" />
+    <ShellContent
+        Title="Scene Nine"
+        ContentTemplate="{DataTemplate local:SceneNine}"
+        Route="SceneNine" />
+    <ShellContent
+        Title="Scene Ten"
+        ContentTemplate="{DataTemplate local:SceneTen}"
+        Route="SceneTen" />
+    <ShellContent
+        Title="EndPage"
+        ContentTemplate="{DataTemplate local:EndPage}"
+        Route="EndPage" />
 
 </Shell>

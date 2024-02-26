@@ -2,10 +2,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
-             x:Class="AQ_10.SceneOne"
+             x:Class="AQ_10.SceneEight"
              ios:Page.UseSafeArea="False"
              Shell.NavBarIsVisible="False"
-             Title="Scene One">
+             Title="Scene Eight">
 
     <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
         <Grid.RowDefinitions>
@@ -13,9 +13,8 @@
             <RowDefinition Height="*"/>   <!-- Space for the rest of the content -->
         </Grid.RowDefinitions>
 
-
         <!-- Background image stretched across the entire Grid -->
-        <Image Source="scene1.png"
+        <Image Source="background_startup.png"
                Aspect="AspectFill"
                HorizontalOptions="FillAndExpand"
                VerticalOptions="FillAndExpand"
@@ -41,16 +40,16 @@
                 Margin="0,0,0,0" 
                 Grid.Row="1"> <!-- Positioned in the second row for main content -->
             <Border.StrokeShape>
-                <RoundRectangle CornerRadius="19"/>
+                <RoundRectangle CornerRadius="24"/>
             </Border.StrokeShape>
 
             <VerticalStackLayout Spacing="0">
                 <!-- Question -->
-                <Label Text="I often notice small sounds when others do not."
+                <Label Text="I like to collect information about categories of things (e.g. types of car, bird, train, plant etc.)."
                        HorizontalOptions="Center"
                        HorizontalTextAlignment="Center"
                        FontFamily="MontserratExtraBold"
-                       FontSize="14"
+                       FontSize="12"
                        Style="{StaticResource IntroPageHeaderStyle}" />
 
 <!-- Grid for Radio Buttons and Navigation Buttons -->

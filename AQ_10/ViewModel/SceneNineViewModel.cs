@@ -3,7 +3,7 @@ using System.Windows.Input;
 
 namespace AQ_10.ViewModel
 {
-    public class SceneOneViewModel : BaseViewModel
+    public class SceneNineViewModel : BaseViewModel
     {
         private bool _isAudioOn = true;
         private string _audioIcon = "🔊"; // Default icon for audio on
@@ -31,11 +31,11 @@ namespace AQ_10.ViewModel
         public ICommand NavigateToPreviousCommand { get; }
         public ICommand NavigateToNextCommand { get; }
 
-        public SceneOneViewModel()
+        public SceneNineViewModel()
         {
             ToggleAudioCommand = new Command(() => IsAudioOn = !IsAudioOn);
-            NavigateToPreviousCommand = new Command(async () => await Shell.Current.GoToAsync("//MainPage"));
-            NavigateToNextCommand = new Command(async () => await Shell.Current.GoToAsync("//SceneTwo"));
+            NavigateToPreviousCommand = new Command(async () => await Shell.Current.GoToAsync("//SceneEight"));
+            NavigateToNextCommand = new Command(async () => await Shell.Current.GoToAsync("//SceneTen"));
         }
     }
 
