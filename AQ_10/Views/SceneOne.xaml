@@ -38,10 +38,10 @@
                 Stroke="{StaticResource BorderColor}"
                 HorizontalOptions="Fill"
                 VerticalOptions="End"
-                Margin="20,0,20,0" 
+                Margin="0,0,0,0" 
                 Grid.Row="1"> <!-- Positioned in the second row for main content -->
             <Border.StrokeShape>
-                <RoundRectangle CornerRadius="24"/>
+                <RoundRectangle CornerRadius="19"/>
             </Border.StrokeShape>
 
             <VerticalStackLayout Spacing="0">
