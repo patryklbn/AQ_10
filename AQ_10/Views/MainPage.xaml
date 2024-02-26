@@ -7,7 +7,7 @@
     <Grid VerticalOptions="FillAndExpand"
           HorizontalOptions="FillAndExpand">
         <!-- Background image -->
-        <Image Source="Resources/Images/background_startup.jpg"
+        <Image Source="background_startup.jpg"
                Aspect="AspectFill"
                HorizontalOptions="FillAndExpand"
                VerticalOptions="FillAndExpand" />
@@ -25,7 +25,7 @@
 
         <Border
             Padding="24,32"
-            BackgroundColor="{StaticResource FrameBackgroundColor}"
+            BackgroundColor="White"
             Stroke="{StaticResource BorderColor}"
             HorizontalOptions="Fill"
             VerticalOptions="End"
