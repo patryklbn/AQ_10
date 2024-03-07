@@ -10,4 +10,12 @@ public partial class EndPage : ContentPage
         this.BindingContext = new EndPageViewModel();
 
     }
+
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        (BindingContext as EndPageViewModel)?.RefreshScoreMessage();
+    }
+
+
 }
