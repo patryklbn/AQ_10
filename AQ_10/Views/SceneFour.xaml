@@ -64,17 +64,26 @@
 
     <!-- Radio Buttons in the middle columns -->
     <VerticalStackLayout Grid.Column="1" Spacing="5">
-        <RadioButton Content="Definitely Agree" GroupName="Question1"/>
-        <RadioButton Content="Slightly Agree" GroupName="Question1"/>
+        <RadioButton Content="Definitely Agree"
+                     GroupName="Question1"
+                     CheckedChanged="OnRadioButtonCheckedChanged"/>
+        <RadioButton Content="Slightly Agree"
+                     GroupName="Question1"
+                     CheckedChanged="OnRadioButtonCheckedChanged"/>
     </VerticalStackLayout>
 
     <VerticalStackLayout Grid.Column="2" Spacing="5">
-        <RadioButton Content="Not Sure" GroupName="Question1"/>
+                     <RadioButton Content="Definitely Disagree"
+                     GroupName="Question1"
+                     CheckedChanged="OnRadioButtonCheckedChanged"/>
+                     <RadioButton Content="Slightly Disagree"
+                     GroupName="Question1"
+                     CheckedChanged="OnRadioButtonCheckedChanged"/>
     </VerticalStackLayout>
-
     <VerticalStackLayout Grid.Column="3" Spacing="5">
-        <RadioButton Content="Slightly Disagree" GroupName="Question1"/>
-        <RadioButton Content="Definitely Disagree" GroupName="Question1"/>
+                     <RadioButton Content="Not Sure"
+                     GroupName="Question1"
+                     CheckedChanged="OnRadioButtonCheckedChanged"/>
     </VerticalStackLayout>
 
     <!-- "Next" Button in the last column -->
