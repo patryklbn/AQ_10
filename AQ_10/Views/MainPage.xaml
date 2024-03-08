@@ -26,14 +26,12 @@
         <Border
             Padding="24,32"
             BackgroundColor="White"
-            Stroke="{StaticResource BorderColor}"
             HorizontalOptions="Fill"
             VerticalOptions="End"
             Margin="20">
             <Border.StrokeShape>
                 <RoundRectangle CornerRadius="24"/>
             </Border.StrokeShape>
-
             <VerticalStackLayout
                 Spacing="16">
 
@@ -42,7 +40,6 @@
                     HorizontalTextAlignment="Center"
                     FontFamily="MontserratExtraBold"
                     FontSize="24"
-                    Style="{StaticResource IntroPageHeaderStyle}"
                     Text="Hello!"/>
 
 
@@ -50,12 +47,10 @@
                     HorizontalOptions="Center"
                     HorizontalTextAlignment="Center"
                     LineBreakMode="WordWrap"
-                    Style="{StaticResource IntroPageTextStyle}"
                     FontFamily="MontserratExtraBold"
                     Text="Welcome to the Autism Quotient Assessment Tool"/>
 
                 <Button
-                    Style="{StaticResource ButtonStyle}"
                     FontFamily="MontserratExtraBold"
                     Text="Start Assesment"
                     BackgroundColor="Green"
