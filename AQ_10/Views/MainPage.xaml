@@ -32,6 +32,7 @@
             <Border.StrokeShape>
                 <RoundRectangle CornerRadius="24"/>
             </Border.StrokeShape>
+
             <VerticalStackLayout
                 Spacing="16">
 
