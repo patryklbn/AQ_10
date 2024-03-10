@@ -56,6 +56,8 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <MauiAsset Remove="Resources\Raw\1st_background.wav" />
+	  <MauiAsset Remove="Resources\Raw\background.mp3" />
+	  <MauiAsset Remove="Resources\Raw\background.wav" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -68,6 +70,10 @@
 	  <None Remove="Views\" />
 	  <None Remove="ViewModel\" />
 	  <None Remove="Resources\Images\scene1.jpeg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Include="Resources\Raw\background.mp3" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Views\" />

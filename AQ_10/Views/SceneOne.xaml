@@ -30,7 +30,7 @@
                 Margin="10"
                 BackgroundColor="Black"
                 Command="{Binding ToggleAudioCommand}" 
-                />
+                Clicked="OnAudioButtonClicked" />
 
         <!-- Content Border -->
         <Border Padding="15"
