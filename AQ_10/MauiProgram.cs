@@ -21,6 +21,15 @@ public static class MauiProgram
 
         builder.Services.AddSingleton(AudioManager.Current);
         builder.Services.AddTransient<SceneOne>();
+        builder.Services.AddTransient<SceneTwo>();
+        builder.Services.AddTransient<SceneThree>();
+        builder.Services.AddTransient<SceneFour>();
+        builder.Services.AddTransient<SceneFive>();
+        builder.Services.AddTransient<SceneSix>();
+        builder.Services.AddTransient<SceneSeven>();
+        builder.Services.AddTransient<SceneEight>();
+        builder.Services.AddTransient<SceneNine>();
+        builder.Services.AddTransient<SceneTen>();
 
 #if DEBUG
         builder.Logging.AddDebug();

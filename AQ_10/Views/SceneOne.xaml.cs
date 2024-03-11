@@ -1,13 +1,18 @@
 ﻿using Plugin.Maui.Audio;
 using AQ_10.ViewModel;
 using System.Reflection;
+using Microsoft.Maui.Controls;
 
 namespace AQ_10;
 
 public partial class SceneOne : ContentPage
 {
     private readonly IAudioManager audioManager;
-    private IAudioPlayer player;
+    private IAudioPlayer backgroundAudio;
+    private IAudioPlayer radButton;
+    private IAudioPlayer prevButton;
+    private IAudioPlayer nextButton;
+    private IAudioPlayer narrator;
     public SceneOne(IAudioManager audioManager)
     {
         InitializeComponent();
@@ -19,20 +24,31 @@ public partial class SceneOne : ContentPage
 
     private async void InitializeAudio()
     {
-        player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("background.wav"));
-        player.Loop = true;
-        player.Play();
+        backgroundAudio = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("background.wav"));
+        radButton = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("radioButton.wav"));
+        prevButton = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("prevButton.wav"));
+        nextButton = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("nextButton.wav"));
+        narrator = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("Question1.wav"));
+
+        prevButton.Volume = 0.05;
+        nextButton.Volume = 0.05;
+        radButton.Volume = 0.05;
+
+        backgroundAudio.Loop = true;
+        backgroundAudio.Volume = 0.3;
+        backgroundAudio.Play();
+        narrator.Play();
     }
 
     private void OnAudioButtonClicked(object sender, EventArgs e)
     {
-        if (player.IsPlaying)
+        if (backgroundAudio.IsPlaying)
         {
-            player.Pause();
+            backgroundAudio.Pause();
         }
         else
         {
-            player.Play();
+            backgroundAudio.Play();
         }
     }
 
@@ -40,9 +56,10 @@ public partial class SceneOne : ContentPage
     {
         base.OnDisappearing();
 
-        if (player != null)
+        if (backgroundAudio != null)
         {
-            player.Stop();
+            backgroundAudio.Stop();
+            narrator.Stop();
         }
     }
 
@@ -50,19 +67,36 @@ public partial class SceneOne : ContentPage
     {
         base.OnAppearing();
 
-        if (!player.IsPlaying)
+        // Ensure the BindingContext is of type SceneOneViewModel
+        if (BindingContext is SceneOneViewModel viewModel)
         {
-            player.Play();
+
+            // Play audio if it's not already playing
+            if (viewModel.IsAudioOn == true)
+            {
+                backgroundAudio.Play();
+                narrator.Play();
+            }
+            else
+            {
+                backgroundAudio.Pause();
+            }
         }
     }
 
-    private void OnPrevNextButtonClicked(object sender, EventArgs e)
+    private void OnNextButtonClicked(object sender, EventArgs e)
     {
+        nextButton.Play();
+    }
 
+    private void OnPrevButtonClicked(object sender, EventArgs e)
+    {
+        prevButton.Play();
     }
 
     private void OnRadioButtonCheckedChanged(object sender, CheckedChangedEventArgs e)
     {
+        radButton.Play();
 
         if (sender is RadioButton radioButton && e.Value)
         {

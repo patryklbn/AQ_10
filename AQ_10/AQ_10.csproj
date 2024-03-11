@@ -61,11 +61,20 @@
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 		<PackageReference Include="Plugin.Maui.Audio" Version="2.1.0" />
-		<PackageReference Include="Xam.Plugin.SimpleAudioPlayer" Version="1.6.0" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <None Remove="Resources\Raw\background.wav" />
+	  <None Remove="Resources\Raw\Question1 - Copy.wav" />
+	  <None Remove="Resources\Raw\Question10 - Copy.wav" />
+	  <None Remove="Resources\Raw\Question2 - Copy.wav" />
+	  <None Remove="Resources\Raw\Question3 - Copy.wav" />
+	  <None Remove="Resources\Raw\Question4 - Copy.wav" />
+	  <None Remove="Resources\Raw\Question5 - Copy.wav" />
+	  <None Remove="Resources\Raw\Question6 - Copy.wav" />
+	  <None Remove="Resources\Raw\Question7 - Copy.wav" />
+	  <None Remove="Resources\Raw\Question8 - Copy.wav" />
+	  <None Remove="Resources\Raw\Question9 - Copy.wav" />
 	  <None Remove="Views\" />
 	  <None Remove="ViewModel\" />
 	  <None Remove="Resources\Images\scene1.jpeg" />

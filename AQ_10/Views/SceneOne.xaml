@@ -62,7 +62,7 @@
             HorizontalOptions="Fill"
             Padding="8,4"
             Command="{Binding NavigateToPreviousCommand}"
-            Clicked="OnPrevNextButtonClicked"/>
+            Clicked="OnPrevButtonClicked"/>
 
     <!-- Radio Buttons in the middle columns -->
     <VerticalStackLayout Grid.Column="1" Spacing="5">
@@ -97,7 +97,7 @@
             HorizontalOptions="Fill"
             Padding="20,4"
             Command="{Binding NavigateToNextCommand}"
-            Clicked="OnPrevNextButtonClicked"/>
+            Clicked="OnNextButtonClicked"/>
 </Grid>
 
             </VerticalStackLayout>
