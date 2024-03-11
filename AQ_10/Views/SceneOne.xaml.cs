@@ -1,60 +1,69 @@
-﻿using AQ_10.ViewModel;
-using Plugin.SimpleAudioPlayer;
+﻿using Plugin.Maui.Audio;
+using AQ_10.ViewModel;
 using System.Reflection;
 
 namespace AQ_10;
 
 public partial class SceneOne : ContentPage
 {
-    private ISimpleAudioPlayer _player;
-    private bool _isMuted = false;
-    public SceneOne()
+    private readonly IAudioManager audioManager;
+    private IAudioPlayer player;
+    public SceneOne(IAudioManager audioManager)
     {
         InitializeComponent();
         var viewModel = new SceneOneViewModel();
         this.BindingContext = viewModel;
+        this.audioManager = audioManager;
+        InitializeAudio();
+    }
 
-        _player = CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
-        PlayBackgroundMusic();
+    private async void InitializeAudio()
+    {
+        player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("background.wav"));
+        player.Loop = true;
+        player.Play();
+    }
+
+    private void OnAudioButtonClicked(object sender, EventArgs e)
+    {
+        if (player.IsPlaying)
+        {
+            player.Pause();
+        }
+        else
+        {
+            player.Play();
+        }
     }
 
     protected override void OnDisappearing()
     {
         base.OnDisappearing();
-        _player.Stop();
+
+        if (player != null)
+        {
+            player.Stop();
+        }
     }
 
     protected override void OnAppearing()
     {
         base.OnAppearing();
-        _player.Play();
-    }
 
-    private void PlayBackgroundMusic()
-    {
-        if (!_player.IsPlaying)
+        if (!player.IsPlaying)
         {
-            var assembly = typeof(SceneOne).GetTypeInfo().Assembly;
-            Stream audioStream = assembly.GetManifestResourceStream("AQ_10.Resources.Raw.background.mp3");
-            if (audioStream != null)
-            {
-                _player.Load(audioStream);
-                _player.Loop = true;
-                _player.Play();
-            }
+            player.Play();
         }
     }
 
-    private void OnAudioButtonClicked(object sender, EventArgs e)
+    private void OnPrevNextButtonClicked(object sender, EventArgs e)
     {
-        _isMuted = !_isMuted; // Toggle the mute state
-        _player.Volume = _isMuted ? 0 : 1; // Set the volume to 0 if muted, else to 1
 
     }
 
-
     private void OnRadioButtonCheckedChanged(object sender, CheckedChangedEventArgs e)
     {
+
         if (sender is RadioButton radioButton && e.Value)
         {
             var viewModel = this.BindingContext as SceneOneViewModel;

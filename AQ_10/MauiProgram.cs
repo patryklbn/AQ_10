@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using Plugin.Maui.Audio;
 
 namespace AQ_10;
 
@@ -18,8 +19,11 @@ public static class MauiProgram
 
             });
 
+        builder.Services.AddSingleton(AudioManager.Current);
+        builder.Services.AddTransient<SceneOne>();
+
 #if DEBUG
-		builder.Logging.AddDebug();
+        builder.Logging.AddDebug();
 #endif
 
 		return builder.Build();
