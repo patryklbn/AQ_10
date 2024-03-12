@@ -78,10 +78,16 @@
 	  <None Remove="Views\" />
 	  <None Remove="ViewModel\" />
 	  <None Remove="Resources\Images\scene1.jpeg" />
+	  <None Remove="Resources\Images\SceneOne.gif" />
+	  <None Remove="Resources\Images\icon-speakig.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Views\" />
 	  <Folder Include="ViewModel\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <BundleResource Include="Resources\Images\sceneone.gif" />
+	  <BundleResource Include="Resources\Images\icon_speaking.png" />
 	</ItemGroup>
 	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionAQ_10HideInfoBar="True" /></VisualStudio></ProjectExtensions>
 </Project>
