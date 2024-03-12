@@ -20,17 +20,28 @@
                VerticalOptions="FillAndExpand"
                Grid.RowSpan="2"/> <!-- Spanning both rows for full background coverage -->
 
-                <!-- Audio Button at the top right corner -->
-        <Button x:Name="AudioButton"
-                Text="{Binding AudioIcon}"
-                Grid.Row="0"
-                VerticalOptions="Start"
-                HorizontalOptions="End"
-                Margin="10"
-                BackgroundColor="Black"
-                Command="{Binding ToggleAudioCommand}"
-                Clicked="OnAudioButtonClicked"
-                />
+        <!-- Container for top right buttons with spacing -->
+        <VerticalStackLayout Grid.Row="0"
+                             VerticalOptions="Start"
+                             HorizontalOptions="End"
+                             Margin="10"
+                             Spacing="5">
+            <!-- Audio Button -->
+            <Button x:Name="AudioButton"
+                    Text="{Binding AudioIcon}"
+                    BackgroundColor="Black"
+                    Opacity="0.85"
+                    Command="{Binding ToggleAudioCommand}" 
+                    Clicked="OnAudioButtonClicked" />
+                    
+            <!-- Narrative Button -->
+            <Button x:Name="NarrativeButton"
+                    Text="🗣"
+                    BackgroundColor="Black"
+                    Opacity="0.85"
+                    Command="{Binding ToggleNarrativeCommand}"
+                    Clicked="OnNarrativeButtonClicked"/>
+        </VerticalStackLayout>
 
         <!-- Content Border -->
         <Border Padding="15"
