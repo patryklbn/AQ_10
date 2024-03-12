@@ -20,6 +20,8 @@ public partial class SceneNine : ContentPage
         this.BindingContext = viewModel;
         this.audioManager = audioManager;
         InitializeAudio();
+        NarrativeButton.Clicked += OnNarrativeButtonClicked;
+
     }
 
     private async void InitializeAudio()
@@ -37,7 +39,6 @@ public partial class SceneNine : ContentPage
         backgroundAudio.Loop = true;
         backgroundAudio.Volume = 0.3;
         backgroundAudio.Play();
-        narrator.Play();
     }
 
     private void OnAudioButtonClicked(object sender, EventArgs e)
@@ -75,12 +76,24 @@ public partial class SceneNine : ContentPage
             if (viewModel.IsAudioOn == true)
             {
                 backgroundAudio.Play();
-                narrator.Play();
             }
             else
             {
                 backgroundAudio.Pause();
             }
+        }
+    }
+    private void OnNarrativeButtonClicked(object sender, EventArgs e)
+    {
+        // Play or restart the narrator audio when the NarrativeButton is clicked
+        if (!narrator.IsPlaying)
+        {
+            narrator.Play();
+        }
+        else
+        {
+            narrator.Stop();
+            narrator.Play();
         }
     }
 
