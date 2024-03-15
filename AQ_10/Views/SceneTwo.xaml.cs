@@ -21,7 +21,6 @@ public partial class SceneTwo : ContentPage
         this.audioManager = audioManager;
         InitializeAudio();
         NarrativeButton.Clicked += OnNarrativeButtonClicked;
-
     }
 
     private async void InitializeAudio()
@@ -43,15 +42,25 @@ public partial class SceneTwo : ContentPage
 
     private void OnAudioButtonClicked(object sender, EventArgs e)
     {
-
         if (backgroundAudio.IsPlaying)
         {
             backgroundAudio.Pause();
         }
         else
         {
-            backgroundAudio.Pause();
+            backgroundAudio.Play();
+        }
+    }
 
+    private void DisposeAudioPlayer(IAudioPlayer player)
+    {
+        if (player != null)
+        {
+            if (player.IsPlaying)
+            {
+                player.Stop();
+            }
+            player.Dispose();
         }
     }
 
@@ -63,12 +72,17 @@ public partial class SceneTwo : ContentPage
         {
             backgroundAudio.Stop();
             narrator.Stop();
+            DisposeAudioPlayer(backgroundAudio);
+            DisposeAudioPlayer(narrator);
+            DisposeAudioPlayer(radButton);
         }
     }
 
     protected override void OnAppearing()
     {
         base.OnAppearing();
+
+        InitializeAudio();
 
         // Ensure the BindingContext is of type SceneOneViewModel
         if (BindingContext is SceneOneViewModel viewModel)

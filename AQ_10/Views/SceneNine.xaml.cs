@@ -53,6 +53,18 @@ public partial class SceneNine : ContentPage
         }
     }
 
+    private void DisposeAudioPlayer(IAudioPlayer player)
+    {
+        if (player != null)
+        {
+            if (player.IsPlaying)
+            {
+                player.Stop();
+            }
+            player.Dispose();
+        }
+    }
+
     protected override void OnDisappearing()
     {
         base.OnDisappearing();
@@ -61,12 +73,17 @@ public partial class SceneNine : ContentPage
         {
             backgroundAudio.Stop();
             narrator.Stop();
+            DisposeAudioPlayer(backgroundAudio);
+            DisposeAudioPlayer(narrator);
+            DisposeAudioPlayer(radButton);
         }
     }
 
     protected override void OnAppearing()
     {
         base.OnAppearing();
+
+        InitializeAudio();
 
         // Ensure the BindingContext is of type SceneOneViewModel
         if (BindingContext is SceneOneViewModel viewModel)

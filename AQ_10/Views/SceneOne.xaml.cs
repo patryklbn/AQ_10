@@ -52,6 +52,18 @@ public partial class SceneOne : ContentPage
         }
     }
 
+    private void DisposeAudioPlayer(IAudioPlayer player)
+    {
+        if (player != null)
+        {
+            if (player.IsPlaying)
+            {
+                player.Stop();
+            }
+            player.Dispose();
+        }
+    }
+
     protected override void OnDisappearing()
     {
         base.OnDisappearing();
@@ -60,12 +72,17 @@ public partial class SceneOne : ContentPage
         {
             backgroundAudio.Stop();
             narrator.Stop();
+            DisposeAudioPlayer(backgroundAudio);
+            DisposeAudioPlayer(narrator);
+            DisposeAudioPlayer(radButton);
         }
     }
 
     protected override void OnAppearing()
     {
         base.OnAppearing();
+
+        InitializeAudio();
 
         // Ensure the BindingContext is of type SceneOneViewModel
         if (BindingContext is SceneOneViewModel viewModel)
@@ -82,6 +99,7 @@ public partial class SceneOne : ContentPage
             }
         }
     }
+
     private void OnNarrativeButtonClicked(object sender, EventArgs e)
     {
         // Play or restart the narrator audio when the NarrativeButton is clicked
