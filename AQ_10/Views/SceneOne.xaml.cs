@@ -147,7 +147,7 @@ public partial class SceneOne : ContentPage
                     if (button == clickedButton)
                     {
                         // Set the border for the clicked button
-                        button.BorderWidth = 6;
+                        button.BorderWidth = 5;
                     }
                     else
                     {
