@@ -35,9 +35,10 @@ public partial class SceneTwo : ContentPage
         nextButton.Volume = 0.05;
         radButton.Volume = 0.05;
 
+
         backgroundAudio.Loop = true;
         backgroundAudio.Volume = 0.3;
-        backgroundAudio.Play();
+
     }
 
     private void OnAudioButtonClicked(object sender, EventArgs e)

@@ -38,7 +38,6 @@ public partial class SceneNine : ContentPage
 
         backgroundAudio.Loop = true;
         backgroundAudio.Volume = 0.3;
-        backgroundAudio.Play();
     }
 
     private void OnAudioButtonClicked(object sender, EventArgs e)
