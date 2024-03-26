@@ -80,6 +80,8 @@
 	  <None Remove="Resources\Images\scene1.jpeg" />
 	  <None Remove="Resources\Images\SceneOne.gif" />
 	  <None Remove="Resources\Images\icon-speakig.png" />
+	  <None Remove="Resources\Images\scene_four.png" />
+	  <None Remove="Resources\Images\scene_three.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Views\" />
@@ -87,7 +89,8 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <BundleResource Include="Resources\Images\sceneone.gif" />
-	  <BundleResource Include="Resources\Images\icon_speaking.png" />
+	  <BundleResource Include="Resources\Images\scene_four.png" />
+	  <BundleResource Include="Resources\Images\scene_three.png" />
 	</ItemGroup>
 	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionAQ_10HideInfoBar="True" /></VisualStudio></ProjectExtensions>
 </Project>
