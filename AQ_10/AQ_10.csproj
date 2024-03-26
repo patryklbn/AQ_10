@@ -37,6 +37,11 @@
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-ios|AnyCPU'">
 	  <CreatePackage>false</CreatePackage>
 	</PropertyGroup>
+	<PropertyGroup>
+  <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  <NoWarn>$(NoWarn);1591</NoWarn>
+</PropertyGroup>
+
 	<ItemGroup>
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
@@ -91,6 +96,11 @@
 	  <BundleResource Include="Resources\Images\sceneone.gif" />
 	  <BundleResource Include="Resources\Images\scene_four.png" />
 	  <BundleResource Include="Resources\Images\scene_three.png" />
+	</ItemGroup>
+	<ItemGroup>
+	  <None Update="Platforms\iOS\Info.plist">
+	    <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+	  </None>
 	</ItemGroup>
 	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionAQ_10HideInfoBar="True" /></VisualStudio></ProjectExtensions>
 </Project>
