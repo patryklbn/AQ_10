@@ -14,7 +14,7 @@
         </Grid.RowDefinitions>
 
         <!-- Background image stretched across the entire Grid -->
-        <Image Source="background_startup.png"
+        <Image Source="scene_three.png"
                Aspect="AspectFill"
                HorizontalOptions="FillAndExpand"
                VerticalOptions="FillAndExpand"
@@ -46,12 +46,14 @@
         <!-- Content Border -->
         <Border Padding="15"
                 BackgroundColor="White"
+                IsVisible="True"
+                Opacity="0.6"
                 HorizontalOptions="Fill"
                 VerticalOptions="End"
-                Margin="0,0,0,0" 
+                Margin="8,8,8,8"
                 Grid.Row="1"> <!-- Positioned in the second row for main content -->
             <Border.StrokeShape>
-                <RoundRectangle CornerRadius="24"/>
+                <RoundRectangle CornerRadius="19"/>
             </Border.StrokeShape>
 
             <VerticalStackLayout Spacing="0">

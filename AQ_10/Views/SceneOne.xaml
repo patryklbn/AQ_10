@@ -7,7 +7,7 @@
              Shell.NavBarIsVisible="False"
              Title="Scene One">
 
-    <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+    <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="0" Margin="0">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/> <!-- Space for the audio button -->
             <RowDefinition Height="*"/>   <!-- Space for the rest of the content -->
@@ -19,7 +19,7 @@
                Aspect="AspectFill"
                HorizontalOptions="FillAndExpand"
                VerticalOptions="FillAndExpand"
-               IsAnimationPlaying="false"
+               IsAnimationPlaying="True"
                Grid.RowSpan="2"/> <!-- Spanning both rows for full background coverage -->
 
         <!-- Container for top right buttons with spacing -->
