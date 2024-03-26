@@ -5,6 +5,10 @@ using Microsoft.Maui.Controls;
 
 namespace AQ_10;
 
+/// <summary>
+/// Represents the fourth scene of the application, handling initialization of the view model, audio playback,
+/// and user interactions for the fourth question.
+/// </summary>
 public partial class SceneFour : ContentPage
 {
     private readonly IAudioManager audioManager;
@@ -13,6 +17,11 @@ public partial class SceneFour : ContentPage
     private IAudioPlayer prevButton;
     private IAudioPlayer nextButton;
     private IAudioPlayer narrator;
+
+    /// <summary>
+    /// Initializes a new instance of the SceneTwo class, setting up audio management and bindings.
+    /// </summary>
+    /// <param name="audioManager">The audio manager to handle audio operations for the scene.</param>
     public SceneFour(IAudioManager audioManager)
     {
         InitializeComponent();
@@ -24,6 +33,9 @@ public partial class SceneFour : ContentPage
 
     }
 
+    /// <summary>
+    /// Initializes audio playback for the scene, including background music, UI sounds, and narrative audio.
+    /// </summary>
     private async void InitializeAudio()
     {
         backgroundAudio = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("background.wav"));
@@ -40,6 +52,9 @@ public partial class SceneFour : ContentPage
         backgroundAudio.Volume = 0.3;
     }
 
+    /// <summary>
+    /// Toggles the playback of background audio based on its current state.
+    /// </summary>
     private void OnAudioButtonClicked(object sender, EventArgs e)
     {
         if (backgroundAudio.IsPlaying)
@@ -52,6 +67,10 @@ public partial class SceneFour : ContentPage
         }
     }
 
+    /// <summary>
+    /// Cleans up resources used by an audio player instance.
+    /// </summary>
+    /// <param name="player">The audio player to be disposed of.</param>
     private void DisposeAudioPlayer(IAudioPlayer player)
     {
         if (player != null)
@@ -64,6 +83,9 @@ public partial class SceneFour : ContentPage
         }
     }
 
+    /// <summary>
+    /// Handles necessary audio management when the page becomes invisible.
+    /// </summary>
     protected override void OnDisappearing()
     {
         base.OnDisappearing();
@@ -78,6 +100,9 @@ public partial class SceneFour : ContentPage
         }
     }
 
+    /// <summary>
+    /// Ensures audio is correctly initialized or resumed when the page becomes visible.
+    /// </summary>
     protected override void OnAppearing()
     {
         base.OnAppearing();
@@ -99,9 +124,12 @@ public partial class SceneFour : ContentPage
             }
         }
     }
+
+    /// <summary>
+    /// Plays or restarts the narrative audio when the narrative button is clicked.
+    /// </summary>
     private void OnNarrativeButtonClicked(object sender, EventArgs e)
     {
-        // Play or restart the narrator audio when the NarrativeButton is clicked
         if (!narrator.IsPlaying)
         {
             narrator.Play();
@@ -113,16 +141,25 @@ public partial class SceneFour : ContentPage
         }
     }
 
+    /// <summary>
+    /// Plays feedback sound when the "next" button is clicked, indicating progression to the next scene.
+    /// </summary>
     private void OnNextButtonClicked(object sender, EventArgs e)
     {
         nextButton.Play();
     }
 
+    /// <summary>
+    /// Plays feedback sound when the "previous" button is clicked, indicating regression to the previous scene.
+    /// </summary>
     private void OnPrevButtonClicked(object sender, EventArgs e)
     {
         prevButton.Play();
     }
 
+    /// <summary>
+    /// Updates the selected answer in the view model based on user interaction with radio buttons.
+    /// </summary>
     private void OnRadioButtonCheckedChanged(object sender, CheckedChangedEventArgs e)
     {
         radButton.Play();
