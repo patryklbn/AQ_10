@@ -1,0 +1,67 @@
+﻿using System;
+using System.Windows.Input;
+using AQ_10.Services; // Ensure the AnswersService is accessible
+
+
+namespace AQ_10.ViewModel
+{
+    public class EndPageViewModel : BaseViewModel
+    {
+        private bool _isAudioOn = true;
+        private string _audioIcon = "🔊"; // Default icon for audio on
+        public string ScoreMessage
+        {
+            get
+            {
+                int score = AnswersService.Instance.CalculateScore();
+                if (score >= 6)
+                {
+                    return $"Your score is: {score}/10.\n\nYou may want to consider taking the longer 50 question test, or getting in touch with a specialist for a diagnostic assessment.";
+                }
+                else
+                {
+                    return $"Your score is: {score}/10.\n\nThe AQ-10 does not offer a lot of insight, but your score is not indicative of autism or a significant number of autistic traits. You could, however, try the 50-question version of the test.";
+                }
+            }
+        }
+
+
+        public bool IsAudioOn
+        { 
+            get => _isAudioOn;
+            set
+            {
+                if (SetProperty(ref _isAudioOn, value))
+                {
+                    // Update the icon based on the audio state
+                    AudioIcon = _isAudioOn ? "🔊" : "🔇";
+                }
+            }
+        }
+
+        public string AudioIcon
+        {
+            get => _audioIcon;
+            set => SetProperty(ref _audioIcon, value);
+        }
+
+
+        public ICommand ToggleAudioCommand { get; }
+        public ICommand NavigateToPreviousCommand { get; }
+        public ICommand NavigateToNextCommand { get; }
+
+        public EndPageViewModel()
+        {
+            ToggleAudioCommand = new Command(() => IsAudioOn = !IsAudioOn);
+            NavigateToPreviousCommand = new Command(async () => await Shell.Current.GoToAsync("//SceneTen"));
+            NavigateToNextCommand = new Command(async () => await Shell.Current.GoToAsync("//MainPage"));
+
+        }
+        public void RefreshScoreMessage()
+        {
+            OnPropertyChanged(nameof(ScoreMessage));
+        }
+    }
+
+}
+
