@@ -1,8 +1,9 @@
 ﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
              x:Class="AQ_10.MainPage"
-             Shell.NavBarIsVisible="False"
-             Title="Autism Quotient Tool">
+             ios:Page.UseSafeArea="False"
+             Shell.NavBarIsVisible="False">
 
     <Grid VerticalOptions="FillAndExpand"
           HorizontalOptions="FillAndExpand">
@@ -40,16 +41,23 @@
                     HorizontalOptions="Center"
                     HorizontalTextAlignment="Center"
                     FontFamily="MontserratExtraBold"
-                    FontSize="24"
-                    Text="Hello!"/>
+                    FontSize="20"
+                    Text="Welcome to the AQ-10 Tool"/>
 
 
-                <Label
-                    HorizontalOptions="Center"
-                    HorizontalTextAlignment="Center"
-                    LineBreakMode="WordWrap"
-                    FontFamily="MontserratExtraBold"
-                    Text="Welcome to the Autism Quotient Assessment Tool"/>
+                    <Label HorizontalOptions="Center"
+                           HorizontalTextAlignment="Center"
+                           FontFamily="MontserratExtraBold"
+                           FontSize="12"
+                           Text="Navigate through the questions using Next and Previous buttons. Select the answer that best reflects your experience. Tap the 🗣 icon to hear the question read aloud, and toggle the background audio as needed 🔊. Track your progress at the bottom." 
+                           Margin="0,1"/>
+
+                                    <Label HorizontalOptions="Center"
+                           HorizontalTextAlignment="Center"
+                           FontFamily="MontserratExtraBold"
+                           FontSize="12"
+                           Text="Remember, this is your journey. Take it at your own pace. Press Start to begin." 
+                           Margin="0,1"/>
 
                 <Button
                     FontFamily="MontserratExtraBold"
