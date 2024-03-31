@@ -9,16 +9,21 @@
 
     <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/> <!-- Space for the audio button -->
-            <RowDefinition Height="*"/>   <!-- Space for the rest of the content -->
+            <RowDefinition Height="Auto"/>
+            <!-- Space for the audio button -->
+            <RowDefinition Height="*"/>
+            <!-- Space for the rest of the content -->
         </Grid.RowDefinitions>
+
 
         <!-- Background image stretched across the entire Grid -->
         <Image Source="background_startup.png"
                Aspect="AspectFill"
                HorizontalOptions="FillAndExpand"
                VerticalOptions="FillAndExpand"
-               Grid.RowSpan="2"/> <!-- Spanning both rows for full background coverage -->
+               IsAnimationPlaying="false"
+               Grid.RowSpan="2"/>
+        <!-- Spanning both rows for full background coverage -->
 
         <!-- Container for top right buttons with spacing -->
         <VerticalStackLayout Grid.Row="0"
@@ -26,6 +31,7 @@
                              HorizontalOptions="End"
                              Margin="10"
                              Spacing="5">
+            <!-- Adjust Spacing here -->
             <!-- Audio Button -->
             <Button x:Name="AudioButton"
                     Text="{Binding AudioIcon}"
@@ -33,7 +39,7 @@
                     Opacity="0.85"
                     Command="{Binding ToggleAudioCommand}" 
                     Clicked="OnAudioButtonClicked" />
-                    
+
             <!-- Narrative Button -->
             <Button x:Name="NarrativeButton"
                     Text="🗣"
@@ -46,12 +52,14 @@
         <!-- Content Border -->
         <Border Padding="15"
                 BackgroundColor="White"
+                IsVisible="True"
+                Opacity="0.9"
                 HorizontalOptions="Fill"
                 VerticalOptions="End"
-                Margin="0,0,0,0" 
-                Grid.Row="1"> <!-- Positioned in the second row for main content -->
+                Margin="0,0,0,0"
+                Grid.Row="1">
             <Border.StrokeShape>
-                <RoundRectangle CornerRadius="24"/>
+                <RoundRectangle CornerRadius="19"/>
             </Border.StrokeShape>
 
             <VerticalStackLayout Spacing="0">
@@ -60,57 +68,114 @@
                        HorizontalOptions="Center"
                        HorizontalTextAlignment="Center"
                        FontFamily="MontserratExtraBold"
-                       FontSize="12"/>
+                       Margin="0,0,0,5"
+                       FontSize="14"/>
 
-<!-- Grid for Radio Buttons and Navigation Buttons -->
-<Grid ColumnDefinitions="Auto, Auto, Auto, Auto, Auto" ColumnSpacing="10" HorizontalOptions="Center" Margin="0,10,0,0">
-    <!-- "Previous" Button in the first column -->
-    <Button Text="Previous"
+                <Grid ColumnDefinitions="Auto, Auto, Auto, Auto, Auto" ColumnSpacing="10" HorizontalOptions="Center" Margin="0,0,0,0">
+                    <StackLayout x:Name="ButtonsContainer" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" Margin="5">
+                        <StackLayout Orientation="Horizontal">
+
+
+                            <Button Text="Previous"
             FontFamily="MontserratExtraBold"
-            BackgroundColor="Green"
+            BackgroundColor="#232B2B"
+            WidthRequest="80"
+            HeightRequest="80"
+            Opacity="1"
             Grid.Column="0"
-            Margin="15"
+            Margin="5"
             HorizontalOptions="Fill"
-            Padding="8,4"
+            Padding="0,0"
             Command="{Binding NavigateToPreviousCommand}"
+            BorderWidth="0"
             Clicked="OnPrevButtonClicked"/>
 
-    <!-- Radio Buttons in the middle columns -->
-    <VerticalStackLayout Grid.Column="1" Spacing="5">
-        <RadioButton Content="Definitely Agree"
-                     GroupName="Question1"
-                     CheckedChanged="OnRadioButtonCheckedChanged"/>
-        <RadioButton Content="Slightly Agree"
-                     GroupName="Question1"
-                     CheckedChanged="OnRadioButtonCheckedChanged"/>
-    </VerticalStackLayout>
 
-    <VerticalStackLayout Grid.Column="2" Spacing="5">
-                     <RadioButton Content="Definitely Disagree"
-                     GroupName="Question1"
-                     CheckedChanged="OnRadioButtonCheckedChanged"/>
-                     <RadioButton Content="Slightly Disagree"
-                     GroupName="Question1"
-                     CheckedChanged="OnRadioButtonCheckedChanged"/>
-    </VerticalStackLayout>
-    <VerticalStackLayout Grid.Column="3" Spacing="5">
-                     <RadioButton Content="Not Sure"
-                     GroupName="Question1"
-                     CheckedChanged="OnRadioButtonCheckedChanged"/>
-    </VerticalStackLayout>
-
-    <!-- "Next" Button in the last column -->
-    <Button Text="Next"
+                            <Button Text="Strongly Agree"
             FontFamily="MontserratExtraBold"
-            BackgroundColor="Green"
-            Margin="15"
-            Grid.Column="4"
+            BackgroundColor="green"  
+            TextColor="white"
+            Margin="5"
+            WidthRequest="80"
+            HeightRequest="60"
             HorizontalOptions="Fill"
-            Padding="20,4"
+            Opacity="1"
+            Padding="0,0"
+            FontSize="8.5"
+            Command="{Binding ResponseCommand}"
+            Clicked="OnResponseButtonClicked"                            
+            CommandParameter="Strongly Agree" />
+                            <Button Text="Agree"
+            FontFamily="MontserratExtraBold"
+            BackgroundColor="#8AC91D"
+            TextColor="white"
+            Margin="5"
+            WidthRequest="80"
+            HeightRequest="60"
+            HorizontalOptions="Fill"
+            Opacity="1"
+            Padding="0,0"
+            FontSize="12"
+            Command="{Binding ResponseCommand}"
+            Clicked="OnResponseButtonClicked"
+            CommandParameter="Agree" />
+                            <Button Text="Not Sure"
+            FontFamily="MontserratExtraBold"
+            BackgroundColor="#DFD220"
+            TextColor="white"
+            Margin="5"
+            WidthRequest="80"
+            HeightRequest="60"
+            HorizontalOptions="Fill"
+            Opacity="1"
+            Padding="0,0"
+            FontSize="12"
+            Command="{Binding ResponseCommand}"
+            Clicked="OnResponseButtonClicked"
+            CommandParameter="Not Sure" />
+                            <Button Text="Disagree"
+            FontFamily="MontserratExtraBold"
+            BackgroundColor="#DF7920"
+            TextColor="white"
+            Margin="5"
+            WidthRequest="80"
+            HeightRequest="60"
+            HorizontalOptions="Fill"
+            Opacity="1"
+            Padding="0,0"
+            FontSize="12"
+            Command="{Binding ResponseCommand}"
+            Clicked="OnResponseButtonClicked"
+            CommandParameter="Disagree" />
+                            <Button Text="Strongly Disagree"
+            FontFamily="MontserratExtraBold"
+            BackgroundColor="red"
+            TextColor="white"
+            Margin="5"
+            WidthRequest="80"
+            HeightRequest="60"
+            HorizontalOptions="Fill"
+            Opacity="1"
+            Padding="0,0"
+            FontSize="7"
+            Command="{Binding ResponseCommand}"
+            Clicked="OnResponseButtonClicked"
+            CommandParameter="Strongly Disagree" />
+
+                            <Button Text="Next"
+            FontFamily="MontserratExtraBold"
+            BackgroundColor="#232B2B"
+            WidthRequest="80"
+            HeightRequest="80"
+            Opacity="1"
+            Margin="5"
+            HorizontalOptions="Fill"
+            Padding="0,0"
             Command="{Binding NavigateToNextCommand}"
             Clicked="OnNextButtonClicked"/>
-</Grid>
-
+                        </StackLayout>
+                    </StackLayout>
+                </Grid>
             </VerticalStackLayout>
         </Border>
     </Grid>

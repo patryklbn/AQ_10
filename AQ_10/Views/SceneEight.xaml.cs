@@ -2,6 +2,8 @@
 using AQ_10.ViewModel;
 using System.Reflection;
 using Microsoft.Maui.Controls;
+using Microsoft.Maui.Graphics;
+using Microsoft.Maui;
 
 namespace AQ_10;
 
@@ -21,7 +23,6 @@ public partial class SceneEight : ContentPage
         this.audioManager = audioManager;
         InitializeAudio();
         NarrativeButton.Clicked += OnNarrativeButtonClicked;
-
     }
 
     private async void InitializeAudio()
@@ -30,7 +31,7 @@ public partial class SceneEight : ContentPage
         radButton = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("radioButton.wav"));
         prevButton = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("prevButton.wav"));
         nextButton = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("nextButton.wav"));
-        narrator = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("Question8.wav"));
+        narrator = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("Question1.wav"));
 
         prevButton.Volume = 0.05;
         nextButton.Volume = 0.05;
@@ -85,8 +86,8 @@ public partial class SceneEight : ContentPage
 
         InitializeAudio();
 
-        // Ensure the BindingContext is of type SceneOneViewModel
-        if (BindingContext is SceneOneViewModel viewModel)
+        // Ensure the BindingContext is of type SceneEightViewModel
+        if (BindingContext is SceneEightViewModel viewModel)
         {
 
             // Play audio if it's not already playing
@@ -100,6 +101,7 @@ public partial class SceneEight : ContentPage
             }
         }
     }
+
     private void OnNarrativeButtonClicked(object sender, EventArgs e)
     {
         // Play or restart the narrator audio when the NarrativeButton is clicked
@@ -124,39 +126,67 @@ public partial class SceneEight : ContentPage
         prevButton.Play();
     }
 
-    private void OnRadioButtonCheckedChanged(object sender, CheckedChangedEventArgs e)
+    private void OnResponseButtonClicked(object sender, EventArgs e)
     {
         radButton.Play();
 
-        if (sender is RadioButton radioButton && e.Value)
-        {
-            var viewModel = this.BindingContext as SceneEightViewModel;
-            if (viewModel == null) return;
+        Button clickedButton = (Button)sender;
 
-            switch (radioButton.Content.ToString())
+        // Access the container of your buttons. For example, if they are in a StackLayout named 'buttonsContainer'
+        var buttonsContainer = this.FindByName<StackLayout>("ButtonsContainer");
+
+        if (buttonsContainer != null && buttonsContainer.Children.FirstOrDefault() is StackLayout innerContainer)
+        {
+            // Iterate through each element in the container
+            foreach (var child in innerContainer.Children)
             {
-                case "Definitely Agree":
-                case "Slightly Agree":
-                    viewModel.SelectedAnswer = viewModel.QuestionNumber switch
+                // Check if the child is a Button
+                if (child is Button button)
+                {
+                    // Check if this is the clicked button
+                    if (button == clickedButton)
                     {
-                        1 or 7 or 8 or 10 => 1,
-                        _ => 0,
-                    };
-                    break;
-                case "Slightly Disagree":
-                case "Definitely Disagree":
-                    viewModel.SelectedAnswer = viewModel.QuestionNumber switch
+                        // Set the border for the clicked button
+                        button.BorderWidth = 5;
+                    }
+                    else
                     {
-                        2 or 3 or 4 or 5 or 6 or 9 => 1,
-                        _ => 0,
-                    };
-                    break;
-                case "Not Sure":
-                default:
-                    viewModel.SelectedAnswer = 0;
-                    break;
+                        // Reset the border for all other buttons
+                        button.BorderWidth = 0;
+                    }
+                }
             }
         }
+
+        string response = clickedButton.CommandParameter.ToString();
+
+        var viewModel = this.BindingContext as SceneEightViewModel;
+        if (viewModel == null) return;
+
+        switch (response)
+        {
+            case "Strongly Agree":
+            case "Agree":
+                viewModel.SelectedAnswer = viewModel.QuestionNumber switch
+                {
+                    1 or 7 or 8 or 10 => 1,
+                    _ => 0,
+                };
+                break;
+            case "Disagree":
+            case "Strongly Disagree":
+                viewModel.SelectedAnswer = viewModel.QuestionNumber switch
+                {
+                    2 or 3 or 4 or 5 or 6 or 9 => 1,
+                    _ => 0,
+                };
+                break;
+            case "Not Sure":
+            default:
+                viewModel.SelectedAnswer = 0;
+                break;
+        }
     }
+
 
 }
