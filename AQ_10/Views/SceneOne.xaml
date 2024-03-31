@@ -49,7 +49,7 @@
         <Border Padding="15"
                 BackgroundColor="White"
                 IsVisible="True"
-                Opacity="1"
+                Opacity="0.9"
                 HorizontalOptions="Fill"
                 VerticalOptions="End"
                 Margin="0,0,0,0"
@@ -74,7 +74,7 @@
     
     <Button Text="Previous"
             FontFamily="MontserratExtraBold"
-            BackgroundColor="Green"
+            BackgroundColor="#232B2B"
             WidthRequest="80"
             HeightRequest="80"
             Opacity="1"
@@ -160,7 +160,7 @@
     
     <Button Text="Next"
             FontFamily="MontserratExtraBold"
-            BackgroundColor="Green"
+            BackgroundColor="#232B2B"
             WidthRequest="80"
             HeightRequest="80"
             Opacity="1"
