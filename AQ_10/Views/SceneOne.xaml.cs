@@ -104,10 +104,12 @@ public partial class SceneOne : ContentPage
     /// <summary>
     /// Ensures that audio is properly initialized when the page appears.
     /// </summary>
-    protected override void OnAppearing()
+    protected override async void OnAppearing()
     {
         base.OnAppearing();
-
+        await Task.Delay(100);
+        backgroundSceneOne.IsAnimationPlaying = true;
+       
         InitializeAudio();
 
         

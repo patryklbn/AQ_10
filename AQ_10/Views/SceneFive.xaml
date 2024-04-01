@@ -98,6 +98,20 @@
                      <RadioButton Content="Not Sure"
                      GroupName="Question1"
                      CheckedChanged="OnRadioButtonCheckedChanged"/>
+                        <!-- Progress Indicator Text -->
+    <Label Text="Q: 5/10"
+           HorizontalOptions="Center"
+           VerticalOptions="Center"
+           FontFamily="MontserratExtraBold"
+           FontSize="12"/>
+    <!-- Static Progress Bar -->
+    <ProgressBar Progress="0.5"
+                 WidthRequest="80"
+                 HeightRequest="15"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center"
+                 BackgroundColor="Transparent"
+                 ProgressColor="Green"/>
     </VerticalStackLayout>
 
     <!-- "Next" Button in the last column -->

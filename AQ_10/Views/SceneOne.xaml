@@ -2,12 +2,15 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+             xmlns:shapes="clr-namespace:Microsoft.Maui.Controls.Shapes;assembly=Microsoft.Maui.Controls"
              x:Class="AQ_10.SceneOne"
-             ios:Page.UseSafeArea="False"
+             ios:Page.UseSafeArea="True"
+             BackgroundColor="Black"
              Shell.NavBarIsVisible="False"
              Title="Scene One">
 
-    <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="0" Margin="0">
+        <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+           Padding="{OnPlatform iOS='-10,0,-30,-25', Default='0'}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/> <!-- Space for the audio button -->
             <RowDefinition Height="*"/>   <!-- Space for the rest of the content -->
@@ -16,10 +19,11 @@
 
         <!-- Background image stretched across the entire Grid -->
         <Image Source="sceneone.gif"
+               x:Name="backgroundSceneOne"
                Aspect="AspectFill"
                HorizontalOptions="FillAndExpand"
                VerticalOptions="FillAndExpand"
-               IsAnimationPlaying="True"
+               IsAnimationPlaying="False"
                Grid.RowSpan="2"/> <!-- Spanning both rows for full background coverage -->
 
         <!-- Container for top right buttons with spacing -->
@@ -97,11 +101,26 @@
                      GroupName="Question1"
                      CheckedChanged="OnRadioButtonCheckedChanged"/>
     </VerticalStackLayout>
-    <VerticalStackLayout Grid.Column="3" Spacing="5">
-                     <RadioButton Content="Not Sure"
-                     GroupName="Question1"
-                     CheckedChanged="OnRadioButtonCheckedChanged"/>
-    </VerticalStackLayout>
+<VerticalStackLayout Grid.Column="3" Spacing="5">
+    <RadioButton Content="Not Sure"
+                 GroupName="Question1"
+                 CheckedChanged="OnRadioButtonCheckedChanged"/>
+    <!-- Progress Indicator Text -->
+    <Label Text="Q: 1/10"
+           HorizontalOptions="Center"
+           VerticalOptions="Center"
+           FontFamily="MontserratExtraBold"
+           FontSize="12"/>
+    <!-- Static Progress Bar -->
+    <ProgressBar Progress="0.1"
+                 WidthRequest="80"
+                 HeightRequest="15"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center"
+                 BackgroundColor="Transparent"
+                 ProgressColor="Green"/>
+</VerticalStackLayout>
+
     <!-- "Next" Button in the last column -->
     <Button Text="Next"
             FontFamily="MontserratExtraBold"
