@@ -164,39 +164,67 @@ public partial class SceneOne : ContentPage
     /// <summary>
     /// Handles changes in radio button selection, updating the selected answer in the view model.
     /// </summary>
-    private void OnRadioButtonCheckedChanged(object sender, CheckedChangedEventArgs e)
+    private void OnResponseButtonClicked(object sender, EventArgs e)
     {
         radButton.Play();
 
-        if (sender is RadioButton radioButton && e.Value)
-        {
-            var viewModel = this.BindingContext as SceneOneViewModel;
-            if (viewModel == null) return;
+        Button clickedButton = (Button)sender;
 
-            switch (radioButton.Content.ToString())
+        // Access the container of your buttons. For example, if they are in a StackLayout named 'buttonsContainer'
+        var buttonsContainer = this.FindByName<StackLayout>("ButtonsContainer");
+
+        if (buttonsContainer != null && buttonsContainer.Children.FirstOrDefault() is StackLayout innerContainer)
+        {
+            // Iterate through each element in the container
+            foreach (var child in innerContainer.Children)
             {
-                case "Definitely Agree":
-                case "Slightly Agree":
-                    viewModel.SelectedAnswer = viewModel.QuestionNumber switch
+                // Check if the child is a Button
+                if (child is Button button)
+                {
+                    // Check if this is the clicked button
+                    if (button == clickedButton)
                     {
-                        1 or 7 or 8 or 10 => 1,
-                        _ => 0,
-                    };
-                    break;
-                case "Slightly Disagree":
-                case "Definitely Disagree":
-                    viewModel.SelectedAnswer = viewModel.QuestionNumber switch
+                        // Set the border for the clicked button
+                        button.BorderWidth = 5;
+                    }
+                    else
                     {
-                        2 or 3 or 4 or 5 or 6 or 9 => 1,
-                        _ => 0,
-                    };
-                    break;
-                case "Not Sure":
-                default:
-                    viewModel.SelectedAnswer = 0;
-                    break;
+                        // Reset the border for all other buttons
+                        button.BorderWidth = 0;
+                    }
+                }
             }
         }
+
+        string response = clickedButton.CommandParameter.ToString();
+
+        var viewModel = this.BindingContext as SceneOneViewModel;
+        if (viewModel == null) return;
+
+        switch (response)
+        {
+            case "Strongly Agree":
+            case "Agree":
+                viewModel.SelectedAnswer = viewModel.QuestionNumber switch
+                {
+                    1 or 7 or 8 or 10 => 1,
+                    _ => 0,
+                };
+                break;
+            case "Disagree":
+            case "Strongly Disagree":
+                viewModel.SelectedAnswer = viewModel.QuestionNumber switch
+                {
+                    2 or 3 or 4 or 5 or 6 or 9 => 1,
+                    _ => 0,
+                };
+                break;
+            case "Not Sure":
+            default:
+                viewModel.SelectedAnswer = 0;
+                break;
+        }
     }
+
 
 }
