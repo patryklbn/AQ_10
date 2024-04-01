@@ -96,7 +96,7 @@ public partial class SceneOne : ContentPage
             backgroundAudio.Stop();
             narrator.Stop();
             DisposeAudioPlayer(backgroundAudio);
-            DisposeAudioPlayer(narrator);
+            DisposeAudioPlayer(narrator); 
             DisposeAudioPlayer(radButton);
         }
     }

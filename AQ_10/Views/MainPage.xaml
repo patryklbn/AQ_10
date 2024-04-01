@@ -43,6 +43,7 @@
                     HorizontalTextAlignment="Center"
                     FontFamily="MontserratExtraBold"
                     FontSize="20"
+                    TextColor="black"
                     Text="Welcome to the AQ-10 Tool"/>
 
 
@@ -50,19 +51,22 @@
                            HorizontalTextAlignment="Center"
                            FontFamily="MontserratExtraBold"
                            FontSize="12"
+                           TextColor="black"
                            Text="Navigate through the questions using Next and Previous buttons. Select the answer that best reflects your experience. Tap the 🗣 icon to hear the question read aloud, and toggle the background audio as needed 🔊. Track your progress at the bottom." 
                            Margin="0,1"/>
 
-                                    <Label HorizontalOptions="Center"
+                           <Label HorizontalOptions="Center"
                            HorizontalTextAlignment="Center"
                            FontFamily="MontserratExtraBold"
                            FontSize="12"
+                           TextColor="black"
                            Text="Remember, this is your journey. Take it at your own pace. Press Start to begin." 
                            Margin="0,1"/>
 
                 <Button
                     FontFamily="MontserratExtraBold"
                     Text="Start Assesment"
+                    TextColor="White"
                     BackgroundColor="Green"
                     HorizontalOptions="Center"
                     Margin="0,12,0,6"
