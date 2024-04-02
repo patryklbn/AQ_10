@@ -3,11 +3,11 @@ using System.Windows.Input;
 
 namespace AQ_10.ViewModel
 {
-	public class MainPageViewModel : BaseViewModel
+    /// <summary>
+    /// ViewModel for the main page, handling audio state and navigation to the first scene.
+    /// </summary>
+    public class MainPageViewModel : BaseViewModel
 	{
-        /// <summary>
-        /// ViewModel for the main page, handling audio state and navigation to the first scene.
-        /// </summary>
         private bool _isAudioOn = true;
         private string _audioIcon = "🔊"; // Default icon for audio on
 

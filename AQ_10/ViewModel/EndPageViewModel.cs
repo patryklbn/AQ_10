@@ -5,11 +5,12 @@ using AQ_10.Services;
 
 namespace AQ_10.ViewModel
 {
+    /// <summary>
+    /// ViewModel for the end page of the application, handling the display of the final score and navigation commands.
+    /// </summary>
     public class EndPageViewModel : BaseViewModel
     {
-        /// <summary>
-        /// ViewModel for the end page of the application, handling the display of the final score and navigation commands.
-        /// </summary>
+
         private bool _isAudioOn = true;
         private string _audioIcon = "🔊"; // Default icon for audio on
 
