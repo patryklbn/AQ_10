@@ -19,7 +19,7 @@ public partial class SceneFour : ContentPage
     private IAudioPlayer narrator;
 
     /// <summary>
-    /// Initializes a new instance of the SceneTwo class, setting up audio management and bindings.
+    /// Initializes a new instance of the SceneFour class, setting up audio management and bindings.
     /// </summary>
     /// <param name="audioManager">The audio manager to handle audio operations for the scene.</param>
     public SceneFour(IAudioManager audioManager)
@@ -109,7 +109,6 @@ public partial class SceneFour : ContentPage
 
         InitializeAudio();
 
-        // Ensure the BindingContext is of type SceneOneViewModel
         if (BindingContext is SceneOneViewModel viewModel)
         {
 
