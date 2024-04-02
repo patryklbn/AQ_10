@@ -61,7 +61,14 @@ namespace AQ_10.Services
             Debug.WriteLine($"Final calculated score: {score}");
             return score;
         }
-    }
 
+        /// <summary>
+        /// Method for tests purpose
+        /// </summary>
+        public void ResetForTests()
+        {
+            answers.Clear();
+        }
+    }
 }
 
