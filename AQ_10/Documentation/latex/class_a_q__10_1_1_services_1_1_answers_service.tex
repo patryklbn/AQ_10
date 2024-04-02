@@ -1,0 +1,98 @@
+\hypertarget{class_a_q__10_1_1_services_1_1_answers_service}{}\doxysection{AQ\+\_\+10.\+Services.\+Answers\+Service Class Reference}
+\label{class_a_q__10_1_1_services_1_1_answers_service}\index{AQ\_10.Services.AnswersService@{AQ\_10.Services.AnswersService}}
+
+
+A singleton service responsible for managing and calculating scores based on user answers.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_a_q__10_1_1_services_1_1_answers_service_abee8276c07b754802bc6b08f6c3ed4fa}{Set\+Answer}} (int question\+Number, int answer\+Value)
+\begin{DoxyCompactList}\small\item\em Sets or updates the answer value for a specific question number. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_a_q__10_1_1_services_1_1_answers_service_a5fd37c5c8dec7c10b11f305bb9cc2c2d}{Get\+Answer}} (int question\+Number)
+\begin{DoxyCompactList}\small\item\em Retrieves the answer value for a specific question number. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_a_q__10_1_1_services_1_1_answers_service_a94553f1e8673084044f6c41b4147c148}{Calculate\+Score}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the total score based on all set answers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_q__10_1_1_services_1_1_answers_service_aba008fd3cb9b95859de20d8480a31836}\label{class_a_q__10_1_1_services_1_1_answers_service_aba008fd3cb9b95859de20d8480a31836}} 
+void {\bfseries Reset\+For\+Tests} ()
+\begin{DoxyCompactList}\small\item\em Method for tests purpose \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_q__10_1_1_services_1_1_answers_service_a09a41facafc6aeefe7cf764bfd8ea208}\label{class_a_q__10_1_1_services_1_1_answers_service_a09a41facafc6aeefe7cf764bfd8ea208}} 
+static \mbox{\hyperlink{class_a_q__10_1_1_services_1_1_answers_service}{Answers\+Service}} {\bfseries Instance}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the singleton instance of the \mbox{\hyperlink{class_a_q__10_1_1_services_1_1_answers_service}{Answers\+Service}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_q__10_1_1_services_1_1_answers_service_a6a41e85cc739fa18b08dbda12257d7fd}\label{class_a_q__10_1_1_services_1_1_answers_service_a6a41e85cc739fa18b08dbda12257d7fd}} 
+Dictionary$<$ int, int $>$ {\bfseries answers} = new Dictionary$<$int, int$>$()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_q__10_1_1_services_1_1_answers_service_a0207c1ce6f49297e0ce2841661c083e2}\label{class_a_q__10_1_1_services_1_1_answers_service_a0207c1ce6f49297e0ce2841661c083e2}} 
+static readonly \mbox{\hyperlink{class_a_q__10_1_1_services_1_1_answers_service}{Answers\+Service}} {\bfseries \+\_\+instance} = new \mbox{\hyperlink{class_a_q__10_1_1_services_1_1_answers_service}{Answers\+Service}}()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A singleton service responsible for managing and calculating scores based on user answers. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_a_q__10_1_1_services_1_1_answers_service_a94553f1e8673084044f6c41b4147c148}\label{class_a_q__10_1_1_services_1_1_answers_service_a94553f1e8673084044f6c41b4147c148}} 
+\index{AQ\_10.Services.AnswersService@{AQ\_10.Services.AnswersService}!CalculateScore@{CalculateScore}}
+\index{CalculateScore@{CalculateScore}!AQ\_10.Services.AnswersService@{AQ\_10.Services.AnswersService}}
+\doxysubsubsection{\texorpdfstring{CalculateScore()}{CalculateScore()}}
+{\footnotesize\ttfamily int AQ\+\_\+10.\+Services.\+Answers\+Service.\+Calculate\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calculates the total score based on all set answers. 
+
+The score calculation assumes that each answer contributes directly to the total score. 
+
+\begin{DoxyReturn}{Returns}
+The total score calculated from all answers.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_a_q__10_1_1_services_1_1_answers_service_a5fd37c5c8dec7c10b11f305bb9cc2c2d}\label{class_a_q__10_1_1_services_1_1_answers_service_a5fd37c5c8dec7c10b11f305bb9cc2c2d}} 
+\index{AQ\_10.Services.AnswersService@{AQ\_10.Services.AnswersService}!GetAnswer@{GetAnswer}}
+\index{GetAnswer@{GetAnswer}!AQ\_10.Services.AnswersService@{AQ\_10.Services.AnswersService}}
+\doxysubsubsection{\texorpdfstring{GetAnswer()}{GetAnswer()}}
+{\footnotesize\ttfamily int AQ\+\_\+10.\+Services.\+Answers\+Service.\+Get\+Answer (\begin{DoxyParamCaption}\item[{int}]{question\+Number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves the answer value for a specific question number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em question\+Number} & The question number.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The answer value if found; otherwise, 0.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_a_q__10_1_1_services_1_1_answers_service_abee8276c07b754802bc6b08f6c3ed4fa}\label{class_a_q__10_1_1_services_1_1_answers_service_abee8276c07b754802bc6b08f6c3ed4fa}} 
+\index{AQ\_10.Services.AnswersService@{AQ\_10.Services.AnswersService}!SetAnswer@{SetAnswer}}
+\index{SetAnswer@{SetAnswer}!AQ\_10.Services.AnswersService@{AQ\_10.Services.AnswersService}}
+\doxysubsubsection{\texorpdfstring{SetAnswer()}{SetAnswer()}}
+{\footnotesize\ttfamily void AQ\+\_\+10.\+Services.\+Answers\+Service.\+Set\+Answer (\begin{DoxyParamCaption}\item[{int}]{question\+Number,  }\item[{int}]{answer\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets or updates the answer value for a specific question number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em question\+Number} & The question number.\\
+\hline
+{\em answer\+Value} & The answer value to set.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Services/Answers\+Service.\+cs\end{DoxyCompactItemize}

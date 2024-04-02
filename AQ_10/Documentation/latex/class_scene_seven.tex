@@ -1,0 +1,115 @@
+\hypertarget{class_scene_seven}{}\doxysection{Scene\+Seven Class Reference}
+\label{class_scene_seven}\index{SceneSeven@{SceneSeven}}
+
+
+Represents the seventh scene of the application, handling initialization of the view model, audio playback, and user interactions for the seventh question.  
+
+
+Inheritance diagram for Scene\+Seven\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_scene_seven}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scene_seven_ac663893ef714eb8c1ff5484df3ce2cb0}{Scene\+Seven}} (IAudio\+Manager audio\+Manager)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \mbox{\hyperlink{class_scene_one}{Scene\+One}} class, setting up audio management and bindings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_scene_seven_a6536028ad87e0950cda9d647b522c4f4}\label{class_scene_seven_a6536028ad87e0950cda9d647b522c4f4}} 
+override void {\bfseries On\+Disappearing} ()
+\begin{DoxyCompactList}\small\item\em Cleans up audio resources when the page is no longer visible. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_seven_aea1ad87b6dc8e6f2440f0c10aee5f86e}\label{class_scene_seven_aea1ad87b6dc8e6f2440f0c10aee5f86e}} 
+override void {\bfseries On\+Appearing} ()
+\begin{DoxyCompactList}\small\item\em Ensures that audio is properly initialized when the page appears. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_scene_seven_abc52a76f1a29876f012199e157a5ebed}\label{class_scene_seven_abc52a76f1a29876f012199e157a5ebed}} 
+async void {\bfseries Initialize\+Audio} ()
+\begin{DoxyCompactList}\small\item\em Initializes audio playback for background music, narrative, and UI sounds. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_seven_a3e6d77fa55019aaa79b56adefc827295}\label{class_scene_seven_a3e6d77fa55019aaa79b56adefc827295}} 
+void {\bfseries On\+Audio\+Button\+Clicked} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Toggles playback of the background audio based on its current state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_seven_ac3b7b8d04f235e8e3e0f1169af3d46b3}{Dispose\+Audio\+Player}} (IAudio\+Player player)
+\begin{DoxyCompactList}\small\item\em Stops and disposes of an audio player when it is no longer needed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_seven_a46a1675f1ea929b0af4e38d07a9aeae1}\label{class_scene_seven_a46a1675f1ea929b0af4e38d07a9aeae1}} 
+void {\bfseries On\+Narrative\+Button\+Clicked} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Handles the event when the narrative button is clicked, playing or replaying the narrative audio. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_seven_a6302ceca63af05070fa2f719ad262ef9}\label{class_scene_seven_a6302ceca63af05070fa2f719ad262ef9}} 
+void {\bfseries On\+Next\+Button\+Clicked} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Plays feedback sound when the \char`\"{}next\char`\"{} button is clicked. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_seven_ae41ae86c865886d8bdc927b00da0b169}\label{class_scene_seven_ae41ae86c865886d8bdc927b00da0b169}} 
+void {\bfseries On\+Prev\+Button\+Clicked} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Plays feedback sound when the \char`\"{}previous\char`\"{} button is clicked. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_seven_ab60f38e0cc13786dc5a4c4b9ba6bc0db}\label{class_scene_seven_ab60f38e0cc13786dc5a4c4b9ba6bc0db}} 
+void {\bfseries On\+Radio\+Button\+Checked\+Changed} (object sender, Checked\+Changed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Handles changes in radio button selection, updating the selected answer in the view model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_scene_seven_a62313a5b983468f9a92156bd4a36d2ec}\label{class_scene_seven_a62313a5b983468f9a92156bd4a36d2ec}} 
+readonly IAudio\+Manager {\bfseries audio\+Manager}
+\item 
+\mbox{\Hypertarget{class_scene_seven_a73dd43882a662ffdf814606cf68d2511}\label{class_scene_seven_a73dd43882a662ffdf814606cf68d2511}} 
+IAudio\+Player {\bfseries background\+Audio}
+\item 
+\mbox{\Hypertarget{class_scene_seven_a420bb6f70e10bc5a427c62bba8a38794}\label{class_scene_seven_a420bb6f70e10bc5a427c62bba8a38794}} 
+IAudio\+Player {\bfseries rad\+Button}
+\item 
+\mbox{\Hypertarget{class_scene_seven_ab6be7e4d171c195b58759b28e5e8c787}\label{class_scene_seven_ab6be7e4d171c195b58759b28e5e8c787}} 
+IAudio\+Player {\bfseries prev\+Button}
+\item 
+\mbox{\Hypertarget{class_scene_seven_abd5a460beb17eb669e3c9e90d8f646d1}\label{class_scene_seven_abd5a460beb17eb669e3c9e90d8f646d1}} 
+IAudio\+Player {\bfseries next\+Button}
+\item 
+\mbox{\Hypertarget{class_scene_seven_a17195f4f8460c685c4272fa4b116f42a}\label{class_scene_seven_a17195f4f8460c685c4272fa4b116f42a}} 
+IAudio\+Player {\bfseries narrator}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the seventh scene of the application, handling initialization of the view model, audio playback, and user interactions for the seventh question. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_scene_seven_ac663893ef714eb8c1ff5484df3ce2cb0}\label{class_scene_seven_ac663893ef714eb8c1ff5484df3ce2cb0}} 
+\index{SceneSeven@{SceneSeven}!SceneSeven@{SceneSeven}}
+\index{SceneSeven@{SceneSeven}!SceneSeven@{SceneSeven}}
+\doxysubsubsection{\texorpdfstring{SceneSeven()}{SceneSeven()}}
+{\footnotesize\ttfamily Scene\+Seven.\+Scene\+Seven (\begin{DoxyParamCaption}\item[{IAudio\+Manager}]{audio\+Manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the \mbox{\hyperlink{class_scene_one}{Scene\+One}} class, setting up audio management and bindings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em audio\+Manager} & The audio manager to handle audio operations.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_scene_seven_ac3b7b8d04f235e8e3e0f1169af3d46b3}\label{class_scene_seven_ac3b7b8d04f235e8e3e0f1169af3d46b3}} 
+\index{SceneSeven@{SceneSeven}!DisposeAudioPlayer@{DisposeAudioPlayer}}
+\index{DisposeAudioPlayer@{DisposeAudioPlayer}!SceneSeven@{SceneSeven}}
+\doxysubsubsection{\texorpdfstring{DisposeAudioPlayer()}{DisposeAudioPlayer()}}
+{\footnotesize\ttfamily void Scene\+Seven.\+Dispose\+Audio\+Player (\begin{DoxyParamCaption}\item[{IAudio\+Player}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Stops and disposes of an audio player when it is no longer needed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & The audio player to dispose.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Views/Scene\+Seven.\+xaml.\+cs\end{DoxyCompactItemize}

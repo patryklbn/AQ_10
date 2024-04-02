@@ -1,0 +1,73 @@
+\hypertarget{class_a_q__10_1_1_view_model_1_1_base_view_model}{}\doxysection{AQ\+\_\+10.\+View\+Model.\+Base\+View\+Model Class Reference}
+\label{class_a_q__10_1_1_view_model_1_1_base_view_model}\index{AQ\_10.ViewModel.BaseViewModel@{AQ\_10.ViewModel.BaseViewModel}}
+Inheritance diagram for AQ\+\_\+10.\+View\+Model.\+Base\+View\+Model\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_a_q__10_1_1_view_model_1_1_base_view_model}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_a_q__10_1_1_view_model_1_1_base_view_model_ad75a6b2a2f07d7139d4d41f47e6a6566}{On\+Property\+Changed}} (\mbox{[}Caller\+Member\+Name\mbox{]} string property\+Name=null)
+\begin{DoxyCompactList}\small\item\em Notify listeners that a property value has changed. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_a_q__10_1_1_view_model_1_1_base_view_model_a554252d544aaf1b15a7209da0baa160c}{Set\+Property$<$ T $>$}} (ref T backing\+Store, T value, \mbox{[}Caller\+Member\+Name\mbox{]} string property\+Name=\char`\"{}\char`\"{}, Action on\+Changed=null)
+\begin{DoxyCompactList}\small\item\em Checks if a property already matches a desired value. Sets the property and notifies listeners only when necessary. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_q__10_1_1_view_model_1_1_base_view_model_ac71e06cfb53301e5fc651d51c833bfd5}\label{class_a_q__10_1_1_view_model_1_1_base_view_model_ac71e06cfb53301e5fc651d51c833bfd5}} 
+Property\+Changed\+Event\+Handler {\bfseries Property\+Changed}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_a_q__10_1_1_view_model_1_1_base_view_model_ad75a6b2a2f07d7139d4d41f47e6a6566}\label{class_a_q__10_1_1_view_model_1_1_base_view_model_ad75a6b2a2f07d7139d4d41f47e6a6566}} 
+\index{AQ\_10.ViewModel.BaseViewModel@{AQ\_10.ViewModel.BaseViewModel}!OnPropertyChanged@{OnPropertyChanged}}
+\index{OnPropertyChanged@{OnPropertyChanged}!AQ\_10.ViewModel.BaseViewModel@{AQ\_10.ViewModel.BaseViewModel}}
+\doxysubsubsection{\texorpdfstring{OnPropertyChanged()}{OnPropertyChanged()}}
+{\footnotesize\ttfamily void AQ\+\_\+10.\+View\+Model.\+Base\+View\+Model.\+On\+Property\+Changed (\begin{DoxyParamCaption}\item[{\mbox{[}\+Caller\+Member\+Name\mbox{]} string}]{property\+Name = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Notify listeners that a property value has changed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em property\+Name} & Name of the property used to notify listeners.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_a_q__10_1_1_view_model_1_1_base_view_model_a554252d544aaf1b15a7209da0baa160c}\label{class_a_q__10_1_1_view_model_1_1_base_view_model_a554252d544aaf1b15a7209da0baa160c}} 
+\index{AQ\_10.ViewModel.BaseViewModel@{AQ\_10.ViewModel.BaseViewModel}!SetProperty$<$ T $>$@{SetProperty$<$ T $>$}}
+\index{SetProperty$<$ T $>$@{SetProperty$<$ T $>$}!AQ\_10.ViewModel.BaseViewModel@{AQ\_10.ViewModel.BaseViewModel}}
+\doxysubsubsection{\texorpdfstring{SetProperty$<$ T $>$()}{SetProperty< T >()}}
+{\footnotesize\ttfamily bool AQ\+\_\+10.\+View\+Model.\+Base\+View\+Model.\+Set\+Property$<$ T $>$ (\begin{DoxyParamCaption}\item[{ref T}]{backing\+Store,  }\item[{T}]{value,  }\item[{\mbox{[}\+Caller\+Member\+Name\mbox{]} string}]{property\+Name = {\ttfamily \char`\"{}\char`\"{}},  }\item[{Action}]{on\+Changed = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Checks if a property already matches a desired value. Sets the property and notifies listeners only when necessary. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of the property.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em backing\+Store} & Reference to the property with both getter and setter.\\
+\hline
+{\em value} & Desired value for the property.\\
+\hline
+{\em property\+Name} & Name of the property used to notify listeners. This optional parameter may be replaced by the caller info attribute.\\
+\hline
+{\em on\+Changed} & Action that is called after the property value has been changed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the value was changed, false if the existing value matched the desired value.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+View\+Model/Base\+View\+Model.\+cs\end{DoxyCompactItemize}
