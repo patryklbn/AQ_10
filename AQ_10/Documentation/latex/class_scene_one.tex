@@ -1,0 +1,115 @@
+\hypertarget{class_scene_one}{}\doxysection{Scene\+One Class Reference}
+\label{class_scene_one}\index{SceneOne@{SceneOne}}
+
+
+Represents the first scene of the questionnaire, handling initialization of the view model, audio playback, and user interactions for the first question.  
+
+
+Inheritance diagram for Scene\+One\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_scene_one}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scene_one_aa0ea9acd9793da2031a9feff82e0cdec}{Scene\+One}} (IAudio\+Manager audio\+Manager)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \mbox{\hyperlink{class_scene_one}{Scene\+One}} class, setting up audio management and bindings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_scene_one_abdb30947cf82f37bd96c91e715648a43}\label{class_scene_one_abdb30947cf82f37bd96c91e715648a43}} 
+override void {\bfseries On\+Disappearing} ()
+\begin{DoxyCompactList}\small\item\em Cleans up audio resources when the page is no longer visible. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_one_aec251ff7db0ec023f99d3d1fff278050}\label{class_scene_one_aec251ff7db0ec023f99d3d1fff278050}} 
+override async void {\bfseries On\+Appearing} ()
+\begin{DoxyCompactList}\small\item\em Ensures that audio is properly initialized when the page appears. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_scene_one_a9305feda2d537789cad585b5e5cbb765}\label{class_scene_one_a9305feda2d537789cad585b5e5cbb765}} 
+async void {\bfseries Initialize\+Audio} ()
+\begin{DoxyCompactList}\small\item\em Initializes audio playback for background music, narrative, and UI sounds. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_one_a81898ab189f524cca82382ec5a4645e1}\label{class_scene_one_a81898ab189f524cca82382ec5a4645e1}} 
+void {\bfseries On\+Audio\+Button\+Clicked} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Toggles playback of the background audio based on its current state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_one_a573085e3514fa372407d4a0e21ccaf7b}{Dispose\+Audio\+Player}} (IAudio\+Player player)
+\begin{DoxyCompactList}\small\item\em Stops and disposes of an audio player when it is no longer needed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_one_a26e2b128640d2b60cf669de1adfa7081}\label{class_scene_one_a26e2b128640d2b60cf669de1adfa7081}} 
+void {\bfseries On\+Narrative\+Button\+Clicked} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Handles the event when the narrative button is clicked, playing or replaying the narrative audio. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_one_a4d4f0b23038429c4d572e4134cdd07c3}\label{class_scene_one_a4d4f0b23038429c4d572e4134cdd07c3}} 
+void {\bfseries On\+Next\+Button\+Clicked} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Plays feedback sound when the \char`\"{}next\char`\"{} button is clicked. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_one_a48be21cfee9f66d58dbe0d6d009cf3cd}\label{class_scene_one_a48be21cfee9f66d58dbe0d6d009cf3cd}} 
+void {\bfseries On\+Prev\+Button\+Clicked} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Plays feedback sound when the \char`\"{}previous\char`\"{} button is clicked. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_one_aee625c4a373b452751cf9f2b82a74a96}\label{class_scene_one_aee625c4a373b452751cf9f2b82a74a96}} 
+void {\bfseries On\+Radio\+Button\+Checked\+Changed} (object sender, Checked\+Changed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Handles changes in radio button selection, updating the selected answer in the view model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_scene_one_a6d6740d7f28359764a9ca4c984f98f05}\label{class_scene_one_a6d6740d7f28359764a9ca4c984f98f05}} 
+readonly IAudio\+Manager {\bfseries audio\+Manager}
+\item 
+\mbox{\Hypertarget{class_scene_one_ae6e52cfa56f6d02c7b1b18ccace71569}\label{class_scene_one_ae6e52cfa56f6d02c7b1b18ccace71569}} 
+IAudio\+Player {\bfseries background\+Audio}
+\item 
+\mbox{\Hypertarget{class_scene_one_af9e5fc0efff26409c766ea01c276aaf2}\label{class_scene_one_af9e5fc0efff26409c766ea01c276aaf2}} 
+IAudio\+Player {\bfseries rad\+Button}
+\item 
+\mbox{\Hypertarget{class_scene_one_a1750d4ba5115cf0fe6be7415a17aefa4}\label{class_scene_one_a1750d4ba5115cf0fe6be7415a17aefa4}} 
+IAudio\+Player {\bfseries prev\+Button}
+\item 
+\mbox{\Hypertarget{class_scene_one_ab93e3df0e712ebcd05a791aa2aece7e5}\label{class_scene_one_ab93e3df0e712ebcd05a791aa2aece7e5}} 
+IAudio\+Player {\bfseries next\+Button}
+\item 
+\mbox{\Hypertarget{class_scene_one_a896a72e9027b769ae5bf1b8a11bbe3dc}\label{class_scene_one_a896a72e9027b769ae5bf1b8a11bbe3dc}} 
+IAudio\+Player {\bfseries narrator}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the first scene of the questionnaire, handling initialization of the view model, audio playback, and user interactions for the first question. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_scene_one_aa0ea9acd9793da2031a9feff82e0cdec}\label{class_scene_one_aa0ea9acd9793da2031a9feff82e0cdec}} 
+\index{SceneOne@{SceneOne}!SceneOne@{SceneOne}}
+\index{SceneOne@{SceneOne}!SceneOne@{SceneOne}}
+\doxysubsubsection{\texorpdfstring{SceneOne()}{SceneOne()}}
+{\footnotesize\ttfamily Scene\+One.\+Scene\+One (\begin{DoxyParamCaption}\item[{IAudio\+Manager}]{audio\+Manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the \mbox{\hyperlink{class_scene_one}{Scene\+One}} class, setting up audio management and bindings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em audio\+Manager} & The audio manager to handle audio operations.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_scene_one_a573085e3514fa372407d4a0e21ccaf7b}\label{class_scene_one_a573085e3514fa372407d4a0e21ccaf7b}} 
+\index{SceneOne@{SceneOne}!DisposeAudioPlayer@{DisposeAudioPlayer}}
+\index{DisposeAudioPlayer@{DisposeAudioPlayer}!SceneOne@{SceneOne}}
+\doxysubsubsection{\texorpdfstring{DisposeAudioPlayer()}{DisposeAudioPlayer()}}
+{\footnotesize\ttfamily void Scene\+One.\+Dispose\+Audio\+Player (\begin{DoxyParamCaption}\item[{IAudio\+Player}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Stops and disposes of an audio player when it is no longer needed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & The audio player to dispose.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Views/Scene\+One.\+xaml.\+cs\end{DoxyCompactItemize}

@@ -19,7 +19,7 @@ public partial class SceneFive : ContentPage
     private IAudioPlayer narrator;
 
     /// <summary>
-    /// Initializes a new instance of the SceneOne class, setting up audio management and bindings.
+    /// Initializes a new instance of the SceneFive class, setting up audio management and bindings.
     /// </summary>
     /// <param name="audioManager">The audio manager to handle audio operations.</param>
     public SceneFive(IAudioManager audioManager)

@@ -5,6 +5,10 @@ using Microsoft.Maui.Controls;
 
 namespace AQ_10;
 
+/// <summary>
+/// Represents the tenth scene of the application, handling initialization of the view model, audio playback,
+/// and user interactions for the tenth question.
+/// </summary>
 public partial class SceneTen : ContentPage
 {
     private readonly IAudioManager audioManager;
@@ -13,6 +17,11 @@ public partial class SceneTen : ContentPage
     private IAudioPlayer prevButton;
     private IAudioPlayer nextButton;
     private IAudioPlayer narrator;
+
+    /// <summary>
+    /// Initializes a new instance of the SceneTen class, setting up audio management and bindings.
+    /// </summary>
+    /// <param name="audioManager">The audio manager to handle audio operations.</param>
     public SceneTen(IAudioManager audioManager)
     {
         InitializeComponent();
@@ -24,6 +33,9 @@ public partial class SceneTen : ContentPage
 
     }
 
+    /// <summary>
+    /// Initializes audio playback for background music, narrative, and UI sounds.
+    /// </summary>
     private async void InitializeAudio()
     {
         backgroundAudio = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("background.wav"));
@@ -40,6 +52,9 @@ public partial class SceneTen : ContentPage
         backgroundAudio.Volume = 0.3;
     }
 
+    /// <summary>
+    /// Toggles playback of the background audio based on its current state.
+    /// </summary>
     private void OnAudioButtonClicked(object sender, EventArgs e)
     {
         if (backgroundAudio.IsPlaying)
@@ -52,6 +67,10 @@ public partial class SceneTen : ContentPage
         }
     }
 
+    /// <summary>
+    /// Stops and disposes of an audio player when it is no longer needed.
+    /// </summary>
+    /// <param name="player">The audio player to dispose.</param>
     private void DisposeAudioPlayer(IAudioPlayer player)
     {
         if (player != null)
@@ -64,6 +83,9 @@ public partial class SceneTen : ContentPage
         }
     }
 
+    /// <summary>
+    /// Cleans up audio resources when the page is no longer visible.
+    /// </summary>
     protected override void OnDisappearing()
     {
         base.OnDisappearing();
@@ -78,13 +100,15 @@ public partial class SceneTen : ContentPage
         }
     }
 
+    /// <summary>
+    /// Ensures that audio is properly initialized when the page appears.
+    /// </summary>
     protected override void OnAppearing()
     {
         base.OnAppearing();
 
         InitializeAudio();
 
-        // Ensure the BindingContext is of type SceneOneViewModel
         if (BindingContext is SceneOneViewModel viewModel)
         {
 
@@ -99,9 +123,12 @@ public partial class SceneTen : ContentPage
             }
         }
     }
+
+    /// <summary>
+    /// Handles the event when the narrative button is clicked, playing or replaying the narrative audio.
+    /// </summary>
     private void OnNarrativeButtonClicked(object sender, EventArgs e)
     {
-        // Play or restart the narrator audio when the NarrativeButton is clicked
         if (!narrator.IsPlaying)
         {
             narrator.Play();
@@ -113,16 +140,25 @@ public partial class SceneTen : ContentPage
         }
     }
 
+    /// <summary>
+    /// Plays feedback sound when the "next" button is clicked.
+    /// </summary>
     private void OnNextButtonClicked(object sender, EventArgs e)
     {
         nextButton.Play();
     }
 
+    /// <summary>
+    /// Plays feedback sound when the "previous" button is clicked.
+    /// </summary>
     private void OnPrevButtonClicked(object sender, EventArgs e)
     {
         prevButton.Play();
     }
 
+    /// <summary>
+    /// Handles changes in radio button selection, updating the selected answer in the view model.
+    /// </summary>
     private void OnRadioButtonCheckedChanged(object sender, CheckedChangedEventArgs e)
     {
         radButton.Play();

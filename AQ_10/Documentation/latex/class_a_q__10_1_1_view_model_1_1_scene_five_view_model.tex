@@ -1,0 +1,95 @@
+\hypertarget{class_a_q__10_1_1_view_model_1_1_scene_five_view_model}{}\doxysection{AQ\+\_\+10.\+View\+Model.\+Scene\+Five\+View\+Model Class Reference}
+\label{class_a_q__10_1_1_view_model_1_1_scene_five_view_model}\index{AQ\_10.ViewModel.SceneFiveViewModel@{AQ\_10.ViewModel.SceneFiveViewModel}}
+
+
+\mbox{\hyperlink{namespace_a_q__10_1_1_view_model}{View\+Model}} for Scene Five, handling audio control, navigation, and managing responses for the fifth question.  
+
+
+Inheritance diagram for AQ\+\_\+10.\+View\+Model.\+Scene\+Five\+View\+Model\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_a_q__10_1_1_view_model_1_1_scene_five_view_model}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_q__10_1_1_view_model_1_1_scene_five_view_model_ab4bc77077cd482def080ebee6b64b71f}\label{class_a_q__10_1_1_view_model_1_1_scene_five_view_model_ab4bc77077cd482def080ebee6b64b71f}} 
+{\bfseries Scene\+Five\+View\+Model} ()
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \mbox{\hyperlink{class_a_q__10_1_1_view_model_1_1_scene_five_view_model}{Scene\+Five\+View\+Model}} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_q__10_1_1_view_model_1_1_scene_five_view_model_aaed53179b939c0d9125bb9f6854d714e}\label{class_a_q__10_1_1_view_model_1_1_scene_five_view_model_aaed53179b939c0d9125bb9f6854d714e}} 
+int {\bfseries Question\+Number}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the current question number, which is set to 5 for Scene Five. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_q__10_1_1_view_model_1_1_scene_five_view_model_aece0d928c10dd17db32850e7c8718420}\label{class_a_q__10_1_1_view_model_1_1_scene_five_view_model_aece0d928c10dd17db32850e7c8718420}} 
+bool {\bfseries Is\+Audio\+On}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets a value indicating whether the audio is on or off. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_q__10_1_1_view_model_1_1_scene_five_view_model_ab807dec4c1995c0ada3157ad825694be}\label{class_a_q__10_1_1_view_model_1_1_scene_five_view_model_ab807dec4c1995c0ada3157ad825694be}} 
+string {\bfseries Audio\+Icon}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the audio icon, changing depending on the audio state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_q__10_1_1_view_model_1_1_scene_five_view_model_a4663ceac055b97f8c886e102b1d1c704}\label{class_a_q__10_1_1_view_model_1_1_scene_five_view_model_a4663ceac055b97f8c886e102b1d1c704}} 
+int {\bfseries Selected\+Answer}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the selected answer for the current question and updates the score accordingly. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_q__10_1_1_view_model_1_1_scene_five_view_model_aa4e4e3d6aeaff6f724023a0042f5faa6}\label{class_a_q__10_1_1_view_model_1_1_scene_five_view_model_aa4e4e3d6aeaff6f724023a0042f5faa6}} 
+ICommand {\bfseries Toggle\+Audio\+Command}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Command to toggle the audio state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_q__10_1_1_view_model_1_1_scene_five_view_model_aacd734ed9b7d28a21985ed72509c2f8f}\label{class_a_q__10_1_1_view_model_1_1_scene_five_view_model_aacd734ed9b7d28a21985ed72509c2f8f}} 
+ICommand {\bfseries Navigate\+To\+Previous\+Command}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Command to navigate to the previous scene. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_q__10_1_1_view_model_1_1_scene_five_view_model_a3b2675d8dafc56a0c93487996ce8a804}\label{class_a_q__10_1_1_view_model_1_1_scene_five_view_model_a3b2675d8dafc56a0c93487996ce8a804}} 
+ICommand {\bfseries Navigate\+To\+Next\+Command}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Command to navigate to the next scene. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_a_q__10_1_1_view_model_1_1_scene_five_view_model_a63143f329277009cac8f9e7d70caf32b}{Calculate\+Score\+Based\+On\+Question\+And\+Answer}} (int question\+Number, int selected\+Answer)
+\begin{DoxyCompactList}\small\item\em Calculates the score for question 5 based on the selected answer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_q__10_1_1_view_model_1_1_scene_five_view_model_a00f958cbf8996bf093c75e6bd0149918}\label{class_a_q__10_1_1_view_model_1_1_scene_five_view_model_a00f958cbf8996bf093c75e6bd0149918}} 
+bool {\bfseries \+\_\+is\+Audio\+On} = true
+\item 
+\mbox{\Hypertarget{class_a_q__10_1_1_view_model_1_1_scene_five_view_model_a2ac604b3b9a6f4bf50b928fe8a4d39ea}\label{class_a_q__10_1_1_view_model_1_1_scene_five_view_model_a2ac604b3b9a6f4bf50b928fe8a4d39ea}} 
+string {\bfseries \+\_\+audio\+Icon} = \char`\"{}🔊\char`\"{}
+\item 
+\mbox{\Hypertarget{class_a_q__10_1_1_view_model_1_1_scene_five_view_model_abdcc04d33ab412c6cac3bdcc8c367661}\label{class_a_q__10_1_1_view_model_1_1_scene_five_view_model_abdcc04d33ab412c6cac3bdcc8c367661}} 
+int {\bfseries \+\_\+selected\+Answer}
+\item 
+\mbox{\Hypertarget{class_a_q__10_1_1_view_model_1_1_scene_five_view_model_a17f89387588d3ff5929e356083ce710d}\label{class_a_q__10_1_1_view_model_1_1_scene_five_view_model_a17f89387588d3ff5929e356083ce710d}} 
+int {\bfseries \+\_\+question\+Number} = 5
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{namespace_a_q__10_1_1_view_model}{View\+Model}} for Scene Five, handling audio control, navigation, and managing responses for the fifth question. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_a_q__10_1_1_view_model_1_1_scene_five_view_model_a63143f329277009cac8f9e7d70caf32b}\label{class_a_q__10_1_1_view_model_1_1_scene_five_view_model_a63143f329277009cac8f9e7d70caf32b}} 
+\index{AQ\_10.ViewModel.SceneFiveViewModel@{AQ\_10.ViewModel.SceneFiveViewModel}!CalculateScoreBasedOnQuestionAndAnswer@{CalculateScoreBasedOnQuestionAndAnswer}}
+\index{CalculateScoreBasedOnQuestionAndAnswer@{CalculateScoreBasedOnQuestionAndAnswer}!AQ\_10.ViewModel.SceneFiveViewModel@{AQ\_10.ViewModel.SceneFiveViewModel}}
+\doxysubsubsection{\texorpdfstring{CalculateScoreBasedOnQuestionAndAnswer()}{CalculateScoreBasedOnQuestionAndAnswer()}}
+{\footnotesize\ttfamily int AQ\+\_\+10.\+View\+Model.\+Scene\+Five\+View\+Model.\+Calculate\+Score\+Based\+On\+Question\+And\+Answer (\begin{DoxyParamCaption}\item[{int}]{question\+Number,  }\item[{int}]{selected\+Answer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Calculates the score for question 5 based on the selected answer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em question\+Number} & The question number, expected to be 5 in this context.\\
+\hline
+{\em selected\+Answer} & The answer selected by the user.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The score calculated based on the selected answer.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+View\+Model/Scene\+Five\+View\+Model.\+cs\end{DoxyCompactItemize}

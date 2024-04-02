@@ -108,7 +108,6 @@ public partial class SceneThree : ContentPage
 
         InitializeAudio();
 
-        // Ensure the BindingContext is of type SceneOneViewModel
         if (BindingContext is SceneOneViewModel viewModel)
         {
 

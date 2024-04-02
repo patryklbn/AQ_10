@@ -1,0 +1,61 @@
+\hypertarget{class_a_q__10_1_1_view_model_1_1_end_page_view_model}{}\doxysection{AQ\+\_\+10.\+View\+Model.\+End\+Page\+View\+Model Class Reference}
+\label{class_a_q__10_1_1_view_model_1_1_end_page_view_model}\index{AQ\_10.ViewModel.EndPageViewModel@{AQ\_10.ViewModel.EndPageViewModel}}
+
+
+\mbox{\hyperlink{namespace_a_q__10_1_1_view_model}{View\+Model}} for the end page of the application, handling the display of the final score and navigation commands.  
+
+
+Inheritance diagram for AQ\+\_\+10.\+View\+Model.\+End\+Page\+View\+Model\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_a_q__10_1_1_view_model_1_1_end_page_view_model}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_q__10_1_1_view_model_1_1_end_page_view_model_a51a42083101a3f234f94740131793e4f}\label{class_a_q__10_1_1_view_model_1_1_end_page_view_model_a51a42083101a3f234f94740131793e4f}} 
+{\bfseries End\+Page\+View\+Model} ()
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \mbox{\hyperlink{class_a_q__10_1_1_view_model_1_1_end_page_view_model}{End\+Page\+View\+Model}} class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_q__10_1_1_view_model_1_1_end_page_view_model_a04239c1a5eb6b75cfe2733d4f5f3da99}\label{class_a_q__10_1_1_view_model_1_1_end_page_view_model_a04239c1a5eb6b75cfe2733d4f5f3da99}} 
+void {\bfseries Refresh\+Score\+Message} ()
+\begin{DoxyCompactList}\small\item\em Refreshes the Score\+Message property to update its value in the view. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_q__10_1_1_view_model_1_1_end_page_view_model_aefe27994ee48bc15cd121869862b63ba}\label{class_a_q__10_1_1_view_model_1_1_end_page_view_model_aefe27994ee48bc15cd121869862b63ba}} 
+string {\bfseries Score\+Message}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Generates a message based on the calculated score, offering suggestions based on the score\textquotesingle{}s value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_q__10_1_1_view_model_1_1_end_page_view_model_ade34f8a05425c22993a3c243fc668166}\label{class_a_q__10_1_1_view_model_1_1_end_page_view_model_ade34f8a05425c22993a3c243fc668166}} 
+bool {\bfseries Is\+Audio\+On}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates whether the audio is currently enabled. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_q__10_1_1_view_model_1_1_end_page_view_model_a32318bf74de96c45c4c7da96fff8214b}\label{class_a_q__10_1_1_view_model_1_1_end_page_view_model_a32318bf74de96c45c4c7da96fff8214b}} 
+string {\bfseries Audio\+Icon}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Represents the icon to be displayed depending on the audio state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_q__10_1_1_view_model_1_1_end_page_view_model_a7c9a9c07fd479d660181c6cd599dc910}\label{class_a_q__10_1_1_view_model_1_1_end_page_view_model_a7c9a9c07fd479d660181c6cd599dc910}} 
+ICommand {\bfseries Toggle\+Audio\+Command}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_a_q__10_1_1_view_model_1_1_end_page_view_model_ad589be9b477c92415e321d66fc2136ca}\label{class_a_q__10_1_1_view_model_1_1_end_page_view_model_ad589be9b477c92415e321d66fc2136ca}} 
+ICommand {\bfseries Navigate\+To\+Previous\+Command}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_a_q__10_1_1_view_model_1_1_end_page_view_model_a73883f6507174f9d4b8af4cb0717e475}\label{class_a_q__10_1_1_view_model_1_1_end_page_view_model_a73883f6507174f9d4b8af4cb0717e475}} 
+ICommand {\bfseries Navigate\+To\+Next\+Command}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_q__10_1_1_view_model_1_1_end_page_view_model_a97611a6706395a82c9e6fdd2a26aa761}\label{class_a_q__10_1_1_view_model_1_1_end_page_view_model_a97611a6706395a82c9e6fdd2a26aa761}} 
+bool {\bfseries \+\_\+is\+Audio\+On} = true
+\item 
+\mbox{\Hypertarget{class_a_q__10_1_1_view_model_1_1_end_page_view_model_a48c83904f6fbb81ae2867a59ac710d76}\label{class_a_q__10_1_1_view_model_1_1_end_page_view_model_a48c83904f6fbb81ae2867a59ac710d76}} 
+string {\bfseries \+\_\+audio\+Icon} = \char`\"{}🔊\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{namespace_a_q__10_1_1_view_model}{View\+Model}} for the end page of the application, handling the display of the final score and navigation commands. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+View\+Model/End\+Page\+View\+Model.\+cs\end{DoxyCompactItemize}

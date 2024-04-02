@@ -1,0 +1,115 @@
+\hypertarget{class_scene_six}{}\doxysection{Scene\+Six Class Reference}
+\label{class_scene_six}\index{SceneSix@{SceneSix}}
+
+
+Represents the sixth scene of the application, handling initialization of the view model, audio playback, and user interactions for the sixth question.  
+
+
+Inheritance diagram for Scene\+Six\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_scene_six}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scene_six_a5824475d09e5e143926c6d6f786b7b4c}{Scene\+Six}} (IAudio\+Manager audio\+Manager)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the Scenes\+Six class, setting up audio management and bindings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_scene_six_aa5d68db055e353e9e2c1a26b6f94afad}\label{class_scene_six_aa5d68db055e353e9e2c1a26b6f94afad}} 
+override void {\bfseries On\+Disappearing} ()
+\begin{DoxyCompactList}\small\item\em Cleans up audio resources when the page is no longer visible. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_six_ab46729a8a4eccde69596603a781b3dd9}\label{class_scene_six_ab46729a8a4eccde69596603a781b3dd9}} 
+override void {\bfseries On\+Appearing} ()
+\begin{DoxyCompactList}\small\item\em Ensures that audio is properly initialized when the page appears. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_scene_six_ad2a5c9f1257fa5a0b9c7892f50213bd5}\label{class_scene_six_ad2a5c9f1257fa5a0b9c7892f50213bd5}} 
+async void {\bfseries Initialize\+Audio} ()
+\begin{DoxyCompactList}\small\item\em Initializes audio playback for background music, narrative, and UI sounds. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_six_a84834feab1472d21f1b8d77a50633833}\label{class_scene_six_a84834feab1472d21f1b8d77a50633833}} 
+void {\bfseries On\+Audio\+Button\+Clicked} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Toggles playback of the background audio based on its current state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_six_aa5564ea18086d67fc0356a31cac526a0}{Dispose\+Audio\+Player}} (IAudio\+Player player)
+\begin{DoxyCompactList}\small\item\em Stops and disposes of an audio player when it is no longer needed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_six_ad928d1b2f5633fbf4da5cc7fdbf47653}\label{class_scene_six_ad928d1b2f5633fbf4da5cc7fdbf47653}} 
+void {\bfseries On\+Narrative\+Button\+Clicked} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Handles the event when the narrative button is clicked, playing or replaying the narrative audio. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_six_ab786a6e1aa6eca13ae191b941cc897c7}\label{class_scene_six_ab786a6e1aa6eca13ae191b941cc897c7}} 
+void {\bfseries On\+Next\+Button\+Clicked} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Plays feedback sound when the \char`\"{}next\char`\"{} button is clicked. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_six_adfd13a2100c35ed2b1c4035ca7206098}\label{class_scene_six_adfd13a2100c35ed2b1c4035ca7206098}} 
+void {\bfseries On\+Prev\+Button\+Clicked} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Plays feedback sound when the \char`\"{}previous\char`\"{} button is clicked. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_six_a4ccad21d4ec22dea2b7b39746fc0e841}\label{class_scene_six_a4ccad21d4ec22dea2b7b39746fc0e841}} 
+void {\bfseries On\+Radio\+Button\+Checked\+Changed} (object sender, Checked\+Changed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Handles changes in radio button selection, updating the selected answer in the view model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_scene_six_a1b1f767931ccfffb106d69b7d04a4d48}\label{class_scene_six_a1b1f767931ccfffb106d69b7d04a4d48}} 
+readonly IAudio\+Manager {\bfseries audio\+Manager}
+\item 
+\mbox{\Hypertarget{class_scene_six_a23f9d376b404b7f9b2e460df466b45ae}\label{class_scene_six_a23f9d376b404b7f9b2e460df466b45ae}} 
+IAudio\+Player {\bfseries background\+Audio}
+\item 
+\mbox{\Hypertarget{class_scene_six_a2473f1795dcf78fd8a8a992c1b31a7af}\label{class_scene_six_a2473f1795dcf78fd8a8a992c1b31a7af}} 
+IAudio\+Player {\bfseries rad\+Button}
+\item 
+\mbox{\Hypertarget{class_scene_six_a5932bf293b10e1b7f9935a1ebc8b3ac1}\label{class_scene_six_a5932bf293b10e1b7f9935a1ebc8b3ac1}} 
+IAudio\+Player {\bfseries prev\+Button}
+\item 
+\mbox{\Hypertarget{class_scene_six_a2e9509449248331265e140ea1d9f1097}\label{class_scene_six_a2e9509449248331265e140ea1d9f1097}} 
+IAudio\+Player {\bfseries next\+Button}
+\item 
+\mbox{\Hypertarget{class_scene_six_afb17ffc711ef3cdd0f13b0a7174e160a}\label{class_scene_six_afb17ffc711ef3cdd0f13b0a7174e160a}} 
+IAudio\+Player {\bfseries narrator}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the sixth scene of the application, handling initialization of the view model, audio playback, and user interactions for the sixth question. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_scene_six_a5824475d09e5e143926c6d6f786b7b4c}\label{class_scene_six_a5824475d09e5e143926c6d6f786b7b4c}} 
+\index{SceneSix@{SceneSix}!SceneSix@{SceneSix}}
+\index{SceneSix@{SceneSix}!SceneSix@{SceneSix}}
+\doxysubsubsection{\texorpdfstring{SceneSix()}{SceneSix()}}
+{\footnotesize\ttfamily Scene\+Six.\+Scene\+Six (\begin{DoxyParamCaption}\item[{IAudio\+Manager}]{audio\+Manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the Scenes\+Six class, setting up audio management and bindings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em audio\+Manager} & The audio manager to handle audio operations.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_scene_six_aa5564ea18086d67fc0356a31cac526a0}\label{class_scene_six_aa5564ea18086d67fc0356a31cac526a0}} 
+\index{SceneSix@{SceneSix}!DisposeAudioPlayer@{DisposeAudioPlayer}}
+\index{DisposeAudioPlayer@{DisposeAudioPlayer}!SceneSix@{SceneSix}}
+\doxysubsubsection{\texorpdfstring{DisposeAudioPlayer()}{DisposeAudioPlayer()}}
+{\footnotesize\ttfamily void Scene\+Six.\+Dispose\+Audio\+Player (\begin{DoxyParamCaption}\item[{IAudio\+Player}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Stops and disposes of an audio player when it is no longer needed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & The audio player to dispose.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Views/Scene\+Six.\+xaml.\+cs\end{DoxyCompactItemize}
