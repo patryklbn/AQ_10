@@ -89,6 +89,11 @@
 	  <None Remove="Resources\Images\icon-speakig.png" />
 	  <None Remove="Resources\Images\scene_four.png" />
 	  <None Remove="Resources\Images\scene_three.png" />
+	  <None Remove="Resources\Images\AQ6.png" />
+	  <None Remove="Resources\Images\AQ5.png" />
+	  <None Remove="Resources\Images\AQ4.png" />
+	  <None Remove="Resources\Images\AQ3.png" />
+	  <None Remove="Resources\Images\AQ2.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Views\" />
@@ -98,6 +103,11 @@
 	  <BundleResource Include="Resources\Images\sceneone.gif" />
 	  <BundleResource Include="Resources\Images\scene_four.png" />
 	  <BundleResource Include="Resources\Images\scene_three.png" />
+	  <BundleResource Include="Resources\Images\aq6.png" />
+	  <BundleResource Include="Resources\Images\aq5.png" />
+	  <BundleResource Include="Resources\Images\aq4.png" />
+	  <BundleResource Include="Resources\Images\aq3.png" />
+	  <BundleResource Include="Resources\Images\aq2.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <None Update="Platforms\iOS\Info.plist">
