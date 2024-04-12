@@ -17,6 +17,7 @@ public partial class SceneSix : ContentPage
     private IAudioPlayer prevButton;
     private IAudioPlayer nextButton;
     private IAudioPlayer narrator;
+    bool audioOn = true;
 
     /// <summary>
     /// Initializes a new instance of the ScenesSix class, setting up audio management and bindings.
@@ -60,10 +61,12 @@ public partial class SceneSix : ContentPage
         if (backgroundAudio.IsPlaying)
         {
             backgroundAudio.Pause();
+            audioOn = false;
         }
         else
         {
             backgroundAudio.Play();
+            audioOn = true;
         }
     }
 
@@ -103,24 +106,16 @@ public partial class SceneSix : ContentPage
     /// <summary>
     /// Ensures that audio is properly initialized when the page appears.
     /// </summary>
-    protected override void OnAppearing()
+    protected override async void OnAppearing()
     {
         base.OnAppearing();
+        await Task.Delay(100);
 
         InitializeAudio();
 
-        if (BindingContext is SceneOneViewModel viewModel)
+        if (audioOn == true)
         {
-
-            // Play audio if it's not already playing
-            if (viewModel.IsAudioOn == true)
-            {
-                backgroundAudio.Play();
-            }
-            else
-            {
-                backgroundAudio.Pause();
-            }
+            backgroundAudio.Play();
         }
     }
 

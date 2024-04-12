@@ -16,6 +16,7 @@
 
         <!-- Audio Button at the top right corner -->
         <Button x:Name="AudioButton"
+                Clicked="OnAudioButtonClicked"
                 Text="{Binding AudioIcon}"
                 Grid.Row="0"
                 VerticalOptions="Start"

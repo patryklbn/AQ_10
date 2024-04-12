@@ -20,6 +20,8 @@ public static class MauiProgram
             });
 
         builder.Services.AddSingleton(AudioManager.Current);
+        builder.Services.AddTransient<MainPage>();
+        builder.Services.AddTransient<EndPage>();
         builder.Services.AddTransient<SceneOne>();
         builder.Services.AddTransient<SceneTwo>();
         builder.Services.AddTransient<SceneThree>();

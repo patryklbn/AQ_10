@@ -17,6 +17,7 @@ public partial class SceneTwo : ContentPage
     private IAudioPlayer prevButton;
     private IAudioPlayer nextButton;
     private IAudioPlayer narrator;
+    bool audioOn = true;
 
     /// <summary>
     /// Initializes a new instance of the SceneTwo class, setting up audio management and bindings.
@@ -61,10 +62,12 @@ public partial class SceneTwo : ContentPage
         if (backgroundAudio.IsPlaying)
         {
             backgroundAudio.Pause();
+            audioOn = false;
         }
         else
         {
             backgroundAudio.Play();
+            audioOn = true;
         }
     }
 
@@ -104,24 +107,16 @@ public partial class SceneTwo : ContentPage
     /// <summary>
     /// Ensures audio is correctly initialized or resumed when the page becomes visible.
     /// </summary>
-    protected override void OnAppearing()
+    protected override async void OnAppearing()
     {
         base.OnAppearing();
+        await Task.Delay(100);
 
         InitializeAudio();
 
-        if (BindingContext is SceneOneViewModel viewModel)
+        if (audioOn == true)
         {
-
-            // Play audio if it's not already playing
-            if (viewModel.IsAudioOn == true)
-            {
-                backgroundAudio.Play();
-            }
-            else
-            {
-                backgroundAudio.Pause();
-            }
+            backgroundAudio.Play();
         }
     }
 

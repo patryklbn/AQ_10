@@ -17,6 +17,7 @@ public partial class SceneOne : ContentPage
     private IAudioPlayer prevButton;
     private IAudioPlayer nextButton;
     private IAudioPlayer narrator;
+    bool audioOn = true;
 
     /// <summary>
     /// Initializes a new instance of the SceneOne class, setting up audio management and bindings.
@@ -48,9 +49,8 @@ public partial class SceneOne : ContentPage
         nextButton.Volume = 0.05;
         radButton.Volume = 0.05;
 
-        backgroundAudio.Loop = true;
+        backgroundAudio.Loop = true; 
         backgroundAudio.Volume = 0.3;
-        backgroundAudio.Play();
     }
 
     /// <summary>
@@ -61,10 +61,12 @@ public partial class SceneOne : ContentPage
         if (backgroundAudio.IsPlaying)
         {
             backgroundAudio.Pause();
+            audioOn = false;
         }
         else
         {
             backgroundAudio.Play();
+            audioOn = true;
         }
     }
 
@@ -112,19 +114,9 @@ public partial class SceneOne : ContentPage
        
         InitializeAudio();
 
-        
-        if (BindingContext is SceneOneViewModel viewModel)
+        if (audioOn == true)
         {
-
-            // Play audio if it's not already playing
-            if (viewModel.IsAudioOn == true)
-            {
-                backgroundAudio.Play();
-            }
-            else
-            {
-                backgroundAudio.Pause();
-            }
+            backgroundAudio.Play();
         }
     }
 
