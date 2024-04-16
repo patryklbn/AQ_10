@@ -7,7 +7,7 @@ public class AnswersServiceTests
     public AnswersServiceTests()
     {
         // Ensure each test starts with a clean state
-        AnswersService.Instance.ResetForTests();
+        AnswersService.Instance.ResetScore();
     }
 
     [Theory]
