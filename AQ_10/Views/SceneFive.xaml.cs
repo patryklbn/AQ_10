@@ -2,7 +2,6 @@
 using AQ_10.ViewModel;
 using System.Reflection;
 using Microsoft.Maui.Controls;
-using static Android.Provider.MediaStore;
 
 namespace AQ_10;
 

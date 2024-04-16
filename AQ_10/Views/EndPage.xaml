@@ -3,11 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
              x:Class="AQ_10.EndPage"
-             ios:Page.UseSafeArea="False"
+             ios:Page.UseSafeArea="True"
+             BackgroundColor="Black"
              Shell.NavBarIsVisible="False"
              Title="Scene EndPage">
 
-    <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+           Padding="{OnPlatform iOS='-10,0,-30,-25', Default='0'}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/> <!-- Space for the audio button -->
             <RowDefinition Height="*"/>   <!-- Space for the rest of the content -->

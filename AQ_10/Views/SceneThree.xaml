@@ -16,7 +16,8 @@
         </Grid.RowDefinitions>
 
         <!-- Background image stretched across the entire Grid -->
-        <Image Source="aq3.png"
+        <Image Source="scenethree.gif"
+               x:Name="backgroundSceneThree"
                Aspect="AspectFill"
                HorizontalOptions="FillAndExpand"
                VerticalOptions="FillAndExpand"

@@ -109,6 +109,7 @@ public partial class SceneThree : ContentPage
     {
         base.OnAppearing();
         await Task.Delay(100);
+        backgroundSceneThree.IsAnimationPlaying = true;
 
         InitializeAudio();
 

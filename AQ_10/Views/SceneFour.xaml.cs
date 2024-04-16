@@ -2,7 +2,6 @@
 using AQ_10.ViewModel;
 using System.Reflection;
 using Microsoft.Maui.Controls;
-using static Android.Provider.MediaStore;
 
 namespace AQ_10;
 
@@ -111,6 +110,8 @@ public partial class SceneFour : ContentPage
     {
         base.OnAppearing();
         await Task.Delay(100);
+        backgroundSceneFour.IsAnimationPlaying = true;
+
 
         InitializeAudio();
 

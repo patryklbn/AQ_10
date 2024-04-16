@@ -5,6 +5,7 @@
              x:Class="AQ_10.SceneFour"
              BackgroundColor="Black"
              ios:Page.UseSafeArea="True"
+             Shell.NavBarIsVisible="False"
              Title="Scene Four">
 
         <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
@@ -15,7 +16,8 @@
         </Grid.RowDefinitions>
 
         <!-- Background image stretched across the entire Grid -->
-        <Image Source="aq4.png"
+        <Image Source="scenefour.gif"
+               x:Name="backgroundSceneFour"
                Aspect="AspectFill"
                HorizontalOptions="FillAndExpand"
                VerticalOptions="FillAndExpand"
