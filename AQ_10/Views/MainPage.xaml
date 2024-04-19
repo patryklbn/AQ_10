@@ -9,7 +9,7 @@
         <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
            Padding="{OnPlatform iOS='-10,0,-30,-25', Default='0'}">
         <!-- Background image -->
-        <Image Source="background_startup.jpg"
+        <Image Source="mainpage_png"
                Aspect="AspectFill"
                HorizontalOptions="FillAndExpand"
                VerticalOptions="FillAndExpand" />
