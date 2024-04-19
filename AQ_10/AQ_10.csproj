@@ -87,8 +87,6 @@
 	  <None Remove="Resources\Images\scene1.jpeg" />
 	  <None Remove="Resources\Images\SceneOne.gif" />
 	  <None Remove="Resources\Images\icon-speakig.png" />
-	  <None Remove="Resources\Images\scene_four.png" />
-	  <None Remove="Resources\Images\scene_three.png" />
 	  <None Remove="Resources\Images\AQ6.png" />
 	  <None Remove="Resources\Images\AQ5.png" />
 	  <None Remove="Resources\Images\AQ4.png" />
@@ -179,6 +177,7 @@
 	  <None Remove="Resources\Raw\Q4background.wav" />
 	  <None Remove="Resources\Images\scenefour.gif" />
 	  <None Remove="Resources\Images\scenethree.gif" />
+	  <None Remove="Resources\Images\startup.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Views\" />
@@ -186,8 +185,6 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <BundleResource Include="Resources\Images\sceneone.gif" />
-	  <BundleResource Include="Resources\Images\scene_four.png" />
-	  <BundleResource Include="Resources\Images\scene_three.png" />
 	  <BundleResource Include="Resources\Images\aq6.png" />
 	  <BundleResource Include="Resources\Images\aq5.png" />
 	  <BundleResource Include="Resources\Images\aq4.png" />
@@ -278,6 +275,7 @@
 	  <BundleResource Include="Resources\Raw\Q4background.wav" />
 	  <BundleResource Include="Resources\Images\scenefour.gif" />
 	  <BundleResource Include="Resources\Images\scenethree.gif" />
+	  <BundleResource Include="Resources\Images\mainpage.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <None Update="Platforms\iOS\Info.plist">
