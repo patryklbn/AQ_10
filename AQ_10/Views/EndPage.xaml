@@ -72,7 +72,7 @@
 
 
     <!-- "Next" Button in the last column -->
-    <Button Text="Start"
+    <Button Text="Start New Assesment"
             TextColor="white"
             FontFamily="MontserratExtraBold"
             BackgroundColor="Green"
@@ -80,7 +80,7 @@
             Grid.Column="4"
             HorizontalOptions="Fill"
             Padding="20,4"
-            Command="{Binding NavigateToNextCommand}"/>
+            Command="{Binding StartNewAssessmentCommand}"/>
 </Grid>
 
             </VerticalStackLayout>
