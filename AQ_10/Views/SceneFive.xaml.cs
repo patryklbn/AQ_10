@@ -39,7 +39,7 @@ public partial class SceneFive : ContentPage
     /// </summary>
     private async void InitializeAudio()
     {
-        backgroundAudio = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("background.wav"));
+        backgroundAudio = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("Nature Ambience (Free Sound 1).wav"));
         radButton = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("radioButton.wav"));
         prevButton = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("prevButton.wav"));
         nextButton = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("nextButton.wav"));

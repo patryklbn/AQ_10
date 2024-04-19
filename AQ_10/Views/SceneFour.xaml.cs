@@ -39,7 +39,7 @@ public partial class SceneFour : ContentPage
     /// </summary>
     private async void InitializeAudio()
     {
-        backgroundAudio = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("Q4background.wav"));
+        backgroundAudio = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("Room Tone with Scissors.wav"));
         radButton = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("radioButton.wav"));
         prevButton = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("prevButton.wav"));
         nextButton = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("nextButton.wav"));

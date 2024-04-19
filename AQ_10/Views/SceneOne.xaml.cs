@@ -40,7 +40,7 @@ public partial class SceneOne : ContentPage
     private async void InitializeAudio()
     {
         // Load and play various audio elements, adjusting volumes and looping as necessary.
-        backgroundAudio = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("background.wav"));
+        backgroundAudio = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("Nature Ambience (Free Sound 1).wav"));
         radButton = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("radioButton.wav"));
         prevButton = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("prevButton.wav"));
         nextButton = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("nextButton.wav"));

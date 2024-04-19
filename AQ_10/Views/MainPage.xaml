@@ -9,7 +9,7 @@
         <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
            Padding="{OnPlatform iOS='-10,0,-30,-25', Default='0'}">
         <!-- Background image -->
-        <Image Source="mainpage_png"
+        <Image Source="mainpage.png"
                Aspect="AspectFill"
                HorizontalOptions="FillAndExpand"
                VerticalOptions="FillAndExpand" />
@@ -31,6 +31,7 @@
             BackgroundColor="White"
             HorizontalOptions="Fill"
             VerticalOptions="End"
+            Opacity="0.8"
             Margin="20">
             <Border.StrokeShape>
                 <RoundRectangle CornerRadius="24"/>

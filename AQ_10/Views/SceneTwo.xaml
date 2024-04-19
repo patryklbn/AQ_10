@@ -16,7 +16,14 @@
         </Grid.RowDefinitions>
 
         <!-- Background image stretched across the entire Grid -->
-        <Image Source="aq2.png"
+        <Image Source="aq2.
+               
+               
+               
+               
+               
+               
+               "
                Aspect="AspectFill"
                HorizontalOptions="FillAndExpand"
                VerticalOptions="FillAndExpand"

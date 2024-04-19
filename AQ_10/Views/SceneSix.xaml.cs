@@ -39,7 +39,7 @@ public partial class SceneSix : ContentPage
     /// </summary>
     private async void InitializeAudio()
     {
-        backgroundAudio = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("background.wav"));
+        backgroundAudio = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("Q6 Ambience and Talking.wav"));
         radButton = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("radioButton.wav"));
         prevButton = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("prevButton.wav"));
         nextButton = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("nextButton.wav"));
