@@ -4,6 +4,7 @@
              xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
              x:Class="AQ_10.SceneTwo"
              ios:Page.UseSafeArea="True"
+             BackgroundColor="Black"
              Shell.NavBarIsVisible="False"
              Title="Scene Two">
 
@@ -15,7 +16,14 @@
         </Grid.RowDefinitions>
 
         <!-- Background image stretched across the entire Grid -->
-        <Image Source="aq2.png"
+        <Image Source="aq2.
+               
+               
+               
+               
+               
+               
+               "
                Aspect="AspectFill"
                HorizontalOptions="FillAndExpand"
                VerticalOptions="FillAndExpand"
@@ -26,8 +34,7 @@
                              VerticalOptions="Start"
                              HorizontalOptions="End"
                              Margin="10"
-                             Spacing="5"> <!-- Adjust Spacing here -->
-            <!-- Audio Button -->
+                             Spacing="5"> 
             <Button x:Name="AudioButton"
                     Text="{Binding AudioIcon}"
                     BackgroundColor="Black"
@@ -82,31 +89,40 @@
 
     <!-- Radio Buttons in the middle columns -->
     <VerticalStackLayout Grid.Column="1" Spacing="5">
-        <RadioButton Content="Definitely Agree"
+        <RadioButton x:Name="radioButton1"
+                     Content="Definitely Agree"
                      TextColor="black"
+                     FontFamily="MontserratExtraBold"
                      GroupName="Question1"
                      CheckedChanged="OnRadioButtonCheckedChanged"/>
-        <RadioButton Content="Slightly Agree"
+        <RadioButton x:Name="radioButton2"
+                     Content="Slightly Agree"
                      TextColor="black"
+                     FontFamily="MontserratExtraBold"
                      GroupName="Question1"
                      CheckedChanged="OnRadioButtonCheckedChanged"/>
     </VerticalStackLayout>
 
     <VerticalStackLayout Grid.Column="2" Spacing="5">
-                     <RadioButton Content="Definitely Disagree"
-                     TextColor="black"
+                     <RadioButton x:Name="radioButton3"
+                     Content="Definitely Disagree"
+                     TextColor="black"             
+                     FontFamily="MontserratExtraBold"
                      GroupName="Question1"
                      CheckedChanged="OnRadioButtonCheckedChanged"/>
-                     <RadioButton Content="Slightly Disagree"
+                     <RadioButton x:Name="radioButton4"
+                     Content="Slightly Disagree"
                      TextColor="black"
+                     FontFamily="MontserratExtraBold"
                      GroupName="Question1"
                      CheckedChanged="OnRadioButtonCheckedChanged"/>
     </VerticalStackLayout>
-    <VerticalStackLayout Grid.Column="3" Spacing="5">
-                     <RadioButton Content="Not Sure"
-                     TextColor="black"
-                     GroupName="Question1"
-                     CheckedChanged="OnRadioButtonCheckedChanged"/>
+<VerticalStackLayout Grid.Column="3" Spacing="5">
+    <RadioButton x:Name="radioButton5"
+                 Content="Not Sure"
+                 TextColor="black"
+                 GroupName="Question1"
+                 CheckedChanged="OnRadioButtonCheckedChanged"/>
                     <!-- Progress Indicator Text -->
     <Label Text="Q: 2/10"
            TextColor="black"

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows.Input;
-using AQ_10.Services; 
-
+using AQ_10.Services;
 
 namespace AQ_10.ViewModel
 {
@@ -62,7 +61,7 @@ namespace AQ_10.ViewModel
         // Commands
         public ICommand ToggleAudioCommand { get; }
         public ICommand NavigateToPreviousCommand { get; }
-        public ICommand NavigateToNextCommand { get; }
+        public ICommand StartNewAssessmentCommand { get; }
 
 
         /// <summary>
@@ -72,8 +71,21 @@ namespace AQ_10.ViewModel
         {
             ToggleAudioCommand = new Command(() => IsAudioOn = !IsAudioOn);
             NavigateToPreviousCommand = new Command(async () => await Shell.Current.GoToAsync("//SceneTen"));
-            NavigateToNextCommand = new Command(async () => await Shell.Current.GoToAsync("//MainPage"));
+            StartNewAssessmentCommand = new Command(StartNewAssessment);
 
+        }
+
+        /// <summary>
+        /// Starts a new assessment by resetting the current score and navigating back to the MainPage.
+        /// This method is invoked from a Start Again button.
+        /// </summary>
+        private async void StartNewAssessment()
+        {
+            // Reset the score
+            AnswersService.Instance.ResetScore();
+
+            // Navigate to MainPage
+            await Shell.Current.GoToAsync("//MainPage", true);  
         }
 
         /// <summary>

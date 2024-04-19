@@ -19,12 +19,12 @@ Inheritance diagram for Scene\+Three\+:\begin{figure}[H]
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{class_scene_three_a9db950ff038b45b29a6327fb0624d16a}\label{class_scene_three_a9db950ff038b45b29a6327fb0624d16a}} 
+override async void {\bfseries On\+Appearing} ()
+\begin{DoxyCompactList}\small\item\em Ensures that audio is properly initialized when the page appears. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_scene_three_ab61d57cfd79d24ebcaf3db7d85b174b9}\label{class_scene_three_ab61d57cfd79d24ebcaf3db7d85b174b9}} 
 override void {\bfseries On\+Disappearing} ()
-\begin{DoxyCompactList}\small\item\em Handles necessary audio management when the page becomes invisible. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_scene_three_aed57d50ec11bff66b0451206e9b7d214}\label{class_scene_three_aed57d50ec11bff66b0451206e9b7d214}} 
-override void {\bfseries On\+Appearing} ()
-\begin{DoxyCompactList}\small\item\em Ensures audio is correctly initialized or resumed when the page becomes visible. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Cleans up audio resources when the page is no longer visible. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -36,6 +36,12 @@ void {\bfseries On\+Audio\+Button\+Clicked} (object sender, Event\+Args e)
 \begin{DoxyCompactList}\small\item\em Toggles the playback of background audio based on its current state. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_scene_three_a9cfcdd4fc7fe5fc651e654a224dfb744}{Dispose\+Audio\+Player}} (IAudio\+Player player)
 \begin{DoxyCompactList}\small\item\em Cleans up resources used by an audio player instance. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_three_a5e909572a7154fc3f533f985afe494d9}\label{class_scene_three_a5e909572a7154fc3f533f985afe494d9}} 
+void {\bfseries Dispose\+Audio\+Players} ()
+\begin{DoxyCompactList}\small\item\em Cleans up all audio player resources within the scene ensuring that each player is stopped and disposed properly to release all associated resources. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_three_ad12538188c19f2c01211f2e7d4d1b215}\label{class_scene_three_ad12538188c19f2c01211f2e7d4d1b215}} 
+void {\bfseries Reset\+UIComponents} ()
+\begin{DoxyCompactList}\small\item\em Resets the UI components to their default state. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_scene_three_a2f5b10797fc9790c9699920700e0d191}\label{class_scene_three_a2f5b10797fc9790c9699920700e0d191}} 
 void {\bfseries On\+Narrative\+Button\+Clicked} (object sender, Event\+Args e)
 \begin{DoxyCompactList}\small\item\em Plays or restarts the narrative audio when the narrative button is clicked. \end{DoxyCompactList}\item 
@@ -68,6 +74,9 @@ IAudio\+Player {\bfseries next\+Button}
 \item 
 \mbox{\Hypertarget{class_scene_three_a2218a99eba1f5d7ab44357d0666f2475}\label{class_scene_three_a2218a99eba1f5d7ab44357d0666f2475}} 
 IAudio\+Player {\bfseries narrator}
+\item 
+\mbox{\Hypertarget{class_scene_three_a47e54ec5563b1a5395719fca582737cd}\label{class_scene_three_a47e54ec5563b1a5395719fca582737cd}} 
+bool {\bfseries audio\+On} = true
 \end{DoxyCompactItemize}
 
 

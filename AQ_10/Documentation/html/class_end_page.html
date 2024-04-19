@@ -65,12 +65,14 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_end_page-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">EndPage Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Represents the end page of the questionnaire, displaying the user's final score and offering additional guidance based on the score.  
+<p>Represents the first scene of the questionnaire, handling initialization of the view model, audio playback, and user interactions for the first question.  
  <a href="class_end_page.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for EndPage:</div>
@@ -81,21 +83,120 @@ Inheritance diagram for EndPage:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa8baa2eda56a692c6c140fc070e7d20a"><td class="memItemLeft" align="right" valign="top"><a id="aa8baa2eda56a692c6c140fc070e7d20a" name="aa8baa2eda56a692c6c140fc070e7d20a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>EndPage</b> ()</td></tr>
-<tr class="memdesc:aa8baa2eda56a692c6c140fc070e7d20a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a new instance of the <a class="el" href="class_end_page.html" title="Represents the end page of the questionnaire, displaying the user&#39;s final score and offering addition...">EndPage</a> class. Sets the BindingContext to a new instance of the EndPageViewModel. <br /></td></tr>
-<tr class="separator:aa8baa2eda56a692c6c140fc070e7d20a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a843897c2d81a2db625b6793b16436c4f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_end_page.html#a843897c2d81a2db625b6793b16436c4f">EndPage</a> (IAudioManager audioManager)</td></tr>
+<tr class="memdesc:a843897c2d81a2db625b6793b16436c4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a new instance of the <a class="el" href="class_main_page.html" title="Represents the first scene of the questionnaire, handling initialization of the view model,...">MainPage</a> class, setting up audio management and bindings.  <a href="class_end_page.html#a843897c2d81a2db625b6793b16436c4f">More...</a><br /></td></tr>
+<tr class="separator:a843897c2d81a2db625b6793b16436c4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a8148a0c09e22891e0777601329b6b4ac"><td class="memItemLeft" align="right" valign="top"><a id="a8148a0c09e22891e0777601329b6b4ac" name="a8148a0c09e22891e0777601329b6b4ac"></a>
-override void&#160;</td><td class="memItemRight" valign="bottom"><b>OnAppearing</b> ()</td></tr>
-<tr class="memdesc:a8148a0c09e22891e0777601329b6b4ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the page becomes visible. Refreshes the score message to ensure it displays the most up-to-date information. <br /></td></tr>
-<tr class="separator:a8148a0c09e22891e0777601329b6b4ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e531178585be10701ac9d60df728817"><td class="memItemLeft" align="right" valign="top"><a id="a3e531178585be10701ac9d60df728817" name="a3e531178585be10701ac9d60df728817"></a>
+override void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDisappearing</b> ()</td></tr>
+<tr class="memdesc:a3e531178585be10701ac9d60df728817"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cleans up audio resources when the page is no longer visible. <br /></td></tr>
+<tr class="separator:a3e531178585be10701ac9d60df728817"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc1bf5d4d386312d80e830a3a29bc1d2"><td class="memItemLeft" align="right" valign="top"><a id="afc1bf5d4d386312d80e830a3a29bc1d2" name="afc1bf5d4d386312d80e830a3a29bc1d2"></a>
+override async void&#160;</td><td class="memItemRight" valign="bottom"><b>OnAppearing</b> ()</td></tr>
+<tr class="memdesc:afc1bf5d4d386312d80e830a3a29bc1d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensures that audio is properly initialized when the page appears. <br /></td></tr>
+<tr class="separator:afc1bf5d4d386312d80e830a3a29bc1d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a4155ce6fc044bf5edbbfd292ae0e85a2"><td class="memItemLeft" align="right" valign="top"><a id="a4155ce6fc044bf5edbbfd292ae0e85a2" name="a4155ce6fc044bf5edbbfd292ae0e85a2"></a>
+async void&#160;</td><td class="memItemRight" valign="bottom"><b>InitializeAudio</b> ()</td></tr>
+<tr class="memdesc:a4155ce6fc044bf5edbbfd292ae0e85a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes audio playback for background music, narrative, and UI sounds. <br /></td></tr>
+<tr class="separator:a4155ce6fc044bf5edbbfd292ae0e85a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ded0b6bb95f15559eada9991a3a406a"><td class="memItemLeft" align="right" valign="top"><a id="a4ded0b6bb95f15559eada9991a3a406a" name="a4ded0b6bb95f15559eada9991a3a406a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OnAudioButtonClicked</b> (object sender, EventArgs e)</td></tr>
+<tr class="memdesc:a4ded0b6bb95f15559eada9991a3a406a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggles playback of the background audio based on its current state. <br /></td></tr>
+<tr class="separator:a4ded0b6bb95f15559eada9991a3a406a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ff4ec65b5c33a108cafaaadb9af7822"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_end_page.html#a5ff4ec65b5c33a108cafaaadb9af7822">DisposeAudioPlayer</a> (IAudioPlayer player)</td></tr>
+<tr class="memdesc:a5ff4ec65b5c33a108cafaaadb9af7822"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops and disposes of an audio player when it is no longer needed.  <a href="class_end_page.html#a5ff4ec65b5c33a108cafaaadb9af7822">More...</a><br /></td></tr>
+<tr class="separator:a5ff4ec65b5c33a108cafaaadb9af7822"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a15f1c2967b150384ed7bc9cad532b905"><td class="memItemLeft" align="right" valign="top"><a id="a15f1c2967b150384ed7bc9cad532b905" name="a15f1c2967b150384ed7bc9cad532b905"></a>
+readonly IAudioManager&#160;</td><td class="memItemRight" valign="bottom"><b>audioManager</b></td></tr>
+<tr class="separator:a15f1c2967b150384ed7bc9cad532b905"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e1fa00cd27ea8b6e371ba66ea3db5f2"><td class="memItemLeft" align="right" valign="top"><a id="a7e1fa00cd27ea8b6e371ba66ea3db5f2" name="a7e1fa00cd27ea8b6e371ba66ea3db5f2"></a>
+IAudioPlayer&#160;</td><td class="memItemRight" valign="bottom"><b>backgroundAudio</b></td></tr>
+<tr class="separator:a7e1fa00cd27ea8b6e371ba66ea3db5f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bae8f10bb3b357db850007c2ad49c15"><td class="memItemLeft" align="right" valign="top"><a id="a3bae8f10bb3b357db850007c2ad49c15" name="a3bae8f10bb3b357db850007c2ad49c15"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>audioOn</b> = true</td></tr>
+<tr class="separator:a3bae8f10bb3b357db850007c2ad49c15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >Represents the end page of the questionnaire, displaying the user's final score and offering additional guidance based on the score. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock"><p >Represents the first scene of the questionnaire, handling initialization of the view model, audio playback, and user interactions for the first question. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a843897c2d81a2db625b6793b16436c4f" name="a843897c2d81a2db625b6793b16436c4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a843897c2d81a2db625b6793b16436c4f">&#9670;&nbsp;</a></span>EndPage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">EndPage.EndPage </td>
+          <td>(</td>
+          <td class="paramtype">IAudioManager&#160;</td>
+          <td class="paramname"><em>audioManager</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initializes a new instance of the <a class="el" href="class_main_page.html" title="Represents the first scene of the questionnaire, handling initialization of the view model,...">MainPage</a> class, setting up audio management and bindings. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">audioManager</td><td>The audio manager to handle audio operations.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a5ff4ec65b5c33a108cafaaadb9af7822" name="a5ff4ec65b5c33a108cafaaadb9af7822"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ff4ec65b5c33a108cafaaadb9af7822">&#9670;&nbsp;</a></span>DisposeAudioPlayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EndPage.DisposeAudioPlayer </td>
+          <td>(</td>
+          <td class="paramtype">IAudioPlayer&#160;</td>
+          <td class="paramname"><em>player</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stops and disposes of an audio player when it is no longer needed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">player</td><td>The audio player to dispose.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>Views/EndPage.xaml.cs</li>
 </ul>
 </div><!-- contents -->

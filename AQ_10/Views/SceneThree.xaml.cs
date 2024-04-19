@@ -38,7 +38,7 @@ public partial class SceneThree : ContentPage
     /// </summary>
     private async void InitializeAudio()
     {
-        backgroundAudio = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("background.wav"));
+        backgroundAudio = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("Room Tone with Scribbling.wav"));
         radButton = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("radioButton.wav"));
         prevButton = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("prevButton.wav"));
         nextButton = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("nextButton.wav"));
@@ -86,36 +86,52 @@ public partial class SceneThree : ContentPage
     }
 
     /// <summary>
-    /// Handles necessary audio management when the page becomes invisible.
-    /// </summary>
-    protected override void OnDisappearing()
-    {
-        base.OnDisappearing();
-
-        if (backgroundAudio != null)
-        {
-            backgroundAudio.Stop();
-            narrator.Stop();
-            DisposeAudioPlayer(backgroundAudio);
-            DisposeAudioPlayer(narrator);
-            DisposeAudioPlayer(radButton);
-        }
-    }
-
-    /// <summary>
-    /// Ensures audio is correctly initialized or resumed when the page becomes visible.
+    /// Ensures that audio is properly initialized when the page appears.
     /// </summary>
     protected override async void OnAppearing()
     {
         base.OnAppearing();
-        await Task.Delay(100);
-
         InitializeAudio();
-
-        if (audioOn == true)
+        ResetUIComponents();
+        if (audioOn)
         {
             backgroundAudio.Play();
         }
+        await Task.Delay(100);
+        backgroundSceneThree.IsAnimationPlaying = true;
+    }
+
+    /// <summary>
+    /// Cleans up audio resources when the page is no longer visible.
+    /// </summary>
+    protected override void OnDisappearing()
+    {
+        base.OnDisappearing();
+        DisposeAudioPlayers();
+
+    }
+
+    /// <summary>
+    /// Cleans up all audio player resources within the scene
+    /// ensuring that each player is stopped and disposed properly to release all associated resources.
+    /// </summary>
+    private void DisposeAudioPlayers()
+    {
+        DisposeAudioPlayer(backgroundAudio);
+        DisposeAudioPlayer(radButton);
+        DisposeAudioPlayer(narrator);
+    }
+
+    /// <summary>
+    /// Resets the UI components to their default state.
+    /// </summary>
+    private void ResetUIComponents()
+    {
+        radioButton1.IsChecked = false;
+        radioButton2.IsChecked = false;
+        radioButton3.IsChecked = false;
+        radioButton4.IsChecked = false;
+        radioButton5.IsChecked = false;
     }
 
     /// <summary>

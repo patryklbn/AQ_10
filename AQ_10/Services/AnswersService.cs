@@ -63,9 +63,9 @@ namespace AQ_10.Services
         }
 
         /// <summary>
-        /// Method for tests purpose
+        /// Method for reset the score.
         /// </summary>
-        public void ResetForTests()
+        public void ResetScore()
         {
             answers.Clear();
         }

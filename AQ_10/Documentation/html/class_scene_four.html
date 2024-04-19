@@ -89,14 +89,14 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:ad41b6ca7263917fd1de5034bc1479fba"><td class="memItemLeft" align="right" valign="top"><a id="ad41b6ca7263917fd1de5034bc1479fba" name="ad41b6ca7263917fd1de5034bc1479fba"></a>
+override async void&#160;</td><td class="memItemRight" valign="bottom"><b>OnAppearing</b> ()</td></tr>
+<tr class="memdesc:ad41b6ca7263917fd1de5034bc1479fba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensures that audio is properly initialized when the page appears. <br /></td></tr>
+<tr class="separator:ad41b6ca7263917fd1de5034bc1479fba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77e76eac0a6f225cb76dbcc7c1c5a4ba"><td class="memItemLeft" align="right" valign="top"><a id="a77e76eac0a6f225cb76dbcc7c1c5a4ba" name="a77e76eac0a6f225cb76dbcc7c1c5a4ba"></a>
 override void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDisappearing</b> ()</td></tr>
-<tr class="memdesc:a77e76eac0a6f225cb76dbcc7c1c5a4ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles necessary audio management when the page becomes invisible. <br /></td></tr>
+<tr class="memdesc:a77e76eac0a6f225cb76dbcc7c1c5a4ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cleans up audio resources when the page is no longer visible. <br /></td></tr>
 <tr class="separator:a77e76eac0a6f225cb76dbcc7c1c5a4ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefff776155b03bb305fdd2e5692262fc"><td class="memItemLeft" align="right" valign="top"><a id="aefff776155b03bb305fdd2e5692262fc" name="aefff776155b03bb305fdd2e5692262fc"></a>
-override void&#160;</td><td class="memItemRight" valign="bottom"><b>OnAppearing</b> ()</td></tr>
-<tr class="memdesc:aefff776155b03bb305fdd2e5692262fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensures audio is correctly initialized or resumed when the page becomes visible. <br /></td></tr>
-<tr class="separator:aefff776155b03bb305fdd2e5692262fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -111,6 +111,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>OnAudioButtonClicked<
 <tr class="memitem:aa1204abc740cf923c1a6746d7db62fa3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene_four.html#aa1204abc740cf923c1a6746d7db62fa3">DisposeAudioPlayer</a> (IAudioPlayer player)</td></tr>
 <tr class="memdesc:aa1204abc740cf923c1a6746d7db62fa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cleans up resources used by an audio player instance.  <a href="class_scene_four.html#aa1204abc740cf923c1a6746d7db62fa3">More...</a><br /></td></tr>
 <tr class="separator:aa1204abc740cf923c1a6746d7db62fa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a7fc440a09fb02db8e7d5a09ac56c21"><td class="memItemLeft" align="right" valign="top"><a id="a4a7fc440a09fb02db8e7d5a09ac56c21" name="a4a7fc440a09fb02db8e7d5a09ac56c21"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DisposeAudioPlayers</b> ()</td></tr>
+<tr class="memdesc:a4a7fc440a09fb02db8e7d5a09ac56c21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cleans up all audio player resources within the scene ensuring that each player is stopped and disposed properly to release all associated resources. <br /></td></tr>
+<tr class="separator:a4a7fc440a09fb02db8e7d5a09ac56c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3d208ca9a637fe1a4e8d012c4028c6e"><td class="memItemLeft" align="right" valign="top"><a id="ac3d208ca9a637fe1a4e8d012c4028c6e" name="ac3d208ca9a637fe1a4e8d012c4028c6e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ResetUIComponents</b> ()</td></tr>
+<tr class="memdesc:ac3d208ca9a637fe1a4e8d012c4028c6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the UI components to their default state. <br /></td></tr>
+<tr class="separator:ac3d208ca9a637fe1a4e8d012c4028c6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97b93237d2acb46a2066a4877368ba09"><td class="memItemLeft" align="right" valign="top"><a id="a97b93237d2acb46a2066a4877368ba09" name="a97b93237d2acb46a2066a4877368ba09"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>OnNarrativeButtonClicked</b> (object sender, EventArgs e)</td></tr>
 <tr class="memdesc:a97b93237d2acb46a2066a4877368ba09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plays or restarts the narrative audio when the narrative button is clicked. <br /></td></tr>
@@ -148,6 +156,9 @@ IAudioPlayer&#160;</td><td class="memItemRight" valign="bottom"><b>nextButton</b
 <tr class="memitem:a92831e01b3ccc866fc5aae64ac2cc5c7"><td class="memItemLeft" align="right" valign="top"><a id="a92831e01b3ccc866fc5aae64ac2cc5c7" name="a92831e01b3ccc866fc5aae64ac2cc5c7"></a>
 IAudioPlayer&#160;</td><td class="memItemRight" valign="bottom"><b>narrator</b></td></tr>
 <tr class="separator:a92831e01b3ccc866fc5aae64ac2cc5c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a223eb00e4702e79b435d43bbacc8214f"><td class="memItemLeft" align="right" valign="top"><a id="a223eb00e4702e79b435d43bbacc8214f" name="a223eb00e4702e79b435d43bbacc8214f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>audioOn</b> = true</td></tr>
+<tr class="separator:a223eb00e4702e79b435d43bbacc8214f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Represents the fourth scene of the application, handling initialization of the view model, audio playback, and user interactions for the fourth question. </p>

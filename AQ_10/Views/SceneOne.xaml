@@ -2,7 +2,6 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
-             xmlns:shapes="clr-namespace:Microsoft.Maui.Controls.Shapes;assembly=Microsoft.Maui.Controls"
              x:Class="AQ_10.SceneOne"
              ios:Page.UseSafeArea="True"
              BackgroundColor="Black"
@@ -31,7 +30,7 @@
                              VerticalOptions="Start"
                              HorizontalOptions="End"
                              Margin="10"
-                             Spacing="5"> <!-- Adjust Spacing here -->
+                             Spacing="5"> 
             <!-- Audio Button -->
             <Button x:Name="AudioButton"
                     Text="{Binding AudioIcon}"
@@ -87,12 +86,14 @@
 
     <!-- Radio Buttons in the middle columns -->
     <VerticalStackLayout Grid.Column="1" Spacing="5">
-        <RadioButton Content="Definitely Agree"
+        <RadioButton x:Name="radioButton1"
+                     Content="Definitely Agree"
                      TextColor="black"
                      FontFamily="MontserratExtraBold"
                      GroupName="Question1"
                      CheckedChanged="OnRadioButtonCheckedChanged"/>
-        <RadioButton Content="Slightly Agree"
+        <RadioButton x:Name="radioButton2"
+                     Content="Slightly Agree"
                      TextColor="black"
                      FontFamily="MontserratExtraBold"
                      GroupName="Question1"
@@ -100,19 +101,22 @@
     </VerticalStackLayout>
 
     <VerticalStackLayout Grid.Column="2" Spacing="5">
-                     <RadioButton Content="Definitely Disagree"
+                     <RadioButton x:Name="radioButton3"
+                     Content="Definitely Disagree"
                      TextColor="black"             
                      FontFamily="MontserratExtraBold"
                      GroupName="Question1"
                      CheckedChanged="OnRadioButtonCheckedChanged"/>
-                     <RadioButton Content="Slightly Disagree"
+                     <RadioButton x:Name="radioButton4"
+                     Content="Slightly Disagree"
                      TextColor="black"
                      FontFamily="MontserratExtraBold"
                      GroupName="Question1"
                      CheckedChanged="OnRadioButtonCheckedChanged"/>
     </VerticalStackLayout>
 <VerticalStackLayout Grid.Column="3" Spacing="5">
-    <RadioButton Content="Not Sure"
+    <RadioButton x:Name="radioButton5"
+                 Content="Not Sure"
                  TextColor="black"
                  GroupName="Question1"
                  CheckedChanged="OnRadioButtonCheckedChanged"/>

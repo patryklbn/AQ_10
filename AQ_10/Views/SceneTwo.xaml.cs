@@ -88,36 +88,50 @@ public partial class SceneTwo : ContentPage
     }
 
     /// <summary>
-    /// Handles necessary audio management when the page becomes invisible.
+    /// Ensures that audio is properly initialized when the page appears.
     /// </summary>
-    protected override void OnDisappearing()
+    protected override void OnAppearing()
     {
-        base.OnDisappearing();
-
-        if (backgroundAudio != null)
+        base.OnAppearing();
+        InitializeAudio();
+        ResetUIComponents();
+        if (audioOn)
         {
-            backgroundAudio.Stop();
-            narrator.Stop();
-            DisposeAudioPlayer(backgroundAudio);
-            DisposeAudioPlayer(narrator);
-            DisposeAudioPlayer(radButton);
+            backgroundAudio.Play();
         }
     }
 
     /// <summary>
-    /// Ensures audio is correctly initialized or resumed when the page becomes visible.
+    /// Cleans up audio resources when the page is no longer visible.
     /// </summary>
-    protected override async void OnAppearing()
+    protected override void OnDisappearing()
     {
-        base.OnAppearing();
-        await Task.Delay(100);
+        base.OnDisappearing();
+        DisposeAudioPlayers();
 
-        InitializeAudio();
+    }
 
-        if (audioOn == true)
-        {
-            backgroundAudio.Play();
-        }
+    /// <summary>
+    /// Cleans up all audio player resources within the scene
+    /// ensuring that each player is stopped and disposed properly to release all associated resources.
+    /// </summary>
+    private void DisposeAudioPlayers()
+    {
+        DisposeAudioPlayer(backgroundAudio);
+        DisposeAudioPlayer(radButton);
+        DisposeAudioPlayer(narrator);
+    }
+
+    /// <summary>
+    /// Resets the UI components to their default state.
+    /// </summary>
+    private void ResetUIComponents()
+    {
+        radioButton1.IsChecked = false;
+        radioButton2.IsChecked = false;
+        radioButton3.IsChecked = false;
+        radioButton4.IsChecked = false;
+        radioButton5.IsChecked = false;
     }
 
     /// <summary>

@@ -1,13 +1,15 @@
 ﻿using Xunit;
 using AQ_10.Services;
 using FluentAssertions;
+using AQ_10.ViewModel;
 
+[Collection("AnswersService Tests")]
 public class AnswersServiceTests
 {
     public AnswersServiceTests()
     {
         // Ensure each test starts with a clean state
-        AnswersService.Instance.ResetForTests();
+        AnswersService.Instance.ResetScore();
     }
 
     [Theory]
@@ -57,5 +59,22 @@ public class AnswersServiceTests
 
         // Assert
         score.Should().Be(0, because: "the total score should be 0 when no answers are set.");
+    }
+
+    [Fact]
+    public void ScoreMessage_ReflectsCurrentScore_UsingDirectSetup()
+    {
+        AnswersService.Instance.ResetScore();
+        // Arrange
+        AnswersService.Instance.SetAnswer(1, 1); // Setup the answers to control the score
+        AnswersService.Instance.SetAnswer(2, 1); // Total score will be 2
+
+        var viewModel = new EndPageViewModel(); // Use the actual service
+
+        // Act
+        var message = viewModel.ScoreMessage;
+
+        // Assert
+        message.Should().Contain("Your score is: 2/10", because: "the score message should reflect the calculated score based on the actual service.");
     }
 }

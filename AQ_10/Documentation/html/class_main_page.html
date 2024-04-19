@@ -64,12 +64,15 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_main_page-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">MainPage Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>The main page of the application that serves as the entry point for users. It initializes the MainPageViewModel as its data context to handle user interactions.  
+<p>Represents the first scene of the questionnaire, handling initialization of the view model, audio playback, and user interactions for the first question.  
  <a href="class_main_page.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for MainPage:</div>
@@ -80,14 +83,120 @@ Inheritance diagram for MainPage:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a89e84234664ee65ff5934205521a2373"><td class="memItemLeft" align="right" valign="top"><a id="a89e84234664ee65ff5934205521a2373" name="a89e84234664ee65ff5934205521a2373"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>MainPage</b> ()</td></tr>
-<tr class="memdesc:a89e84234664ee65ff5934205521a2373"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a new instance of the <a class="el" href="class_main_page.html" title="The main page of the application that serves as the entry point for users. It initializes the MainPag...">MainPage</a> class. Sets up the page and its binding context to interact with the MainPageViewModel. <br /></td></tr>
-<tr class="separator:a89e84234664ee65ff5934205521a2373"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c566327aff4e1e5bdd9b7afd436e73b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_page.html#a6c566327aff4e1e5bdd9b7afd436e73b">MainPage</a> (IAudioManager audioManager)</td></tr>
+<tr class="memdesc:a6c566327aff4e1e5bdd9b7afd436e73b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a new instance of the <a class="el" href="class_main_page.html" title="Represents the first scene of the questionnaire, handling initialization of the view model,...">MainPage</a> class, setting up audio management and bindings.  <a href="class_main_page.html#a6c566327aff4e1e5bdd9b7afd436e73b">More...</a><br /></td></tr>
+<tr class="separator:a6c566327aff4e1e5bdd9b7afd436e73b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a3e2728dd031e9be682f9de4ca82fef35"><td class="memItemLeft" align="right" valign="top"><a id="a3e2728dd031e9be682f9de4ca82fef35" name="a3e2728dd031e9be682f9de4ca82fef35"></a>
+override void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDisappearing</b> ()</td></tr>
+<tr class="memdesc:a3e2728dd031e9be682f9de4ca82fef35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cleans up audio resources when the page is no longer visible. <br /></td></tr>
+<tr class="separator:a3e2728dd031e9be682f9de4ca82fef35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87608e55157204dce6a0c478b5b5446b"><td class="memItemLeft" align="right" valign="top"><a id="a87608e55157204dce6a0c478b5b5446b" name="a87608e55157204dce6a0c478b5b5446b"></a>
+override async void&#160;</td><td class="memItemRight" valign="bottom"><b>OnAppearing</b> ()</td></tr>
+<tr class="memdesc:a87608e55157204dce6a0c478b5b5446b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensures that audio is properly initialized when the page appears. <br /></td></tr>
+<tr class="separator:a87608e55157204dce6a0c478b5b5446b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a11c04d44b3b34d8dc573baa19e58b1c3"><td class="memItemLeft" align="right" valign="top"><a id="a11c04d44b3b34d8dc573baa19e58b1c3" name="a11c04d44b3b34d8dc573baa19e58b1c3"></a>
+async void&#160;</td><td class="memItemRight" valign="bottom"><b>InitializeAudio</b> ()</td></tr>
+<tr class="memdesc:a11c04d44b3b34d8dc573baa19e58b1c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes audio playback for background music, narrative, and UI sounds. <br /></td></tr>
+<tr class="separator:a11c04d44b3b34d8dc573baa19e58b1c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad67c9fecbf395399a6d63ddce3e4c82c"><td class="memItemLeft" align="right" valign="top"><a id="ad67c9fecbf395399a6d63ddce3e4c82c" name="ad67c9fecbf395399a6d63ddce3e4c82c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OnAudioButtonClicked</b> (object sender, EventArgs e)</td></tr>
+<tr class="memdesc:ad67c9fecbf395399a6d63ddce3e4c82c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggles playback of the background audio based on its current state. <br /></td></tr>
+<tr class="separator:ad67c9fecbf395399a6d63ddce3e4c82c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a526145bcc3bb530a56ce720e92d89ec0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_page.html#a526145bcc3bb530a56ce720e92d89ec0">DisposeAudioPlayer</a> (IAudioPlayer player)</td></tr>
+<tr class="memdesc:a526145bcc3bb530a56ce720e92d89ec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops and disposes of an audio player when it is no longer needed.  <a href="class_main_page.html#a526145bcc3bb530a56ce720e92d89ec0">More...</a><br /></td></tr>
+<tr class="separator:a526145bcc3bb530a56ce720e92d89ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a9c49d98b2fa41877fadb152125510aec"><td class="memItemLeft" align="right" valign="top"><a id="a9c49d98b2fa41877fadb152125510aec" name="a9c49d98b2fa41877fadb152125510aec"></a>
+readonly IAudioManager&#160;</td><td class="memItemRight" valign="bottom"><b>audioManager</b></td></tr>
+<tr class="separator:a9c49d98b2fa41877fadb152125510aec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0de5de4f29c117dc3502ec5de690174c"><td class="memItemLeft" align="right" valign="top"><a id="a0de5de4f29c117dc3502ec5de690174c" name="a0de5de4f29c117dc3502ec5de690174c"></a>
+IAudioPlayer&#160;</td><td class="memItemRight" valign="bottom"><b>backgroundAudio</b></td></tr>
+<tr class="separator:a0de5de4f29c117dc3502ec5de690174c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2094b1b0bb6684223c2cbc5ebb5b0be"><td class="memItemLeft" align="right" valign="top"><a id="af2094b1b0bb6684223c2cbc5ebb5b0be" name="af2094b1b0bb6684223c2cbc5ebb5b0be"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>audioOn</b> = true</td></tr>
+<tr class="separator:af2094b1b0bb6684223c2cbc5ebb5b0be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >The main page of the application that serves as the entry point for users. It initializes the MainPageViewModel as its data context to handle user interactions. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock"><p >Represents the first scene of the questionnaire, handling initialization of the view model, audio playback, and user interactions for the first question. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a6c566327aff4e1e5bdd9b7afd436e73b" name="a6c566327aff4e1e5bdd9b7afd436e73b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c566327aff4e1e5bdd9b7afd436e73b">&#9670;&nbsp;</a></span>MainPage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MainPage.MainPage </td>
+          <td>(</td>
+          <td class="paramtype">IAudioManager&#160;</td>
+          <td class="paramname"><em>audioManager</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initializes a new instance of the <a class="el" href="class_main_page.html" title="Represents the first scene of the questionnaire, handling initialization of the view model,...">MainPage</a> class, setting up audio management and bindings. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">audioManager</td><td>The audio manager to handle audio operations.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a526145bcc3bb530a56ce720e92d89ec0" name="a526145bcc3bb530a56ce720e92d89ec0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a526145bcc3bb530a56ce720e92d89ec0">&#9670;&nbsp;</a></span>DisposeAudioPlayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainPage.DisposeAudioPlayer </td>
+          <td>(</td>
+          <td class="paramtype">IAudioPlayer&#160;</td>
+          <td class="paramname"><em>player</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stops and disposes of an audio player when it is no longer needed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">player</td><td>The audio player to dispose.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>Views/MainPage.xaml.cs</li>
 </ul>
 </div><!-- contents -->

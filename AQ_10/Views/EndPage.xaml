@@ -3,18 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
              x:Class="AQ_10.EndPage"
-             ios:Page.UseSafeArea="False"
+             ios:Page.UseSafeArea="True"
+             BackgroundColor="Black"
              Shell.NavBarIsVisible="False"
              Title="Scene EndPage">
 
-    <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+           Padding="{OnPlatform iOS='-10,0,-30,-25', Default='0'}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/> <!-- Space for the audio button -->
             <RowDefinition Height="*"/>   <!-- Space for the rest of the content -->
         </Grid.RowDefinitions>
 
         <!-- Background image stretched across the entire Grid -->
-        <Image Source="background_startup.png"
+        <Image Source="background_startup.
+               
+               
+               "
                Aspect="AspectFill"
                HorizontalOptions="FillAndExpand"
                VerticalOptions="FillAndExpand"
@@ -70,7 +75,7 @@
 
 
     <!-- "Next" Button in the last column -->
-    <Button Text="Start"
+    <Button Text="Start New Assesment"
             TextColor="white"
             FontFamily="MontserratExtraBold"
             BackgroundColor="Green"
@@ -78,7 +83,7 @@
             Grid.Column="4"
             HorizontalOptions="Fill"
             Padding="20,4"
-            Command="{Binding NavigateToNextCommand}"/>
+            Command="{Binding StartNewAssessmentCommand}"/>
 </Grid>
 
             </VerticalStackLayout>
