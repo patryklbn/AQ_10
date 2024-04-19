@@ -89,14 +89,14 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a74b43135010f3958ef448194412fa6f0"><td class="memItemLeft" align="right" valign="top"><a id="a74b43135010f3958ef448194412fa6f0" name="a74b43135010f3958ef448194412fa6f0"></a>
-override void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDisappearing</b> ()</td></tr>
-<tr class="memdesc:a74b43135010f3958ef448194412fa6f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cleans up audio resources when the page is no longer visible. <br /></td></tr>
-<tr class="separator:a74b43135010f3958ef448194412fa6f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff52da1d60f2fe2cff759cef5cb39106"><td class="memItemLeft" align="right" valign="top"><a id="aff52da1d60f2fe2cff759cef5cb39106" name="aff52da1d60f2fe2cff759cef5cb39106"></a>
 override void&#160;</td><td class="memItemRight" valign="bottom"><b>OnAppearing</b> ()</td></tr>
 <tr class="memdesc:aff52da1d60f2fe2cff759cef5cb39106"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensures that audio is properly initialized when the page appears. <br /></td></tr>
 <tr class="separator:aff52da1d60f2fe2cff759cef5cb39106"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74b43135010f3958ef448194412fa6f0"><td class="memItemLeft" align="right" valign="top"><a id="a74b43135010f3958ef448194412fa6f0" name="a74b43135010f3958ef448194412fa6f0"></a>
+override void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDisappearing</b> ()</td></tr>
+<tr class="memdesc:a74b43135010f3958ef448194412fa6f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cleans up audio resources when the page is no longer visible. <br /></td></tr>
+<tr class="separator:a74b43135010f3958ef448194412fa6f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -111,6 +111,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>OnAudioButtonClicked<
 <tr class="memitem:a0c4842727d9f31a8baddb8a1c37a078e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene_five.html#a0c4842727d9f31a8baddb8a1c37a078e">DisposeAudioPlayer</a> (IAudioPlayer player)</td></tr>
 <tr class="memdesc:a0c4842727d9f31a8baddb8a1c37a078e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops and disposes of an audio player when it is no longer needed.  <a href="class_scene_five.html#a0c4842727d9f31a8baddb8a1c37a078e">More...</a><br /></td></tr>
 <tr class="separator:a0c4842727d9f31a8baddb8a1c37a078e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a13f631fbaad0b3cec748d2744c8f45"><td class="memItemLeft" align="right" valign="top"><a id="a2a13f631fbaad0b3cec748d2744c8f45" name="a2a13f631fbaad0b3cec748d2744c8f45"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DisposeAudioPlayers</b> ()</td></tr>
+<tr class="memdesc:a2a13f631fbaad0b3cec748d2744c8f45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cleans up all audio player resources within the scene ensuring that each player is stopped and disposed properly to release all associated resources. <br /></td></tr>
+<tr class="separator:a2a13f631fbaad0b3cec748d2744c8f45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a044a853da002fe30ace8aa98d92802cf"><td class="memItemLeft" align="right" valign="top"><a id="a044a853da002fe30ace8aa98d92802cf" name="a044a853da002fe30ace8aa98d92802cf"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ResetUIComponents</b> ()</td></tr>
+<tr class="memdesc:a044a853da002fe30ace8aa98d92802cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the UI components to their default state. <br /></td></tr>
+<tr class="separator:a044a853da002fe30ace8aa98d92802cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a894d3cc2857ba3b6654305e1a810f509"><td class="memItemLeft" align="right" valign="top"><a id="a894d3cc2857ba3b6654305e1a810f509" name="a894d3cc2857ba3b6654305e1a810f509"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>OnNarrativeButtonClicked</b> (object sender, EventArgs e)</td></tr>
 <tr class="memdesc:a894d3cc2857ba3b6654305e1a810f509"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the event when the narrative button is clicked, playing or replaying the narrative audio. <br /></td></tr>
@@ -148,6 +156,9 @@ IAudioPlayer&#160;</td><td class="memItemRight" valign="bottom"><b>nextButton</b
 <tr class="memitem:a74a0f4f077ca45b13060d3a6146629ff"><td class="memItemLeft" align="right" valign="top"><a id="a74a0f4f077ca45b13060d3a6146629ff" name="a74a0f4f077ca45b13060d3a6146629ff"></a>
 IAudioPlayer&#160;</td><td class="memItemRight" valign="bottom"><b>narrator</b></td></tr>
 <tr class="separator:a74a0f4f077ca45b13060d3a6146629ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d03de585f0df9b71b286d9f17fc886e"><td class="memItemLeft" align="right" valign="top"><a id="a1d03de585f0df9b71b286d9f17fc886e" name="a1d03de585f0df9b71b286d9f17fc886e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>audioOn</b> = true</td></tr>
+<tr class="separator:a1d03de585f0df9b71b286d9f17fc886e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Represents the fifth scene of the application, handling initialization of the view model, audio playback, and user interactions for the fifth question. </p>

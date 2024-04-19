@@ -21,5 +21,6 @@ var searchData=
   ['scenetwo_18',['SceneTwo',['../class_scene_two.html#af5cfa013b78604990ea8bc1638e94158',1,'SceneTwo']]],
   ['scenetwoviewmodel_19',['SceneTwoViewModel',['../class_a_q__10_1_1_view_model_1_1_scene_two_view_model.html#a919253046fba0fddebd8fd29e146d382',1,'AQ_10::ViewModel::SceneTwoViewModel']]],
   ['setanswer_20',['SetAnswer',['../class_a_q__10_1_1_services_1_1_answers_service.html#abee8276c07b754802bc6b08f6c3ed4fa',1,'AQ_10::Services::AnswersService']]],
-  ['setproperty_3c_20t_20_3e_21',['SetProperty&lt; T &gt;',['../class_a_q__10_1_1_view_model_1_1_base_view_model.html#a554252d544aaf1b15a7209da0baa160c',1,'AQ_10::ViewModel::BaseViewModel']]]
+  ['setproperty_3c_20t_20_3e_21',['SetProperty&lt; T &gt;',['../class_a_q__10_1_1_view_model_1_1_base_view_model.html#a554252d544aaf1b15a7209da0baa160c',1,'AQ_10::ViewModel::BaseViewModel']]],
+  ['startnewassessment_22',['StartNewAssessment',['../class_a_q__10_1_1_view_model_1_1_end_page_view_model.html#a558987411438b480fcae1bc64313b3b7',1,'AQ_10::ViewModel::EndPageViewModel']]]
 ];

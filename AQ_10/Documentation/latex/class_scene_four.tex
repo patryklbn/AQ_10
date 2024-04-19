@@ -19,12 +19,12 @@ Inheritance diagram for Scene\+Four\+:\begin{figure}[H]
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{class_scene_four_ad41b6ca7263917fd1de5034bc1479fba}\label{class_scene_four_ad41b6ca7263917fd1de5034bc1479fba}} 
+override async void {\bfseries On\+Appearing} ()
+\begin{DoxyCompactList}\small\item\em Ensures that audio is properly initialized when the page appears. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_scene_four_a77e76eac0a6f225cb76dbcc7c1c5a4ba}\label{class_scene_four_a77e76eac0a6f225cb76dbcc7c1c5a4ba}} 
 override void {\bfseries On\+Disappearing} ()
-\begin{DoxyCompactList}\small\item\em Handles necessary audio management when the page becomes invisible. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_scene_four_aefff776155b03bb305fdd2e5692262fc}\label{class_scene_four_aefff776155b03bb305fdd2e5692262fc}} 
-override void {\bfseries On\+Appearing} ()
-\begin{DoxyCompactList}\small\item\em Ensures audio is correctly initialized or resumed when the page becomes visible. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Cleans up audio resources when the page is no longer visible. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -36,6 +36,12 @@ void {\bfseries On\+Audio\+Button\+Clicked} (object sender, Event\+Args e)
 \begin{DoxyCompactList}\small\item\em Toggles the playback of background audio based on its current state. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_scene_four_aa1204abc740cf923c1a6746d7db62fa3}{Dispose\+Audio\+Player}} (IAudio\+Player player)
 \begin{DoxyCompactList}\small\item\em Cleans up resources used by an audio player instance. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_four_a4a7fc440a09fb02db8e7d5a09ac56c21}\label{class_scene_four_a4a7fc440a09fb02db8e7d5a09ac56c21}} 
+void {\bfseries Dispose\+Audio\+Players} ()
+\begin{DoxyCompactList}\small\item\em Cleans up all audio player resources within the scene ensuring that each player is stopped and disposed properly to release all associated resources. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_four_ac3d208ca9a637fe1a4e8d012c4028c6e}\label{class_scene_four_ac3d208ca9a637fe1a4e8d012c4028c6e}} 
+void {\bfseries Reset\+UIComponents} ()
+\begin{DoxyCompactList}\small\item\em Resets the UI components to their default state. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_scene_four_a97b93237d2acb46a2066a4877368ba09}\label{class_scene_four_a97b93237d2acb46a2066a4877368ba09}} 
 void {\bfseries On\+Narrative\+Button\+Clicked} (object sender, Event\+Args e)
 \begin{DoxyCompactList}\small\item\em Plays or restarts the narrative audio when the narrative button is clicked. \end{DoxyCompactList}\item 
@@ -68,6 +74,9 @@ IAudio\+Player {\bfseries next\+Button}
 \item 
 \mbox{\Hypertarget{class_scene_four_a92831e01b3ccc866fc5aae64ac2cc5c7}\label{class_scene_four_a92831e01b3ccc866fc5aae64ac2cc5c7}} 
 IAudio\+Player {\bfseries narrator}
+\item 
+\mbox{\Hypertarget{class_scene_four_a223eb00e4702e79b435d43bbacc8214f}\label{class_scene_four_a223eb00e4702e79b435d43bbacc8214f}} 
+bool {\bfseries audio\+On} = true
 \end{DoxyCompactItemize}
 
 

@@ -1,5 +1,6 @@
 var searchData=
 [
   ['refreshscoremessage_0',['RefreshScoreMessage',['../class_a_q__10_1_1_view_model_1_1_end_page_view_model.html#a04239c1a5eb6b75cfe2733d4f5f3da99',1,'AQ_10::ViewModel::EndPageViewModel']]],
-  ['resetfortests_1',['ResetForTests',['../class_a_q__10_1_1_services_1_1_answers_service.html#aba008fd3cb9b95859de20d8480a31836',1,'AQ_10::Services::AnswersService']]]
+  ['resetscore_1',['ResetScore',['../class_a_q__10_1_1_services_1_1_answers_service.html#a6085d2b3559b013a2056b6fd67afeeb4',1,'AQ_10::Services::AnswersService']]],
+  ['resetuicomponents_2',['ResetUIComponents',['../class_scene_eight.html#ae4fe134acdca61098dddc784005589f3',1,'SceneEight.ResetUIComponents()'],['../class_scene_five.html#a044a853da002fe30ace8aa98d92802cf',1,'SceneFive.ResetUIComponents()'],['../class_scene_four.html#ac3d208ca9a637fe1a4e8d012c4028c6e',1,'SceneFour.ResetUIComponents()'],['../class_scene_nine.html#a2ae248490b3c790368fcc4b8dae7dcdc',1,'SceneNine.ResetUIComponents()'],['../class_scene_one.html#a4fae4ae1f5062c0c4b0edbf9bbe47842',1,'SceneOne.ResetUIComponents()'],['../class_scene_seven.html#ab6eb9ad4b2b1eaea9aa770d5eb1d3182',1,'SceneSeven.ResetUIComponents()'],['../class_scene_six.html#a07d848f2ff29f2b499693d008e4c0882',1,'SceneSix.ResetUIComponents()'],['../class_scene_ten.html#af2da753a995a1ba745482d8a5b4497f6',1,'SceneTen.ResetUIComponents()'],['../class_scene_three.html#ad12538188c19f2c01211f2e7d4d1b215',1,'SceneThree.ResetUIComponents()'],['../class_scene_two.html#a715904ef6db45467e049e625f3e8e008',1,'SceneTwo.ResetUIComponents()']]]
 ];
