@@ -16,10 +16,7 @@
         </Grid.RowDefinitions>
 
         <!-- Background image stretched across the entire Grid -->
-        <Image Source="background_startup.
-               
-               
-               "
+        <Image Source="background_startup.png"
                Aspect="AspectFill"
                HorizontalOptions="FillAndExpand"
                VerticalOptions="FillAndExpand"
@@ -38,11 +35,13 @@
                 />
 
         <!-- Content Border -->
-        <Border Padding="15"
-                BackgroundColor="White"
-                HorizontalOptions="Fill"
-                VerticalOptions="End"
-                Margin="20,0,20,0" 
+        <Border
+            Padding="24,32"
+            BackgroundColor="White"
+            HorizontalOptions="Fill"
+            VerticalOptions="End"
+            Opacity="0.8"
+            Margin="20"
                 Grid.Row="1"> <!-- Positioned in the second row for main content -->
             <Border.StrokeShape>
                 <RoundRectangle CornerRadius="24"/>
@@ -75,7 +74,7 @@
 
 
     <!-- "Next" Button in the last column -->
-    <Button Text="Start New Assesment"
+    <Button Text="Start Again"
             TextColor="white"
             FontFamily="MontserratExtraBold"
             BackgroundColor="Green"
