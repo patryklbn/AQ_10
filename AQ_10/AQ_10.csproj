@@ -37,6 +37,11 @@
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-ios|AnyCPU'">
 	  <CreatePackage>false</CreatePackage>
 	</PropertyGroup>
+	<PropertyGroup>
+  <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  <NoWarn>$(NoWarn);1591</NoWarn>
+</PropertyGroup>
+
 	<ItemGroup>
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
@@ -54,18 +59,236 @@
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
-
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+	  <MauiAsset Remove="Resources\Raw\1st_background.wav" />
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+		<PackageReference Include="Plugin.Maui.Audio" Version="2.1.0" />
+		<PackageReference Include="SkiaSharp" Version="2.88.7" />
+		<PackageReference Include="SkiaSharp.NativeAssets.macOS" Version="2.88.7" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Raw\background.wav" />
+	  <None Remove="Resources\Raw\Question1 - Copy.wav" />
+	  <None Remove="Resources\Raw\Question10 - Copy.wav" />
+	  <None Remove="Resources\Raw\Question2 - Copy.wav" />
+	  <None Remove="Resources\Raw\Question3 - Copy.wav" />
+	  <None Remove="Resources\Raw\Question4 - Copy.wav" />
+	  <None Remove="Resources\Raw\Question5 - Copy.wav" />
+	  <None Remove="Resources\Raw\Question6 - Copy.wav" />
+	  <None Remove="Resources\Raw\Question7 - Copy.wav" />
+	  <None Remove="Resources\Raw\Question8 - Copy.wav" />
+	  <None Remove="Resources\Raw\Question9 - Copy.wav" />
 	  <None Remove="Views\" />
 	  <None Remove="ViewModel\" />
 	  <None Remove="Resources\Images\scene1.jpeg" />
+	  <None Remove="Resources\Images\SceneOne.gif" />
+	  <None Remove="Resources\Images\icon-speakig.png" />
+	  <None Remove="Resources\Images\AQ6.png" />
+	  <None Remove="Resources\Images\AQ5.png" />
+	  <None Remove="Resources\Images\AQ4.png" />
+	  <None Remove="Resources\Images\AQ3.png" />
+	  <None Remove="Resources\Images\AQ2.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_calendar_view___u_i_calendar_view_appearance.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_collection_reusable_view___u_i_collection_reusable_view_appearance.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_collection_view___u_i_collection_view_appearance.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_collection_view_cell___u_i_collection_view_cell_appearance.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_collection_view_list_cell___u_i_collection_view_list_cell_appearance.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_collision_behavior_____u_i_collision_behavior_delegate.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_color_well___u_i_color_well_appearance.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_control___u_i_control_appearance.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_control_event_proxy.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_date_picker___u_i_date_picker_appearance.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_document_interaction_controller_____u_i_document_interaction_controller_delegate.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_document_menu_view_controller_____u_i_document_menu_delegate.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_document_picker_view_controller_____u_i_document_picker_delegate.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_event_attribution_view___u_i_event_attribution_view_appearance.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_gesture_recognizer_____u_i_gesture_recognizer_delegate.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_image_picker_controller_____u_i_image_picker_controller_delegate.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_image_view___u_i_image_view_appearance.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_input_view___u_i_input_view_appearance.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_label___u_i_label_appearance.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_list_content_view___u_i_list_content_view_appearance.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_navigation_bar___u_i_navigation_bar_appearance.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_page_control___u_i_page_control_appearance.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_page_view_controller_____u_i_page_view_controller_data_source.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_page_view_controller_____u_i_page_view_controller_delegate.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_paste_control___u_i_paste_control_appearance.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_picker_view___u_i_picker_view_appearance.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_popover_background_view___u_i_popover_background_view_appearance.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_popover_controller_____u_i_popover_controller_delegate.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_popover_presentation_controller_____u_i_popover_presentation_controller_delegate.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_preview_interaction_____u_i_preview_interaction_delegate.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_print_interaction_controller_____u_i_print_interaction_controller_delegate.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_progress_view___u_i_progress_view_appearance.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_refresh_control___u_i_refresh_control_appearance.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_scroll_view_____u_i_scroll_view_delegate.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_scroll_view___u_i_scroll_view_appearance.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_search_bar_____u_i_search_bar_delegate.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_search_bar___u_i_search_bar_appearance.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_search_controller_______xamarin___u_i_search_results_updating.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_search_text_field___u_i_search_text_field_appearance.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_segmented_control___u_i_segmented_control_appearance.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_slider___u_i_slider_appearance.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_split_view_controller_____u_i_split_view_controller_delegate.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_stack_view___u_i_stack_view_appearance.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_stepper___u_i_stepper_appearance.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_switch___u_i_switch_appearance.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_tab_bar_____u_i_tab_bar_delegate.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_tab_bar___u_i_tab_bar_appearance.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_tab_bar_controller_____u_i_tab_bar_controller_delegate.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_tab_bar_item___u_i_tab_bar_item_appearance.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_table_view___u_i_table_view_appearance.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_table_view_cell___u_i_table_view_cell_appearance.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_table_view_header_footer_view___u_i_table_view_header_footer_view_appearance.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_text_field_____u_i_text_field_delegate.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_text_field___u_i_text_field_appearance.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_text_view_____u_i_text_view_delegate.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_text_view___u_i_text_view_appearance.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_toolbar___u_i_toolbar_appearance.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_video_editor_controller_____u_i_video_editor_controller_delegate.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_view_____u_i_view_static_callback.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_view___u_i_view_appearance.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_visual_effect_view___u_i_visual_effect_view_appearance.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_web_view_____u_i_web_view_delegate.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_web_view___u_i_web_view_appearance.png" />
+	  <None Remove="Documentation\html\interface_u_i_kit___u_i_window___u_i_window_appearance.png" />
+	  <None Remove="Documentation\html\interface_web_kit___w_k_web_view___w_k_web_view_appearance.png" />
+	  <None Remove="Documentation\html\nav_f.png" />
+	  <None Remove="Documentation\html\nav_g.png" />
+	  <None Remove="Documentation\html\nav_h.png" />
+	  <None Remove="Documentation\html\open.png" />
+	  <None Remove="Documentation\html\protocol_u_i_collection_view_source-p.png" />
+	  <None Remove="Documentation\html\protocol_u_i_picker_view_model-p.png" />
+	  <None Remove="Documentation\html\search\search_l.png" />
+	  <None Remove="Documentation\html\search\search_m.png" />
+	  <None Remove="Documentation\html\search\search_r.png" />
+	  <None Remove="Documentation\html\splitbar.png" />
+	  <None Remove="Documentation\html\sync_off.png" />
+	  <None Remove="Documentation\html\sync_on.png" />
+	  <None Remove="Documentation\html\tab_a.png" />
+	  <None Remove="Documentation\html\tab_b.png" />
+	  <None Remove="Documentation\html\tab_h.png" />
+	  <None Remove="Documentation\html\tab_s.png" />
+	  <None Remove="Resources\Raw\Ambient.wav" />
+	  <None Remove="Resources\Raw\Q4background.wav" />
+	  <None Remove="Resources\Images\scenefour.gif" />
+	  <None Remove="Resources\Images\scenethree.gif" />
+	  <None Remove="Resources\Images\startup.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Views\" />
 	  <Folder Include="ViewModel\" />
 	</ItemGroup>
+	<ItemGroup>
+	  <BundleResource Include="Resources\Images\sceneone.gif" />
+	  <BundleResource Include="Resources\Images\aq6.png" />
+	  <BundleResource Include="Resources\Images\aq5.png" />
+	  <BundleResource Include="Resources\Images\aq4.png" />
+	  <BundleResource Include="Resources\Images\aq3.png" />
+	  <BundleResource Include="Resources\Images\aq2.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_calendar_view___u_i_calendar_view_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_collection_reusable_view___u_i_collection_reusable_view_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_collection_view___u_i_collection_view_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_collection_view_cell___u_i_collection_view_cell_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_collection_view_list_cell___u_i_collection_view_list_cell_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_collision_behavior_____u_i_collision_behavior_delegate.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_color_well___u_i_color_well_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_control___u_i_control_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_control_event_proxy.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_date_picker___u_i_date_picker_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_document_interaction_controller_____u_i_document_interaction_controller_delegate.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_document_menu_view_controller_____u_i_document_menu_delegate.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_document_picker_view_controller_____u_i_document_picker_delegate.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_event_attribution_view___u_i_event_attribution_view_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_gesture_recognizer_____u_i_gesture_recognizer_delegate.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_image_picker_controller_____u_i_image_picker_controller_delegate.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_image_view___u_i_image_view_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_input_view___u_i_input_view_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_label___u_i_label_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_list_content_view___u_i_list_content_view_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_navigation_bar___u_i_navigation_bar_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_page_control___u_i_page_control_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_page_view_controller_____u_i_page_view_controller_data_source.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_page_view_controller_____u_i_page_view_controller_delegate.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_paste_control___u_i_paste_control_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_picker_view___u_i_picker_view_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_popover_background_view___u_i_popover_background_view_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_popover_controller_____u_i_popover_controller_delegate.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_popover_presentation_controller_____u_i_popover_presentation_controller_delegate.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_preview_interaction_____u_i_preview_interaction_delegate.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_print_interaction_controller_____u_i_print_interaction_controller_delegate.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_progress_view___u_i_progress_view_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_refresh_control___u_i_refresh_control_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_scroll_view_____u_i_scroll_view_delegate.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_scroll_view___u_i_scroll_view_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_search_bar_____u_i_search_bar_delegate.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_search_bar___u_i_search_bar_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_search_controller_______xamarin___u_i_search_results_updating.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_search_text_field___u_i_search_text_field_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_segmented_control___u_i_segmented_control_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_slider___u_i_slider_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_split_view_controller_____u_i_split_view_controller_delegate.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_stack_view___u_i_stack_view_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_stepper___u_i_stepper_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_switch___u_i_switch_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_tab_bar_____u_i_tab_bar_delegate.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_tab_bar___u_i_tab_bar_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_tab_bar_controller_____u_i_tab_bar_controller_delegate.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_tab_bar_item___u_i_tab_bar_item_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_table_view___u_i_table_view_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_table_view_cell___u_i_table_view_cell_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_table_view_header_footer_view___u_i_table_view_header_footer_view_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_text_field_____u_i_text_field_delegate.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_text_field___u_i_text_field_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_text_view_____u_i_text_view_delegate.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_text_view___u_i_text_view_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_toolbar___u_i_toolbar_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_video_editor_controller_____u_i_video_editor_controller_delegate.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_view_____u_i_view_static_callback.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_view___u_i_view_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_visual_effect_view___u_i_visual_effect_view_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_web_view_____u_i_web_view_delegate.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_web_view___u_i_web_view_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_u_i_kit___u_i_window___u_i_window_appearance.png" />
+	  <BundleResource Include="Documentation\html\interface_web_kit___w_k_web_view___w_k_web_view_appearance.png" />
+	  <BundleResource Include="Documentation\html\nav_f.png" />
+	  <BundleResource Include="Documentation\html\nav_g.png" />
+	  <BundleResource Include="Documentation\html\nav_h.png" />
+	  <BundleResource Include="Documentation\html\open.png" />
+	  <BundleResource Include="Documentation\html\protocol_u_i_collection_view_source-p.png" />
+	  <BundleResource Include="Documentation\html\protocol_u_i_picker_view_model-p.png" />
+	  <BundleResource Include="Documentation\html\search\search_l.png" />
+	  <BundleResource Include="Documentation\html\search\search_m.png" />
+	  <BundleResource Include="Documentation\html\search\search_r.png" />
+	  <BundleResource Include="Documentation\html\splitbar.png" />
+	  <BundleResource Include="Documentation\html\sync_off.png" />
+	  <BundleResource Include="Documentation\html\sync_on.png" />
+	  <BundleResource Include="Documentation\html\tab_a.png" />
+	  <BundleResource Include="Documentation\html\tab_b.png" />
+	  <BundleResource Include="Documentation\html\tab_h.png" />
+	  <BundleResource Include="Documentation\html\tab_s.png" />
+	  <BundleResource Include="Resources\Raw\Ambient.wav" />
+	  <BundleResource Include="Resources\Raw\Q4background.wav" />
+	  <BundleResource Include="Resources\Images\scenefour.gif" />
+	  <BundleResource Include="Resources\Images\scenethree.gif" />
+	  <BundleResource Include="Resources\Images\mainpage.png" />
+	</ItemGroup>
+	<ItemGroup>
+	  <None Update="Platforms\iOS\Info.plist">
+	    <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+	  </None>
+	</ItemGroup>
+	<ItemGroup>
+	  <MauiAsset Update="Resources\Raw\Ambient.wav">
+	    <LogicalName>Ambient.wav</LogicalName>
+	  </MauiAsset>
+	  <MauiAsset Update="Resources\Raw\Q4background.wav">
+	    <LogicalName>Q4background.wav</LogicalName>
+	  </MauiAsset>
+	</ItemGroup>
+	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionAQ_10HideInfoBar="True" /></VisualStudio></ProjectExtensions>
 </Project>

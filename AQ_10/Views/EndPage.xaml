@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+             x:Class="AQ_10.EndPage"
+             ios:Page.UseSafeArea="True"
+             BackgroundColor="Black"
+             Shell.NavBarIsVisible="False"
+             Title="Scene EndPage">
+
+        <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+           Padding="{OnPlatform iOS='-10,0,-30,-25', Default='0'}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/> <!-- Space for the audio button -->
+            <RowDefinition Height="*"/>   <!-- Space for the rest of the content -->
+        </Grid.RowDefinitions>
+
+        <!-- Background image stretched across the entire Grid -->
+        <Image Source="background_startup.
+               
+               
+               "
+               Aspect="AspectFill"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="FillAndExpand"
+               Grid.RowSpan="2"/> <!-- Spanning both rows for full background coverage -->
+
+                <!-- Audio Button at the top right corner -->
+        <Button x:Name="AudioButton"
+                Clicked="OnAudioButtonClicked"
+                Text="{Binding AudioIcon}"
+                Grid.Row="0"
+                VerticalOptions="Start"
+                HorizontalOptions="End"
+                Margin="10"
+                BackgroundColor="Black"
+                Command="{Binding ToggleAudioCommand}" 
+                />
+
+        <!-- Content Border -->
+        <Border Padding="15"
+                BackgroundColor="White"
+                HorizontalOptions="Fill"
+                VerticalOptions="End"
+                Margin="20,0,20,0" 
+                Grid.Row="1"> <!-- Positioned in the second row for main content -->
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="24"/>
+            </Border.StrokeShape>
+
+            <VerticalStackLayout Spacing="0">
+                <!-- Question -->
+        <Label Text="{Binding ScoreMessage}"
+               TextColor="black"
+               HorizontalOptions="Center"
+               HorizontalTextAlignment="Center"
+               VerticalOptions="Center"
+               VerticalTextAlignment="Center"
+               FontFamily="MontserratExtraBold"
+               FontSize="16"
+               Margin="20" />
+
+<!-- Grid for Radio Buttons and Navigation Buttons -->
+<Grid ColumnDefinitions="Auto, Auto, Auto, Auto, Auto" ColumnSpacing="10" HorizontalOptions="Center" Margin="0,10,0,0">
+    <!-- "Previous" Button in the first column -->
+    <Button Text="Previous"
+            TextColor="white"
+            FontFamily="MontserratExtraBold"
+            BackgroundColor="Green"
+            Grid.Column="0"
+            Margin="15"
+            HorizontalOptions="Fill"
+            Padding="8,4"
+            Command="{Binding NavigateToPreviousCommand}" />
+
+
+    <!-- "Next" Button in the last column -->
+    <Button Text="Start New Assesment"
+            TextColor="white"
+            FontFamily="MontserratExtraBold"
+            BackgroundColor="Green"
+            Margin="15"
+            Grid.Column="4"
+            HorizontalOptions="Fill"
+            Padding="20,4"
+            Command="{Binding StartNewAssessmentCommand}"/>
+</Grid>
+
+            </VerticalStackLayout>
+        </Border>
+    </Grid>
+</ContentPage>

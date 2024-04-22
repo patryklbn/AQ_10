@@ -1,0 +1,124 @@
+\hypertarget{class_scene_eight}{}\doxysection{Scene\+Eight Class Reference}
+\label{class_scene_eight}\index{SceneEight@{SceneEight}}
+
+
+Represents the eight scene of the application, handling initialization of the view model, audio playback, and user interactions for the eight question.  
+
+
+Inheritance diagram for Scene\+Eight\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_scene_eight}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scene_eight_a736117580f3faf0308cf01fa6c6a2555}{Scene\+Eight}} (IAudio\+Manager audio\+Manager)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \mbox{\hyperlink{class_scene_eight}{Scene\+Eight}} class, setting up audio management and bindings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_scene_eight_a28b2a3d4fdbda5cf1f259fe268b18cc3}\label{class_scene_eight_a28b2a3d4fdbda5cf1f259fe268b18cc3}} 
+override void {\bfseries On\+Appearing} ()
+\begin{DoxyCompactList}\small\item\em Ensures that audio is properly initialized when the page appears. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_eight_ab34ed564371c9c04d8c1719fe0cd0e11}\label{class_scene_eight_ab34ed564371c9c04d8c1719fe0cd0e11}} 
+override void {\bfseries On\+Disappearing} ()
+\begin{DoxyCompactList}\small\item\em Cleans up audio resources when the page is no longer visible. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_scene_eight_a80f8498151476d8b691283f798967114}\label{class_scene_eight_a80f8498151476d8b691283f798967114}} 
+async void {\bfseries Initialize\+Audio} ()
+\begin{DoxyCompactList}\small\item\em Initializes audio playback for background music, narrative, and UI sounds. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_eight_af4ef587f34162e6a82dbcf83843f0454}\label{class_scene_eight_af4ef587f34162e6a82dbcf83843f0454}} 
+void {\bfseries On\+Audio\+Button\+Clicked} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Toggles playback of the background audio based on its current state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_eight_abaeb14deac09e227e90dff3403b35aea}{Dispose\+Audio\+Player}} (IAudio\+Player player)
+\begin{DoxyCompactList}\small\item\em Stops and disposes of an audio player when it is no longer needed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_eight_a06d64c3428b434faf805d8ff259fe5f5}\label{class_scene_eight_a06d64c3428b434faf805d8ff259fe5f5}} 
+void {\bfseries Dispose\+Audio\+Players} ()
+\begin{DoxyCompactList}\small\item\em Cleans up all audio player resources within the scene ensuring that each player is stopped and disposed properly to release all associated resources. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_eight_ae4fe134acdca61098dddc784005589f3}\label{class_scene_eight_ae4fe134acdca61098dddc784005589f3}} 
+void {\bfseries Reset\+UIComponents} ()
+\begin{DoxyCompactList}\small\item\em Resets the UI components to their default state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_eight_ab9e6a88168cdea614f44a620ff12680c}\label{class_scene_eight_ab9e6a88168cdea614f44a620ff12680c}} 
+void {\bfseries On\+Narrative\+Button\+Clicked} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Handles the event when the narrative button is clicked, playing or replaying the narrative audio. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_eight_af3c52dd0e542e1a7f42af822c919a270}\label{class_scene_eight_af3c52dd0e542e1a7f42af822c919a270}} 
+void {\bfseries On\+Next\+Button\+Clicked} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Plays feedback sound when the \char`\"{}next\char`\"{} button is clicked. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_eight_a55a5d2de189010192a3f6493ad82e66a}\label{class_scene_eight_a55a5d2de189010192a3f6493ad82e66a}} 
+void {\bfseries On\+Prev\+Button\+Clicked} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Plays feedback sound when the \char`\"{}previous\char`\"{} button is clicked. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_eight_a22ac52b977f5dbf1b6152d0462b87298}\label{class_scene_eight_a22ac52b977f5dbf1b6152d0462b87298}} 
+void {\bfseries On\+Radio\+Button\+Checked\+Changed} (object sender, Checked\+Changed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Handles changes in radio button selection, updating the selected answer in the view model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_scene_eight_a90d946de8dfea0ee17aaad0bcb1d3cbc}\label{class_scene_eight_a90d946de8dfea0ee17aaad0bcb1d3cbc}} 
+readonly IAudio\+Manager {\bfseries audio\+Manager}
+\item 
+\mbox{\Hypertarget{class_scene_eight_a82c94682ff5fde919bd540f0e9bb2912}\label{class_scene_eight_a82c94682ff5fde919bd540f0e9bb2912}} 
+IAudio\+Player {\bfseries background\+Audio}
+\item 
+\mbox{\Hypertarget{class_scene_eight_aea0262618e4ee43e4a32540ed3667fc7}\label{class_scene_eight_aea0262618e4ee43e4a32540ed3667fc7}} 
+IAudio\+Player {\bfseries rad\+Button}
+\item 
+\mbox{\Hypertarget{class_scene_eight_a5897196487e8acbe0dff343875368072}\label{class_scene_eight_a5897196487e8acbe0dff343875368072}} 
+IAudio\+Player {\bfseries prev\+Button}
+\item 
+\mbox{\Hypertarget{class_scene_eight_a9943709d52735d4f1c6537d55bd49f54}\label{class_scene_eight_a9943709d52735d4f1c6537d55bd49f54}} 
+IAudio\+Player {\bfseries next\+Button}
+\item 
+\mbox{\Hypertarget{class_scene_eight_a9d19ddb90cc1b1017766659664cc9f1f}\label{class_scene_eight_a9d19ddb90cc1b1017766659664cc9f1f}} 
+IAudio\+Player {\bfseries narrator}
+\item 
+\mbox{\Hypertarget{class_scene_eight_aeaab329a92888f25333274247801333e}\label{class_scene_eight_aeaab329a92888f25333274247801333e}} 
+bool {\bfseries audio\+On} = true
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the eight scene of the application, handling initialization of the view model, audio playback, and user interactions for the eight question. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_scene_eight_a736117580f3faf0308cf01fa6c6a2555}\label{class_scene_eight_a736117580f3faf0308cf01fa6c6a2555}} 
+\index{SceneEight@{SceneEight}!SceneEight@{SceneEight}}
+\index{SceneEight@{SceneEight}!SceneEight@{SceneEight}}
+\doxysubsubsection{\texorpdfstring{SceneEight()}{SceneEight()}}
+{\footnotesize\ttfamily Scene\+Eight.\+Scene\+Eight (\begin{DoxyParamCaption}\item[{IAudio\+Manager}]{audio\+Manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the \mbox{\hyperlink{class_scene_eight}{Scene\+Eight}} class, setting up audio management and bindings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em audio\+Manager} & The audio manager to handle audio operations.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_scene_eight_abaeb14deac09e227e90dff3403b35aea}\label{class_scene_eight_abaeb14deac09e227e90dff3403b35aea}} 
+\index{SceneEight@{SceneEight}!DisposeAudioPlayer@{DisposeAudioPlayer}}
+\index{DisposeAudioPlayer@{DisposeAudioPlayer}!SceneEight@{SceneEight}}
+\doxysubsubsection{\texorpdfstring{DisposeAudioPlayer()}{DisposeAudioPlayer()}}
+{\footnotesize\ttfamily void Scene\+Eight.\+Dispose\+Audio\+Player (\begin{DoxyParamCaption}\item[{IAudio\+Player}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Stops and disposes of an audio player when it is no longer needed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & The audio player to dispose.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Views/Scene\+Eight.\+xaml.\+cs\end{DoxyCompactItemize}

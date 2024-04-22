@@ -1,0 +1,124 @@
+\hypertarget{class_scene_three}{}\doxysection{Scene\+Three Class Reference}
+\label{class_scene_three}\index{SceneThree@{SceneThree}}
+
+
+Represents the third scene of the application, handling initialization of the view model, audio playback, and user interactions for the third question.  
+
+
+Inheritance diagram for Scene\+Three\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_scene_three}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scene_three_ac3c1ae6b55ce8361e8e97c01fbe4a446}{Scene\+Three}} (IAudio\+Manager audio\+Manager)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \mbox{\hyperlink{class_scene_two}{Scene\+Two}} class, setting up audio management and bindings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_scene_three_a9db950ff038b45b29a6327fb0624d16a}\label{class_scene_three_a9db950ff038b45b29a6327fb0624d16a}} 
+override async void {\bfseries On\+Appearing} ()
+\begin{DoxyCompactList}\small\item\em Ensures that audio is properly initialized when the page appears. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_three_ab61d57cfd79d24ebcaf3db7d85b174b9}\label{class_scene_three_ab61d57cfd79d24ebcaf3db7d85b174b9}} 
+override void {\bfseries On\+Disappearing} ()
+\begin{DoxyCompactList}\small\item\em Cleans up audio resources when the page is no longer visible. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_scene_three_a64247ce4f8cb744a9cae0f2015d79b6a}\label{class_scene_three_a64247ce4f8cb744a9cae0f2015d79b6a}} 
+async void {\bfseries Initialize\+Audio} ()
+\begin{DoxyCompactList}\small\item\em Initializes audio playback for the scene, including background music, UI sounds, and narrative audio. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_three_a0563ce2fe7968e92626b36bb5bf514c7}\label{class_scene_three_a0563ce2fe7968e92626b36bb5bf514c7}} 
+void {\bfseries On\+Audio\+Button\+Clicked} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Toggles the playback of background audio based on its current state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_three_a9cfcdd4fc7fe5fc651e654a224dfb744}{Dispose\+Audio\+Player}} (IAudio\+Player player)
+\begin{DoxyCompactList}\small\item\em Cleans up resources used by an audio player instance. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_three_a5e909572a7154fc3f533f985afe494d9}\label{class_scene_three_a5e909572a7154fc3f533f985afe494d9}} 
+void {\bfseries Dispose\+Audio\+Players} ()
+\begin{DoxyCompactList}\small\item\em Cleans up all audio player resources within the scene ensuring that each player is stopped and disposed properly to release all associated resources. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_three_ad12538188c19f2c01211f2e7d4d1b215}\label{class_scene_three_ad12538188c19f2c01211f2e7d4d1b215}} 
+void {\bfseries Reset\+UIComponents} ()
+\begin{DoxyCompactList}\small\item\em Resets the UI components to their default state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_three_a2f5b10797fc9790c9699920700e0d191}\label{class_scene_three_a2f5b10797fc9790c9699920700e0d191}} 
+void {\bfseries On\+Narrative\+Button\+Clicked} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Plays or restarts the narrative audio when the narrative button is clicked. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_three_a3844fed42f6090e87a4f21db00b7953f}\label{class_scene_three_a3844fed42f6090e87a4f21db00b7953f}} 
+void {\bfseries On\+Next\+Button\+Clicked} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Plays feedback sound when the \char`\"{}next\char`\"{} button is clicked, indicating progression to the next scene. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_three_a6f089b532a023df195acd67046c8a41c}\label{class_scene_three_a6f089b532a023df195acd67046c8a41c}} 
+void {\bfseries On\+Prev\+Button\+Clicked} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Plays feedback sound when the \char`\"{}previous\char`\"{} button is clicked, indicating regression to the previous scene. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_three_ac454aed63699272eea2000b92d74ab1c}\label{class_scene_three_ac454aed63699272eea2000b92d74ab1c}} 
+void {\bfseries On\+Radio\+Button\+Checked\+Changed} (object sender, Checked\+Changed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Updates the selected answer in the view model based on user interaction with radio buttons. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_scene_three_a5f7981137412d4c580705f5a4a1c9577}\label{class_scene_three_a5f7981137412d4c580705f5a4a1c9577}} 
+readonly IAudio\+Manager {\bfseries audio\+Manager}
+\item 
+\mbox{\Hypertarget{class_scene_three_a81da6c69b1f0e2fc859f84b481bac03a}\label{class_scene_three_a81da6c69b1f0e2fc859f84b481bac03a}} 
+IAudio\+Player {\bfseries background\+Audio}
+\item 
+\mbox{\Hypertarget{class_scene_three_ae4e87a042c8ea74113621c98c60e8b1b}\label{class_scene_three_ae4e87a042c8ea74113621c98c60e8b1b}} 
+IAudio\+Player {\bfseries rad\+Button}
+\item 
+\mbox{\Hypertarget{class_scene_three_acede41fb65e67d03bed11cad73bbd4e7}\label{class_scene_three_acede41fb65e67d03bed11cad73bbd4e7}} 
+IAudio\+Player {\bfseries prev\+Button}
+\item 
+\mbox{\Hypertarget{class_scene_three_a7f10b63d72d93caa64a61bc1563eb945}\label{class_scene_three_a7f10b63d72d93caa64a61bc1563eb945}} 
+IAudio\+Player {\bfseries next\+Button}
+\item 
+\mbox{\Hypertarget{class_scene_three_a2218a99eba1f5d7ab44357d0666f2475}\label{class_scene_three_a2218a99eba1f5d7ab44357d0666f2475}} 
+IAudio\+Player {\bfseries narrator}
+\item 
+\mbox{\Hypertarget{class_scene_three_a47e54ec5563b1a5395719fca582737cd}\label{class_scene_three_a47e54ec5563b1a5395719fca582737cd}} 
+bool {\bfseries audio\+On} = true
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the third scene of the application, handling initialization of the view model, audio playback, and user interactions for the third question. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_scene_three_ac3c1ae6b55ce8361e8e97c01fbe4a446}\label{class_scene_three_ac3c1ae6b55ce8361e8e97c01fbe4a446}} 
+\index{SceneThree@{SceneThree}!SceneThree@{SceneThree}}
+\index{SceneThree@{SceneThree}!SceneThree@{SceneThree}}
+\doxysubsubsection{\texorpdfstring{SceneThree()}{SceneThree()}}
+{\footnotesize\ttfamily Scene\+Three.\+Scene\+Three (\begin{DoxyParamCaption}\item[{IAudio\+Manager}]{audio\+Manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the \mbox{\hyperlink{class_scene_two}{Scene\+Two}} class, setting up audio management and bindings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em audio\+Manager} & The audio manager to handle audio operations for the scene.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_scene_three_a9cfcdd4fc7fe5fc651e654a224dfb744}\label{class_scene_three_a9cfcdd4fc7fe5fc651e654a224dfb744}} 
+\index{SceneThree@{SceneThree}!DisposeAudioPlayer@{DisposeAudioPlayer}}
+\index{DisposeAudioPlayer@{DisposeAudioPlayer}!SceneThree@{SceneThree}}
+\doxysubsubsection{\texorpdfstring{DisposeAudioPlayer()}{DisposeAudioPlayer()}}
+{\footnotesize\ttfamily void Scene\+Three.\+Dispose\+Audio\+Player (\begin{DoxyParamCaption}\item[{IAudio\+Player}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Cleans up resources used by an audio player instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & The audio player to be disposed of.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Views/Scene\+Three.\+xaml.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,124 @@
+\hypertarget{class_scene_five}{}\doxysection{Scene\+Five Class Reference}
+\label{class_scene_five}\index{SceneFive@{SceneFive}}
+
+
+Represents the fifth scene of the application, handling initialization of the view model, audio playback, and user interactions for the fifth question.  
+
+
+Inheritance diagram for Scene\+Five\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_scene_five}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scene_five_ac3ea3614d1b2da5cfb7dd48bccef7a83}{Scene\+Five}} (IAudio\+Manager audio\+Manager)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \mbox{\hyperlink{class_scene_five}{Scene\+Five}} class, setting up audio management and bindings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_scene_five_aff52da1d60f2fe2cff759cef5cb39106}\label{class_scene_five_aff52da1d60f2fe2cff759cef5cb39106}} 
+override void {\bfseries On\+Appearing} ()
+\begin{DoxyCompactList}\small\item\em Ensures that audio is properly initialized when the page appears. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_five_a74b43135010f3958ef448194412fa6f0}\label{class_scene_five_a74b43135010f3958ef448194412fa6f0}} 
+override void {\bfseries On\+Disappearing} ()
+\begin{DoxyCompactList}\small\item\em Cleans up audio resources when the page is no longer visible. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_scene_five_af6d01f280c73b7014b494ec70235f480}\label{class_scene_five_af6d01f280c73b7014b494ec70235f480}} 
+async void {\bfseries Initialize\+Audio} ()
+\begin{DoxyCompactList}\small\item\em Initializes audio playback for background music, narrative, and UI sounds. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_five_aa176e3a96a998637968065dc14b93b0f}\label{class_scene_five_aa176e3a96a998637968065dc14b93b0f}} 
+void {\bfseries On\+Audio\+Button\+Clicked} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Toggles playback of the background audio based on its current state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_five_a0c4842727d9f31a8baddb8a1c37a078e}{Dispose\+Audio\+Player}} (IAudio\+Player player)
+\begin{DoxyCompactList}\small\item\em Stops and disposes of an audio player when it is no longer needed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_five_a2a13f631fbaad0b3cec748d2744c8f45}\label{class_scene_five_a2a13f631fbaad0b3cec748d2744c8f45}} 
+void {\bfseries Dispose\+Audio\+Players} ()
+\begin{DoxyCompactList}\small\item\em Cleans up all audio player resources within the scene ensuring that each player is stopped and disposed properly to release all associated resources. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_five_a044a853da002fe30ace8aa98d92802cf}\label{class_scene_five_a044a853da002fe30ace8aa98d92802cf}} 
+void {\bfseries Reset\+UIComponents} ()
+\begin{DoxyCompactList}\small\item\em Resets the UI components to their default state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_five_a894d3cc2857ba3b6654305e1a810f509}\label{class_scene_five_a894d3cc2857ba3b6654305e1a810f509}} 
+void {\bfseries On\+Narrative\+Button\+Clicked} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Handles the event when the narrative button is clicked, playing or replaying the narrative audio. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_five_aa468b2b9517956d383e53112f613829b}\label{class_scene_five_aa468b2b9517956d383e53112f613829b}} 
+void {\bfseries On\+Next\+Button\+Clicked} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Plays feedback sound when the \char`\"{}next\char`\"{} button is clicked. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_five_ad9f68c61a53ff56a04a9dbda17f5b5a6}\label{class_scene_five_ad9f68c61a53ff56a04a9dbda17f5b5a6}} 
+void {\bfseries On\+Prev\+Button\+Clicked} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Plays feedback sound when the \char`\"{}previous\char`\"{} button is clicked. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_five_af60ec26f08f7c68e15f3383f5b5f0223}\label{class_scene_five_af60ec26f08f7c68e15f3383f5b5f0223}} 
+void {\bfseries On\+Radio\+Button\+Checked\+Changed} (object sender, Checked\+Changed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Handles changes in radio button selection, updating the selected answer in the view model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_scene_five_a152d12187c33333b2dacac6a17dd959a}\label{class_scene_five_a152d12187c33333b2dacac6a17dd959a}} 
+readonly IAudio\+Manager {\bfseries audio\+Manager}
+\item 
+\mbox{\Hypertarget{class_scene_five_abd01ba303a7a85fcf9e664ed59397878}\label{class_scene_five_abd01ba303a7a85fcf9e664ed59397878}} 
+IAudio\+Player {\bfseries background\+Audio}
+\item 
+\mbox{\Hypertarget{class_scene_five_a36f6d688050af628d031956db742f07a}\label{class_scene_five_a36f6d688050af628d031956db742f07a}} 
+IAudio\+Player {\bfseries rad\+Button}
+\item 
+\mbox{\Hypertarget{class_scene_five_ad835f2ae3a9f1c848505b7032ad31c66}\label{class_scene_five_ad835f2ae3a9f1c848505b7032ad31c66}} 
+IAudio\+Player {\bfseries prev\+Button}
+\item 
+\mbox{\Hypertarget{class_scene_five_af09da701057e2a933900b435539603be}\label{class_scene_five_af09da701057e2a933900b435539603be}} 
+IAudio\+Player {\bfseries next\+Button}
+\item 
+\mbox{\Hypertarget{class_scene_five_a74a0f4f077ca45b13060d3a6146629ff}\label{class_scene_five_a74a0f4f077ca45b13060d3a6146629ff}} 
+IAudio\+Player {\bfseries narrator}
+\item 
+\mbox{\Hypertarget{class_scene_five_a1d03de585f0df9b71b286d9f17fc886e}\label{class_scene_five_a1d03de585f0df9b71b286d9f17fc886e}} 
+bool {\bfseries audio\+On} = true
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the fifth scene of the application, handling initialization of the view model, audio playback, and user interactions for the fifth question. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_scene_five_ac3ea3614d1b2da5cfb7dd48bccef7a83}\label{class_scene_five_ac3ea3614d1b2da5cfb7dd48bccef7a83}} 
+\index{SceneFive@{SceneFive}!SceneFive@{SceneFive}}
+\index{SceneFive@{SceneFive}!SceneFive@{SceneFive}}
+\doxysubsubsection{\texorpdfstring{SceneFive()}{SceneFive()}}
+{\footnotesize\ttfamily Scene\+Five.\+Scene\+Five (\begin{DoxyParamCaption}\item[{IAudio\+Manager}]{audio\+Manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the \mbox{\hyperlink{class_scene_five}{Scene\+Five}} class, setting up audio management and bindings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em audio\+Manager} & The audio manager to handle audio operations.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_scene_five_a0c4842727d9f31a8baddb8a1c37a078e}\label{class_scene_five_a0c4842727d9f31a8baddb8a1c37a078e}} 
+\index{SceneFive@{SceneFive}!DisposeAudioPlayer@{DisposeAudioPlayer}}
+\index{DisposeAudioPlayer@{DisposeAudioPlayer}!SceneFive@{SceneFive}}
+\doxysubsubsection{\texorpdfstring{DisposeAudioPlayer()}{DisposeAudioPlayer()}}
+{\footnotesize\ttfamily void Scene\+Five.\+Dispose\+Audio\+Player (\begin{DoxyParamCaption}\item[{IAudio\+Player}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Stops and disposes of an audio player when it is no longer needed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & The audio player to dispose.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Views/Scene\+Five.\+xaml.\+cs\end{DoxyCompactItemize}

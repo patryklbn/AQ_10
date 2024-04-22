@@ -1,0 +1,94 @@
+\hypertarget{class_main_page}{}\doxysection{Main\+Page Class Reference}
+\label{class_main_page}\index{MainPage@{MainPage}}
+
+
+Represents the first scene of the questionnaire, handling initialization of the view model, audio playback, and user interactions for the first question.  
+
+
+Inheritance diagram for Main\+Page\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_main_page}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_main_page_a6c566327aff4e1e5bdd9b7afd436e73b}{Main\+Page}} (IAudio\+Manager audio\+Manager)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \mbox{\hyperlink{class_main_page}{Main\+Page}} class, setting up audio management and bindings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_main_page_a3e2728dd031e9be682f9de4ca82fef35}\label{class_main_page_a3e2728dd031e9be682f9de4ca82fef35}} 
+override void {\bfseries On\+Disappearing} ()
+\begin{DoxyCompactList}\small\item\em Cleans up audio resources when the page is no longer visible. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_main_page_a87608e55157204dce6a0c478b5b5446b}\label{class_main_page_a87608e55157204dce6a0c478b5b5446b}} 
+override async void {\bfseries On\+Appearing} ()
+\begin{DoxyCompactList}\small\item\em Ensures that audio is properly initialized when the page appears. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_main_page_a11c04d44b3b34d8dc573baa19e58b1c3}\label{class_main_page_a11c04d44b3b34d8dc573baa19e58b1c3}} 
+async void {\bfseries Initialize\+Audio} ()
+\begin{DoxyCompactList}\small\item\em Initializes audio playback for background music, narrative, and UI sounds. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_main_page_ad67c9fecbf395399a6d63ddce3e4c82c}\label{class_main_page_ad67c9fecbf395399a6d63ddce3e4c82c}} 
+void {\bfseries On\+Audio\+Button\+Clicked} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Toggles playback of the background audio based on its current state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_page_a526145bcc3bb530a56ce720e92d89ec0}{Dispose\+Audio\+Player}} (IAudio\+Player player)
+\begin{DoxyCompactList}\small\item\em Stops and disposes of an audio player when it is no longer needed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_main_page_a9c49d98b2fa41877fadb152125510aec}\label{class_main_page_a9c49d98b2fa41877fadb152125510aec}} 
+readonly IAudio\+Manager {\bfseries audio\+Manager}
+\item 
+\mbox{\Hypertarget{class_main_page_a0de5de4f29c117dc3502ec5de690174c}\label{class_main_page_a0de5de4f29c117dc3502ec5de690174c}} 
+IAudio\+Player {\bfseries background\+Audio}
+\item 
+\mbox{\Hypertarget{class_main_page_af2094b1b0bb6684223c2cbc5ebb5b0be}\label{class_main_page_af2094b1b0bb6684223c2cbc5ebb5b0be}} 
+bool {\bfseries audio\+On} = true
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the first scene of the questionnaire, handling initialization of the view model, audio playback, and user interactions for the first question. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_main_page_a6c566327aff4e1e5bdd9b7afd436e73b}\label{class_main_page_a6c566327aff4e1e5bdd9b7afd436e73b}} 
+\index{MainPage@{MainPage}!MainPage@{MainPage}}
+\index{MainPage@{MainPage}!MainPage@{MainPage}}
+\doxysubsubsection{\texorpdfstring{MainPage()}{MainPage()}}
+{\footnotesize\ttfamily Main\+Page.\+Main\+Page (\begin{DoxyParamCaption}\item[{IAudio\+Manager}]{audio\+Manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the \mbox{\hyperlink{class_main_page}{Main\+Page}} class, setting up audio management and bindings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em audio\+Manager} & The audio manager to handle audio operations.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_main_page_a526145bcc3bb530a56ce720e92d89ec0}\label{class_main_page_a526145bcc3bb530a56ce720e92d89ec0}} 
+\index{MainPage@{MainPage}!DisposeAudioPlayer@{DisposeAudioPlayer}}
+\index{DisposeAudioPlayer@{DisposeAudioPlayer}!MainPage@{MainPage}}
+\doxysubsubsection{\texorpdfstring{DisposeAudioPlayer()}{DisposeAudioPlayer()}}
+{\footnotesize\ttfamily void Main\+Page.\+Dispose\+Audio\+Player (\begin{DoxyParamCaption}\item[{IAudio\+Player}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Stops and disposes of an audio player when it is no longer needed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & The audio player to dispose.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Views/Main\+Page.\+xaml.\+cs\end{DoxyCompactItemize}

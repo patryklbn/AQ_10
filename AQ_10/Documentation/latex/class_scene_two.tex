@@ -1,0 +1,124 @@
+\hypertarget{class_scene_two}{}\doxysection{Scene\+Two Class Reference}
+\label{class_scene_two}\index{SceneTwo@{SceneTwo}}
+
+
+Represents the second scene of the application, handling initialization of the view model, audio playback, and user interactions for the second question.  
+
+
+Inheritance diagram for Scene\+Two\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_scene_two}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scene_two_af5cfa013b78604990ea8bc1638e94158}{Scene\+Two}} (IAudio\+Manager audio\+Manager)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \mbox{\hyperlink{class_scene_two}{Scene\+Two}} class, setting up audio management and bindings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_scene_two_ac0ed3f3c6f5e44841483adae977e9e59}\label{class_scene_two_ac0ed3f3c6f5e44841483adae977e9e59}} 
+override void {\bfseries On\+Appearing} ()
+\begin{DoxyCompactList}\small\item\em Ensures that audio is properly initialized when the page appears. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_two_a460dd5090b54e5d320f117f485f51c47}\label{class_scene_two_a460dd5090b54e5d320f117f485f51c47}} 
+override void {\bfseries On\+Disappearing} ()
+\begin{DoxyCompactList}\small\item\em Cleans up audio resources when the page is no longer visible. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_scene_two_a16be4c023946ab3d1c1375980451db1f}\label{class_scene_two_a16be4c023946ab3d1c1375980451db1f}} 
+async void {\bfseries Initialize\+Audio} ()
+\begin{DoxyCompactList}\small\item\em Initializes audio playback for the scene, including background music, UI sounds, and narrative audio. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_two_aca03f96cc6dddbefce1acde537f33539}\label{class_scene_two_aca03f96cc6dddbefce1acde537f33539}} 
+void {\bfseries On\+Audio\+Button\+Clicked} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Toggles the playback of background audio based on its current state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_two_ace515b8700d1086225c7a3b5fbf80a5b}{Dispose\+Audio\+Player}} (IAudio\+Player player)
+\begin{DoxyCompactList}\small\item\em Cleans up resources used by an audio player instance. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_two_a5788edb675a82a1a04110905eb005f4a}\label{class_scene_two_a5788edb675a82a1a04110905eb005f4a}} 
+void {\bfseries Dispose\+Audio\+Players} ()
+\begin{DoxyCompactList}\small\item\em Cleans up all audio player resources within the scene ensuring that each player is stopped and disposed properly to release all associated resources. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_two_a715904ef6db45467e049e625f3e8e008}\label{class_scene_two_a715904ef6db45467e049e625f3e8e008}} 
+void {\bfseries Reset\+UIComponents} ()
+\begin{DoxyCompactList}\small\item\em Resets the UI components to their default state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_two_a019c7b28f50d42c602c2e7842a8bfc13}\label{class_scene_two_a019c7b28f50d42c602c2e7842a8bfc13}} 
+void {\bfseries On\+Narrative\+Button\+Clicked} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Plays or restarts the narrative audio when the narrative button is clicked. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_two_ae7c07ef8ab343e3eb7aabc13490d8f51}\label{class_scene_two_ae7c07ef8ab343e3eb7aabc13490d8f51}} 
+void {\bfseries On\+Next\+Button\+Clicked} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Plays feedback sound when the \char`\"{}next\char`\"{} button is clicked, indicating progression to the next scene. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_two_a2b51dbe6c650940eeb744c567e2d70c3}\label{class_scene_two_a2b51dbe6c650940eeb744c567e2d70c3}} 
+void {\bfseries On\+Prev\+Button\+Clicked} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Plays feedback sound when the \char`\"{}previous\char`\"{} button is clicked, indicating regression to the previous scene. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_two_a682bedf6299b6b84ca6e27e8eb837b98}\label{class_scene_two_a682bedf6299b6b84ca6e27e8eb837b98}} 
+void {\bfseries On\+Radio\+Button\+Checked\+Changed} (object sender, Checked\+Changed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Updates the selected answer in the view model based on user interaction with radio buttons. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_scene_two_a1e69590ec41e6d5e12754df881501572}\label{class_scene_two_a1e69590ec41e6d5e12754df881501572}} 
+readonly IAudio\+Manager {\bfseries audio\+Manager}
+\item 
+\mbox{\Hypertarget{class_scene_two_a23e31381eddb7ad9b06695ec9f89c92d}\label{class_scene_two_a23e31381eddb7ad9b06695ec9f89c92d}} 
+IAudio\+Player {\bfseries background\+Audio}
+\item 
+\mbox{\Hypertarget{class_scene_two_a93348b17fabaa55715073594a8435bc9}\label{class_scene_two_a93348b17fabaa55715073594a8435bc9}} 
+IAudio\+Player {\bfseries rad\+Button}
+\item 
+\mbox{\Hypertarget{class_scene_two_a1d82da0e9f4ab141288160942ba0bb6a}\label{class_scene_two_a1d82da0e9f4ab141288160942ba0bb6a}} 
+IAudio\+Player {\bfseries prev\+Button}
+\item 
+\mbox{\Hypertarget{class_scene_two_a07c1854f64632159affb3627980beaca}\label{class_scene_two_a07c1854f64632159affb3627980beaca}} 
+IAudio\+Player {\bfseries next\+Button}
+\item 
+\mbox{\Hypertarget{class_scene_two_a9e930bc9127b39f1394a5c95ca808124}\label{class_scene_two_a9e930bc9127b39f1394a5c95ca808124}} 
+IAudio\+Player {\bfseries narrator}
+\item 
+\mbox{\Hypertarget{class_scene_two_a447199920adec4b454264a8671767f4b}\label{class_scene_two_a447199920adec4b454264a8671767f4b}} 
+bool {\bfseries audio\+On} = true
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the second scene of the application, handling initialization of the view model, audio playback, and user interactions for the second question. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_scene_two_af5cfa013b78604990ea8bc1638e94158}\label{class_scene_two_af5cfa013b78604990ea8bc1638e94158}} 
+\index{SceneTwo@{SceneTwo}!SceneTwo@{SceneTwo}}
+\index{SceneTwo@{SceneTwo}!SceneTwo@{SceneTwo}}
+\doxysubsubsection{\texorpdfstring{SceneTwo()}{SceneTwo()}}
+{\footnotesize\ttfamily Scene\+Two.\+Scene\+Two (\begin{DoxyParamCaption}\item[{IAudio\+Manager}]{audio\+Manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the \mbox{\hyperlink{class_scene_two}{Scene\+Two}} class, setting up audio management and bindings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em audio\+Manager} & The audio manager to handle audio operations for the scene.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_scene_two_ace515b8700d1086225c7a3b5fbf80a5b}\label{class_scene_two_ace515b8700d1086225c7a3b5fbf80a5b}} 
+\index{SceneTwo@{SceneTwo}!DisposeAudioPlayer@{DisposeAudioPlayer}}
+\index{DisposeAudioPlayer@{DisposeAudioPlayer}!SceneTwo@{SceneTwo}}
+\doxysubsubsection{\texorpdfstring{DisposeAudioPlayer()}{DisposeAudioPlayer()}}
+{\footnotesize\ttfamily void Scene\+Two.\+Dispose\+Audio\+Player (\begin{DoxyParamCaption}\item[{IAudio\+Player}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Cleans up resources used by an audio player instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & The audio player to be disposed of.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Views/Scene\+Two.\+xaml.\+cs\end{DoxyCompactItemize}
