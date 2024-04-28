@@ -49,7 +49,7 @@ public partial class SceneThree : ContentPage
         radButton.Volume = 0.05;
 
         backgroundAudio.Loop = true;
-        backgroundAudio.Volume = 0.3;
+        backgroundAudio.Volume = 0.05;
     }
 
     /// <summary>

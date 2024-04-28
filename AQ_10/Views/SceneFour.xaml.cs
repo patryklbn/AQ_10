@@ -48,9 +48,10 @@ public partial class SceneFour : ContentPage
         prevButton.Volume = 0.05;
         nextButton.Volume = 0.05;
         radButton.Volume = 0.05;
+        backgroundAudio.Volume = 0.2;
 
         backgroundAudio.Loop = true;
-        backgroundAudio.Volume = 0.3;
+        backgroundAudio.Volume = 0.05;
     }
 
     /// <summary>

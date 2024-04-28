@@ -47,6 +47,7 @@ public partial class SceneTen : ContentPage
         prevButton.Volume = 0.05;
         nextButton.Volume = 0.05;
         radButton.Volume = 0.05;
+        radButton.Volume = 0.05;
 
         backgroundAudio.Loop = true;
         backgroundAudio.Volume = 0.3;
